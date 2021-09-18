@@ -7,7 +7,7 @@ const headingStyles = css`
   h4,
   h5,
   h6 {
-    font-family: "Poppins";
+    font-family: Poppins;
   }
 `;
 
@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: Roboto;
   }
 
   /* A elements that don't have a class get default styles */
