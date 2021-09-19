@@ -30,7 +30,12 @@ export default {
     },
   },
   spacings: {
+    xsmall: "0.25rem",
+    small: "0.5rem",
     base: "1rem",
+    medium: "1.5rem",
+    large: "2rem",
+    xlarge: "4rem",
   },
   shadows: {
     soft: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",

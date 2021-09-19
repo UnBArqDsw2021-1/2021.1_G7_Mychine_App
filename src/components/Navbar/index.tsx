@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaUserCircle } from "react-icons/fa";
 import Logo from "../../../public/img/logo.svg";
 import * as S from "./styles";
 
@@ -20,20 +21,23 @@ const Navbar = () => (
       <S.NavLinks>
         <S.Links>
           <Link href="/" passHref>
-            <S.CustomLink href="/">Sobre</S.CustomLink>
+            <S.CustomLink>Sobre</S.CustomLink>
           </Link>
 
           <Link href="/" passHref>
-            <S.CustomLink href="/">Contato</S.CustomLink>
+            <S.CustomLink>Contato</S.CustomLink>
           </Link>
         </S.Links>
 
         <S.Links>
           <Link href="/" passHref>
-            <S.CustomLink href="/">Registrar-se</S.CustomLink>
+            <S.CustomLink>Registrar-se</S.CustomLink>
           </Link>
           <Link href="/" passHref>
-            <S.CustomLink href="/">Entrar</S.CustomLink>
+            <S.CustomLink highlight>
+              <FaUserCircle size={25} />
+              Entrar
+            </S.CustomLink>
           </Link>
         </S.Links>
       </S.NavLinks>

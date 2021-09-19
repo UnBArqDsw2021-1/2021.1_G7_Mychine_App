@@ -16,26 +16,29 @@ export const Navbar = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1rem 4rem;
+  padding: 0.5rem 4rem;
 `;
 
 export const Logo = styled.div`
-  position: relative;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-right: 4rem;
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.primary};
-  text-shadow: 
+  ${({ theme }) => css`
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: ${theme.spacings.xlarge};
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    text-shadow: 
         /* first layer at 1px */ -1px -1px 0px white,
-    0px -1px 0px white, 1px -1px 0px white, -1px 0px 0px white,
-    1px 0px 0px white, -1px 1px 0px white, 0px 1px 0px white, 1px 1px 0px white,
-    /* second layer at 2px */ -2px -2px 0px white, -1px -2px 0px white,
-    0px -2px 0px white, 1px -2px 0px white, 2px -2px 0px white,
-    2px -1px 0px white, 2px 0px 0px white, 2px 1px 0px white, 2px 2px 0px white,
-    1px 2px 0px white, 0px 2px 0px white, -1px 2px 0px white, -2px 2px 0px white,
-    -2px 1px 0px white, -2px 0px 0px white, -2px -1px 0px white;
+      0px -1px 0px white, 1px -1px 0px white, -1px 0px 0px white,
+      1px 0px 0px white, -1px 1px 0px white, 0px 1px 0px white,
+      1px 1px 0px white, /* second layer at 2px */ -2px -2px 0px white,
+      -1px -2px 0px white, 0px -2px 0px white, 1px -2px 0px white,
+      2px -2px 0px white, 2px -1px 0px white, 2px 0px 0px white,
+      2px 1px 0px white, 2px 2px 0px white, 1px 2px 0px white, 0px 2px 0px white,
+      -1px 2px 0px white, -2px 2px 0px white, -2px 1px 0px white,
+      -2px 0px 0px white, -2px -1px 0px white;
+  `}
 `;
 
 export const NavLinks = styled.div`
@@ -46,38 +49,30 @@ export const NavLinks = styled.div`
 `;
 
 export const Links = styled.div`
-  display: flex;
-  gap: 2rem;
+  ${({ theme }) => css`
+    display: flex;
+    gap: ${theme.spacings.large};
+  `}
 `;
 
-export const CustomLink = styled.a`
-  ${({ theme }) => css`
+export const CustomLink = styled.a<{ highlight: boolean }>`
+  ${({ theme, highlight }) => css`
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: ${theme.spacings.small};
+    padding: 1rem;
     color: white;
     font-weight: ${theme.font.weight.semiBold};
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
     text-shadow: 1px 1px 1px #333;
 
-    /* &:after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 0px;
-      border-radius: 10px;
-      background-color: #ff8520;
-      transition: all 0.25s ease-out;
-    } */
-    /*     
-    &:hover {
-      &:after {
-        width: 100%;
-        background-image: linear-gradient(to right, #f87000, #ff9a48);
-      }
-    } */
+    ${highlight &&
+    css`
+      box-shadow: inset 0 0 1px 2px white;
+    `}
 
-    ${hoverAnimation({ strokeWidth: "2px", position: "-10px" })}
+    ${hoverAnimation({ strokeWidth: "2px", position: "0px" })}
   `}
 `;
