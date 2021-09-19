@@ -2,7 +2,10 @@ export default {
   border: {
     radius: "5px",
   },
-  colors: {},
+  colors: {
+    primary: "#FF8520",
+    secondary: "#FFE382",
+  },
   font: {
     weight: {
       light: 300,

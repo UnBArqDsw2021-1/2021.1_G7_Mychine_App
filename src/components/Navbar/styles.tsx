@@ -25,7 +25,7 @@ export const Logo = styled.div`
   align-items: center;
   margin-right: 4rem;
   cursor: pointer;
-  color: #ff8520;
+  color: ${({ theme }) => theme.colors.primary};
   text-shadow: 
         /* first layer at 1px */ -1px -1px 0px white,
     0px -1px 0px white, 1px -1px 0px white, -1px 0px 0px white,

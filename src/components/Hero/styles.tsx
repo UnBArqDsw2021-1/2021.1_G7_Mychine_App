@@ -4,7 +4,11 @@ export const HeroContainer = styled.div`
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  gap: 10rem;
   overflow: hidden;
 
   &:before {
@@ -49,7 +53,6 @@ export const HeroContainer = styled.div`
 export const HeroTextContainer = styled.h1`
   ${({ theme }) => css`
     position: relative;
-    margin: 0 auto;
     color: white;
     font-size: ${theme.font.sizes.huge};
     font-weight: ${theme.font.weight.black};
@@ -81,4 +84,12 @@ export const HeroTextContainer = styled.h1`
       font-size: 1.8rem;
     }
   `}
+`;
+
+export const HeroSearchContainer = styled.div`
+  /* position: absolute; */
+  display: block;
+  width: 100%;
+  /* margin-top: 15rem; */
+  /* bottom: 100px; */
 `;
