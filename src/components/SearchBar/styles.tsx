@@ -1,23 +1,20 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const SearchBar = styled.div`
   display: flex;
-  width: 60%;
-  height: 55px;
+  width: 50%;
   margin: 0 auto;
-  padding: 0.15rem;
-  background-color: #ffffff55;
+  background-color: #00000040;
 
   & input {
     flex: 1;
+    color: white;
     background-color: transparent;
     border: none;
   }
 
   & button {
     justify-self: flex-end;
-    min-width: 150px;
-    border: none;
-    background-color: ${({ theme }) => theme.colors.secondary};
+    margin: auto;
   }
 `;

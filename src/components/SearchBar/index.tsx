@@ -1,9 +1,12 @@
+import Button from "components/Button";
 import * as S from "./styles";
 
 const SearchBar = () => (
   <S.SearchBar>
     <input />
-    <button type="button">Buscar</button>
+    <Button color="secondary" shadow size="large">
+      Buscar
+    </Button>
   </S.SearchBar>
 );
 

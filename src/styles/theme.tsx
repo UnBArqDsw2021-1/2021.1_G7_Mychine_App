@@ -4,7 +4,12 @@ export default {
   },
   colors: {
     primary: "#FF8520",
-    secondary: "#FFE382",
+    secondary: "#e9c74b",
+    darkGray: "#333",
+    darkGray100: "#444",
+    darkGray200: "#555",
+    background: "#F1F1F1",
+    background100: "#FAFAFA",
   },
   font: {
     weight: {
