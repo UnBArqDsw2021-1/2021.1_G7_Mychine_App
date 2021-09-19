@@ -1,13 +1,18 @@
+import { useForm } from "react-hook-form";
 import Button from "components/Button";
 import * as S from "./styles";
 
-const SearchBar = () => (
-  <S.SearchBar>
-    <input />
-    <Button color="secondary" shadow size="large">
-      Buscar
-    </Button>
-  </S.SearchBar>
-);
+const SearchBar = () => {
+  const { register } = useForm();
+
+  return (
+    <S.SearchBar>
+      <input {...register("search")} placeholder="Produto" autoComplete="off" />
+      <Button color="secondary" shadow size="large">
+        Buscar
+      </Button>
+    </S.SearchBar>
+  );
+};
 
 export default SearchBar;
