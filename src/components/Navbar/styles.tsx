@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { hoverAnimation } from "@UI/animations";
 
 export const NavbarWrapper = styled.div`
   grid-area: nav;
@@ -58,7 +59,7 @@ export const CustomLink = styled.a`
     text-decoration: none;
     text-shadow: 1px 1px 1px #333;
 
-    &:after {
+    /* &:after {
       position: absolute;
       content: "";
       left: 0;
@@ -68,12 +69,15 @@ export const CustomLink = styled.a`
       border-radius: 10px;
       background-color: #ff8520;
       transition: all 0.25s ease-out;
-    }
+    } */
+    /*     
     &:hover {
       &:after {
         width: 100%;
         background-image: linear-gradient(to right, #f87000, #ff9a48);
       }
-    }
+    } */
+
+    ${hoverAnimation({ strokeWidth: "2px", position: "-10px" })}
   `}
 `;

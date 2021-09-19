@@ -23,6 +23,26 @@ const Button = ({ children, ...props }: IButtonProps) => {
     minimal,
   } = props;
 
+  const handleClick = (event) => {
+    props?.onClick?.(event);
+
+    // ripple effect
+    const button = event.currentTarget;
+    const newRipple = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+    newRipple.style.width = `${diameter}px`;
+    newRipple.style.height = `${diameter}px`;
+    newRipple.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    newRipple.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    newRipple.classList.add("ripple");
+
+    // remove old ripple
+    button.getElementsByClassName("ripple")[0]?.remove();
+
+    button.appendChild(newRipple);
+  };
+
   return (
     <S.Button
       type="button"
@@ -33,6 +53,7 @@ const Button = ({ children, ...props }: IButtonProps) => {
       fullWidth={fullWidth}
       minimal={minimal}
       {...props}
+      onClick={handleClick}
     >
       {children}
     </S.Button>
