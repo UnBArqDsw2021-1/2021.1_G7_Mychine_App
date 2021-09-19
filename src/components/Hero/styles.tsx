@@ -11,6 +11,10 @@ export const HeroContainer = styled.div`
   gap: 10rem;
   overflow: hidden;
 
+  @media (max-width: 600px) {
+    gap: 4rem;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -23,7 +27,7 @@ export const HeroContainer = styled.div`
         rgb(0 0 0 / 90%),
         rgb(185 185 185 / 20%)
       ),
-      url(/img/hero.png);
+      url(/img/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,9 +66,9 @@ export const HeroTextContainer = styled.h1`
     &:before {
       content: "";
       position: absolute;
-      width: 44%;
+      width: 25%;
       height: 1px;
-      left: 0;
+      right: 0;
       top: -10px;
       background-color: white;
     }
@@ -72,9 +76,9 @@ export const HeroTextContainer = styled.h1`
     &:after {
       content: "";
       position: absolute;
-      width: 44%;
+      width: 25%;
       height: 1px;
-      right: 0;
+      left: 0;
       bottom: -12px;
       background-color: white;
     }
@@ -82,6 +86,7 @@ export const HeroTextContainer = styled.h1`
     @media (max-width: 600px) {
       max-width: 90%;
       font-size: 1.8rem;
+      margin-top: 100px; // ~ navbar height
     }
   `}
 `;

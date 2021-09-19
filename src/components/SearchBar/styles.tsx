@@ -5,7 +5,11 @@ export const SearchBar = styled.div`
     display: flex;
     width: 50%;
     margin: 0 auto;
-    background-color: #00000040;
+    background-color: #dddddd30;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
 
     & input {
       flex: 1;
@@ -18,6 +22,11 @@ export const SearchBar = styled.div`
 
       &:focus {
         border: 2px solid ${theme.colors.secondary};
+      }
+
+      @media (max-width: 600px) {
+        max-width: 200px;
+        font-size: ${theme.font.sizes.base};
       }
     }
 

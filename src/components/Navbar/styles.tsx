@@ -17,6 +17,10 @@ export const Navbar = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 0.5rem 4rem;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem 1rem;
+  }
 `;
 
 export const Logo = styled.div`
@@ -38,6 +42,10 @@ export const Logo = styled.div`
       2px 1px 0px white, 2px 2px 0px white, 1px 2px 0px white, 0px 2px 0px white,
       -1px 2px 0px white, -2px 2px 0px white, -2px 1px 0px white,
       -2px 0px 0px white, -2px -1px 0px white;
+
+    @media (max-width: 600px) {
+      margin-right: ${theme.spacings.large};
+    }
   `}
 `;
 
@@ -52,6 +60,10 @@ export const Links = styled.div`
   ${({ theme }) => css`
     display: flex;
     gap: ${theme.spacings.large};
+
+    @media (max-width: 600px) {
+      gap: calc(${theme.spacings.large} / 2);
+    }
   `}
 `;
 
@@ -67,6 +79,11 @@ export const CustomLink = styled.a<{ highlight: boolean }>`
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
     text-shadow: 1px 1px 1px #333;
+
+    @media (max-width: 600px) {
+      font-size: ${theme.font.sizes.base};
+      letter-spacing: 0.5px;
+    }
 
     ${highlight &&
     css`
