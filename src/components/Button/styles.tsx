@@ -51,7 +51,11 @@ export const Button = styled.button<IButtonStyleProps>`
     ${fullWidth && buttonStylesModifiers(theme).fullWidth};
     ${shadow && buttonStylesModifiers(theme).shadow};
 
-    ${rippleAnimation()}
-    ${hoverAnimation({ strokeWidth: "4.5px", position: "-1px" })}
+    ${rippleAnimation(color)}
+    ${hoverAnimation({
+      strokeWidth: "4px",
+      position: "-1px",
+      blendMode: "multiply",
+    })}
   `}
 `;

@@ -4,8 +4,10 @@ export default {
   },
   colors: {
     primary: "#FF8520",
-    secondary: "#e9c74b",
-    darkGray: "#333",
+    secondary: "#fdd017",
+    red: "#ef2d56",
+    green: "#06d6a0",
+    darkGray: "#2d1e2f",
     darkGray100: "#444",
     darkGray200: "#555",
     background: "#F1F1F1",

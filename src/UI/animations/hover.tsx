@@ -5,12 +5,14 @@ export interface IHoverProps {
   strokeWidth?: string;
   position?: string;
   pseudoElement?: "before" | "after";
+  blendMode?: string;
 }
 
 const hoverAnimation = ({
   strokeWidth = "3px",
   position = "0px",
   pseudoElement = "after",
+  blendMode = "normal",
 }: IHoverProps) => css`
   &:hover {
     &${`:${pseudoElement}`} {
@@ -21,8 +23,16 @@ const hoverAnimation = ({
       right: ${position};
       bottom: ${position};
       border-radius: 0px;
-      background: linear-gradient(120deg, #ef4647, #ff831e, #ef4647);
+      background: linear-gradient(
+        120deg,
+        #f2ff00,
+        #ff8520,
+        #ef4647,
+        #ff6600,
+        #ffd900
+      );
       background-size: 300% 300%;
+      mix-blend-mode: ${blendMode};
       clip-path: polygon(
         0% 100%,
         ${strokeWidth} 100%,
@@ -35,7 +45,7 @@ const hoverAnimation = ({
         100% 0%,
         0% 0%
       );
-      animation: ${frameEnter(strokeWidth)} 0.275s forwards ease-in-out reverse,
+      animation: ${frameEnter(strokeWidth)} 0.275s forwards ease-in reverse,
         ${gradient} 3s ease-in-out infinite;
     }
   }

@@ -11,7 +11,7 @@ export const HeroContainer = styled.div`
   gap: 10rem;
   overflow: hidden;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     gap: 4rem;
   }
 
@@ -24,8 +24,8 @@ export const HeroContainer = styled.div`
     right: 0;
     background-image: linear-gradient(
         to right top,
-        rgb(0 0 0 / 90%),
-        rgb(185 185 185 / 20%)
+        rgb(10 10 10 / 75%) 45%,
+        rgb(231 229 205 / 33%) 100%
       ),
       url(/img/hero.jpg);
     background-position: center;
@@ -63,14 +63,26 @@ export const HeroTextContainer = styled.h1`
     text-shadow: 2px 2px 4px #333;
     cursor: default;
 
+    @media (max-width: 800px) {
+      max-width: 90%;
+      font-size: 1.8rem;
+      font-weight: ${theme.font.weight.bold};
+      margin-top: 100px; // ~ navbar height
+    }
+
     &:before {
       content: "";
       position: absolute;
       width: 25%;
       height: 1px;
-      right: 0;
-      top: -10px;
+      left: 0;
+      bottom: calc(100%);
       background-color: white;
+
+      @media (max-width: 800px) {
+        bottom: unset;
+        top: 3px;
+      }
     }
 
     &:after {
@@ -78,23 +90,35 @@ export const HeroTextContainer = styled.h1`
       position: absolute;
       width: 25%;
       height: 1px;
-      left: 0;
-      bottom: -12px;
+      right: 0;
+      top: calc(100% + 0.9rem);
       background-color: white;
+
+      @media (max-width: 800px) {
+        top: unset;
+        bottom: 3px;
+      }
     }
 
-    @media (max-width: 600px) {
-      max-width: 90%;
-      font-size: 1.8rem;
-      margin-top: 100px; // ~ navbar height
+    & span {
+      position: absolute;
+      left: 3px;
+      top: calc(100%);
+      color: ${theme.colors.secondary};
+      font-size: ${theme.font.sizes.medium};
+      font-weight: ${theme.font.weight.regular};
+      letter-spacing: 0.5px;
+
+      @media (max-width: 800px) {
+        font-weight: ${theme.font.weight.regular};
+        font-size: ${theme.font.sizes.small};
+      }
     }
   `}
 `;
 
 export const HeroSearchContainer = styled.div`
-  /* position: absolute; */
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  /* margin-top: 15rem; */
-  /* bottom: 100px; */
 `;
