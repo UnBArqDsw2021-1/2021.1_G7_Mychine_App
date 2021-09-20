@@ -7,16 +7,18 @@ import * as S from "./styles";
 const Navbar = () => (
   <S.NavbarWrapper>
     <S.Navbar>
-      <S.Logo>
-        <Image
-          src={Logo}
-          width={75}
-          height={75}
-          objectFit="contain"
-          alt="logo"
-        />
-        <h1>MYCHINE</h1>
-      </S.Logo>
+      <Link href="/" passHref>
+        <S.Logo>
+          <Image
+            src={Logo}
+            width={75}
+            height={75}
+            objectFit="contain"
+            alt="logo"
+          />
+          <h1>MYCHINE</h1>
+        </S.Logo>
+      </Link>
 
       <S.NavLinks>
         <S.Links>
@@ -30,7 +32,7 @@ const Navbar = () => (
         </S.Links>
 
         <S.Links>
-          <Link href="/" passHref>
+          <Link href="/register" passHref>
             <S.CustomLink>Registrar-se</S.CustomLink>
           </Link>
           <Link href="/" passHref>

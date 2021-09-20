@@ -5,6 +5,7 @@ import GlobalStyle from "styles/global";
 import PageTransitionStyle, { TIMEOUT } from "@UI/animations/pageTransitions";
 import theme from "styles/theme";
 import BaseTemplate from "templates/Base";
+import Loader from "components/Loader";
 import type { AppProps } from "next/app";
 
 function App({ Component, pageProps, router }: AppProps) {
@@ -20,7 +21,7 @@ function App({ Component, pageProps, router }: AppProps) {
           <PageTransition
             timeout={TIMEOUT}
             classNames="page-transition"
-            loadingComponent={<div>CARREGANDO...</div>}
+            loadingComponent={<Loader size="large" />}
             loadingDelay={0}
             loadingTimeout={0}
             skipInitialTransition
