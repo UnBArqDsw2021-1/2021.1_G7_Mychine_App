@@ -22,18 +22,17 @@ export const HeroContainer = styled.div`
     width: 100%;
     left: 0;
     right: 0;
-    background-image: linear-gradient(
-        to right top,
-        rgb(10 10 10 / 75%) 45%,
-        rgb(231 229 205 / 33%) 100%
-      ),
-      url(/img/hero.jpg);
+    background-image: url(/img/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
     z-index: -2;
     transition: all 45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      filter: blur(8px);
+    }
   }
 
   &:after {
@@ -41,8 +40,15 @@ export const HeroContainer = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     pointer-events: none;
+    background-image: radial-gradient(
+      circle,
+      rgba(34, 34, 34, 0.5018382352941176) 40%,
+      rgba(3, 3, 3, 0.7987570028011204) 100%
+    );
+    background-size: cover;
     z-index: -1;
   }
 
@@ -60,7 +66,7 @@ export const HeroTextContainer = styled.h1`
     color: white;
     font-size: ${theme.font.sizes.huge};
     font-weight: ${theme.font.weight.black};
-    text-shadow: 2px 2px 4px #333;
+    text-shadow: 1px 1px 3px #222222f0;
     cursor: default;
 
     @media (max-width: 800px) {
