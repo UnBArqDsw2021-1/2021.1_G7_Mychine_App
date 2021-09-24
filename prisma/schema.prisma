@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model user {
+  userId    Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  name      String
+  phone     String
+  cpf       String?
+  isAdm     Boolean
+  createdAt DateTime  @default(now())
+  updatedAt DateTime
+  address   address[]
+  rent      rent[]
+}
+
+model address {
+  userId     Int
+  cep        String
+  city       String?
+  state      String?
+  street     String?
+  number     Int
+  complement String?
+  user       user    @relation(fields: [userId], references: userId)
+
+  @@unique([userId, cep, number])
+}
+
+model category {
+  categoryId  Int       @id @default(autoincrement())
+  name        String
+  description String?
+  product     product[]
+}
+
+model product {
+  productId       Int      @id @default(autoincrement())
+  categoryId      Int
+  name            String
+  description     String
+  lastMaintenance DateTime
+  price           Float
+  status          status
+  image           String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime
+
+  cotegory category @relation(fields: [categoryId], references: categoryId)
+  rent     rent[]
+}
+
+enum status {
+  Avaliable
+  Unavaliable
+  Maintenance
+}
+
+model rent {
+  userId      Int
+  productId   Int
+  rentId      Int      @id @default(autoincrement())
+  initialDate DateTime
+  finalDate   DateTime
+
+  user    user    @relation(fields: [userId], references: userId)
+  product product @relation(fields: [productId], references: productId)
+}
