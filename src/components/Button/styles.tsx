@@ -55,7 +55,6 @@ export const Button = styled.button<IButtonStyleProps>`
     ${hoverAnimation({
       strokeWidth: "4px",
       position: "-1px",
-      blendMode: "multiply",
     })}
   `}
 `;

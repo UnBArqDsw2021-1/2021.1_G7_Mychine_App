@@ -87,9 +87,11 @@ export const CustomLink = styled.a<{ highlight: boolean }>`
 
     ${highlight &&
     css`
-      box-shadow: inset 0 0 1px 2px white;
+      box-shadow: inset 0 0 0px 2px white;
     `}
 
-    ${hoverAnimation({ strokeWidth: "2px", position: "0px" })}
+    ${hoverAnimation({
+      strokeWidth: "2px",
+    })}
   `}
 `;

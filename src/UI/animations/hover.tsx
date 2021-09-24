@@ -9,45 +9,82 @@ export interface IHoverProps {
 }
 
 const hoverAnimation = ({
-  strokeWidth = "3px",
+  strokeWidth = "2px",
   position = "0px",
-  pseudoElement = "after",
-  blendMode = "normal",
 }: IHoverProps) => css`
-  &:hover {
-    &${`:${pseudoElement}`} {
-      content: "";
-      position: absolute;
-      top: ${position};
-      left: ${position};
-      right: ${position};
-      bottom: ${position};
-      border-radius: 0px;
-      background: linear-gradient(
-        120deg,
-        #f2ff00,
-        #ff8520,
+  position: relative;
+  vertical-align: middle;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    border: 1px solid transparent;
+    width: 0;
+    height: 0;
+
+    border-image-slice: 1;
+    --angle: 0deg;
+  }
+
+  &:before {
+    bottom: ${position}; // 1px?!!!
+    left: ${position};
+  }
+
+  &:after {
+    top: ${position};
+    right: ${position};
+    opacity: 0;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    width: 100%;
+    height: 100%;
+    animation: ${rotate} 3s ease-in-out infinite;
+  }
+
+  &:hover:before {
+    border-image: conic-gradient(
+        from var(--angle),
         #ef4647,
         #ff6600,
-        #ffd900
-      );
-      background-size: 300% 300%;
-      mix-blend-mode: ${blendMode};
-      clip-path: polygon(
-        0% 100%,
-        ${strokeWidth} 100%,
-        ${strokeWidth} ${strokeWidth},
-        calc(100% - ${strokeWidth}) ${strokeWidth},
-        calc(100% - ${strokeWidth}) calc(100% - ${strokeWidth}),
-        ${strokeWidth} calc(100% - ${strokeWidth}),
-        ${strokeWidth} 100%,
-        100% 100%,
-        100% 0%,
-        0% 0%
-      );
-      animation: ${frameEnter(strokeWidth)} 0.275s forwards ease-in reverse,
-        ${gradient} 3s ease-in-out infinite;
-    }
+        #ff8520,
+        #ffae00,
+        #ef4647
+      )
+      /* source */ 1 / /* slice */ ${strokeWidth} 0px 0px ${strokeWidth} /
+      /* width */ 0px 0px 0px 0px /* outset */ round; /* repeat */
+  }
+  &:hover:after {
+    opacity: 1;
+    border-image: conic-gradient(
+        from var(--angle),
+        #ef4647,
+        #ff6600,
+        #ff8520,
+        #ffae00,
+        #ef4647
+      )
+      /* source */ 1 / /* slice */ 0px ${strokeWidth} ${strokeWidth} 0px /
+      /* width */ 0px 0px 0px 0px /* outset */ round; /* repeat */
+  }
+
+  &:hover:before {
+    transition: height 0.15s ease-in, width 0.1s ease-in 0.15s;
+  }
+
+  &:hover:after {
+    transition: height 0.15s ease-in 0.25s, width 0.1s ease-in 0.4s,
+      opacity 0s linear 0.3s;
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
   }
 `;
 
@@ -72,75 +109,8 @@ export const gradient = keyframes`
   }
 `;
 
-export const frameEnter = (strokeWidth: string) => keyframes`
-  0% {
-    clip-path: polygon(
-      0% 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) calc(100% - ${strokeWidth}),
-      ${strokeWidth} calc(100% - ${strokeWidth}),
-      ${strokeWidth} 100%,
-      100% 100%,
-      100% 0%,
-      0% 0%
-    );
-  }
-  25% {
-    clip-path: polygon(
-      0% 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) calc(100% - ${strokeWidth}),
-      calc(100% - ${strokeWidth}) calc(100% - ${strokeWidth}),
-      calc(100% - ${strokeWidth}) 100%,
-      100% 100%,
-      100% 0%,
-      0% 0%
-    );
-  }
-  50% {
-    clip-path: polygon(
-      0% 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      calc(100% - ${strokeWidth}) ${strokeWidth},
-      100% 0%,
-      0% 0%
-    );
-  }
-  75% {
-    -webkit-clip-path: polygon(
-      0% 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} ${strokeWidth},
-      ${strokeWidth} 0%,
-      0% 0%
-    );
-  }
-  100% {
-    -webkit-clip-path: polygon(
-      0% 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      ${strokeWidth} 100%,
-      0% 100%
-    );
+export const rotate = keyframes`
+  to {
+    --angle: 360deg;
   }
 `;
