@@ -29,5 +29,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     res.status(200).json(user);
     return;
   }
-  res.status(405).json({ 'error': 'cannot handle GET method' });
+  res.status(405).json({ 'error': `cannot handle ${req.method} method` });
 }
