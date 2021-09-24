@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from "styled-components";
-import { hoverAnimation, rippleAnimation } from "@UI/animations";
+import { rippleAnimation } from "@UI/animations";
 import type { IButtonProps } from ".";
 
 export type IButtonStyleProps = IButtonProps;
@@ -7,17 +7,33 @@ export type IButtonStyleProps = IButtonProps;
 const buttonStylesModifiers = (theme: DefaultTheme) => ({
   size: {
     small: css`
-      height: 35px;
-      padding: 6px 12px;
+      padding: 6px 20px;
       font-size: 0.9rem;
-      letter-spacing: 0;
     `,
     regular: css`
-      height: 45px;
+      height: 55px;
     `,
     large: css`
-      height: 55px;
+      padding: 15px 45px;
       font-size: ${theme.font.sizes.medium};
+    `,
+  },
+  color: {
+    primary: css`
+      background-image: linear-gradient(
+        to right,
+        #ff8520 0%,
+        #ff7300 51%,
+        #f14745 100%
+      );
+    `,
+    secondary: css`
+      background-image: linear-gradient(
+        to right,
+        #f7971e 0%,
+        #ffd200 51%,
+        #f7971e 100%
+      );
     `,
   },
   shadow: css`
@@ -34,27 +50,37 @@ export const Button = styled.button<IButtonStyleProps>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
+    margin: 5px;
+    padding: 12px 30px;
+
     color: ${theme.colors.darkGray};
     font-size: ${theme.font.sizes.base};
     font-weight: ${theme.font.weight.semiBold};
     letter-spacing: 1px;
+    text-align: center;
     text-transform: uppercase;
+
     border: none;
-    background: ${theme.colors[color]};
+    outline: none;
+    background-size: 200% auto;
+
     cursor: pointer;
     user-select: none;
     overflow: hidden;
-    transition: 0.25s;
 
+    transition: all 0.2s;
+    transition: background 0.5s;
+
+    &:hover {
+      background-position: right center;
+      text-decoration: none;
+    }
+
+    ${size && buttonStylesModifiers(theme).color[color]};
     ${size && buttonStylesModifiers(theme).size[size]};
     ${fullWidth && buttonStylesModifiers(theme).fullWidth};
     ${shadow && buttonStylesModifiers(theme).shadow};
 
-    ${rippleAnimation(color)}
-    ${hoverAnimation({
-      strokeWidth: "4px",
-      position: "-1px",
-    })}
+    ${rippleAnimation(color)};
   `}
 `;

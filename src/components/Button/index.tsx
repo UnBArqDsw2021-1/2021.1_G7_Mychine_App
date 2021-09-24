@@ -18,7 +18,7 @@ const Button = ({ children, ...props }: IButtonProps) => {
     color = "primary",
     size = "regular",
     icon,
-    shadow,
+    shadow = true,
     fullWidth,
     minimal,
   } = props;

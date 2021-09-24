@@ -11,6 +11,12 @@ export const HeroContainer = styled.div`
   gap: 10rem;
   overflow: hidden;
 
+  /* Enable GPU Rendering */
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
   @media (max-width: 800px) {
     gap: 4rem;
   }
@@ -26,6 +32,7 @@ export const HeroContainer = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: brightness(0.8);
     pointer-events: none;
     z-index: -2;
     transition: all 45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -43,19 +50,26 @@ export const HeroContainer = styled.div`
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     pointer-events: none;
-    background-image: radial-gradient(
-      circle,
-      rgba(34, 34, 34, 0.5018382352941176) 40%,
-      rgba(3, 3, 3, 0.7987570028011204) 100%
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.6502976190476191) 0%,
+      rgba(34, 34, 34, 0.35057773109243695) 100%
     );
     background-size: cover;
     z-index: -1;
+    transition: all 40s linear;
   }
 
   &:hover {
     &:before {
       transform: scale(1.15);
-      transition: all 45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transition: all 60s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+
+    &:after {
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
     }
   }
 `;

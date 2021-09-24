@@ -15,7 +15,7 @@ const rippleAnimation = (color: Color = "primary") => css`
       position: absolute;
       border-radius: 50%;
       transform: scale(0);
-      animation: ${ripple} 0.6s linear;
+      animation: ${ripple} 0.9s linear;
       background-color: ${theme.colors[color]};
       mix-blend-mode: screen;
       pointer-events: none;

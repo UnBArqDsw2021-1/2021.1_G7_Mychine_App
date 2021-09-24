@@ -19,6 +19,7 @@ export const SearchBar = styled.div`
       color: white;
       font-size: ${theme.font.sizes.medium};
       padding: 0 1rem;
+      margin-right: 5px;
       background-color: transparent;
       border: none;
       outline: none;

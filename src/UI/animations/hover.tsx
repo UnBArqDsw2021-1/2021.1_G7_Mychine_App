@@ -26,6 +26,7 @@ const hoverAnimation = ({
 
     border-image-slice: 1;
     --angle: 0deg;
+    z-index: 2;
   }
 
   &:before {
@@ -50,9 +51,9 @@ const hoverAnimation = ({
     border-image: conic-gradient(
         from var(--angle),
         #ef4647,
-        #ff6600,
+        #eb6a00,
         #ff8520,
-        #ffae00,
+        #ffa600,
         #ef4647
       )
       /* source */ 1 / /* slice */ ${strokeWidth} 0px 0px ${strokeWidth} /
@@ -63,9 +64,9 @@ const hoverAnimation = ({
     border-image: conic-gradient(
         from var(--angle),
         #ef4647,
-        #ff6600,
+        #eb6a00,
         #ff8520,
-        #ffae00,
+        #ffa600,
         #ef4647
       )
       /* source */ 1 / /* slice */ 0px ${strokeWidth} ${strokeWidth} 0px /
@@ -73,12 +74,12 @@ const hoverAnimation = ({
   }
 
   &:hover:before {
-    transition: height 0.15s ease-in, width 0.1s ease-in 0.15s;
+    transition: height 0.11s ease-in, width 0.1s ease-in 0.11s;
   }
 
   &:hover:after {
-    transition: height 0.15s ease-in 0.25s, width 0.1s ease-in 0.4s,
-      opacity 0s linear 0.3s;
+    transition: height 0.11s ease-in 0.21s, width 0.1s ease-in 0.32s,
+      opacity 0s linear 0.22s;
   }
 
   @property --angle {
