@@ -19,7 +19,7 @@ model user {
   cpf       String?
   isAdm     Boolean
   createdAt DateTime  @default(now())
-  updatedAt DateTime
+  updatedAt DateTime?
   address   address[]
   rent      rent[]
 }
