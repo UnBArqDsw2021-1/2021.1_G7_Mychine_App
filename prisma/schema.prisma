@@ -17,7 +17,7 @@ model user {
   name      String
   phone     String
   cpf       String?
-  isAdm     Boolean
+  isAdm     Boolean   @default(false)
   createdAt DateTime  @default(now())
   updatedAt DateTime?
   address   address[]
