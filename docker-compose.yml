@@ -1,16 +1,25 @@
 version: '3'
 
 services:
- db:
-    container_name: mychinedb
+  db:
+    container_name: "mychinedb"
     image: 'mysql:8'
     env_file: .env
     ports:
       - "3307:3306"
     volumes:
-      - ./database-config.sh:/docker-entrypoint-initdb.d/database-config.sh
+      - ./docker/database-config.sh:/docker-entrypoint-initdb.d/database-config.sh
 
-networks:
-  default:
-    external:
-      name: mychine-network
+  mychineapp:
+    container_name: "mychineapp"
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    image: mychine_image
+    env_file: .env
+
+    volumes:
+      - ./:/www/
+    ports:
+      - "3000:3000"
+
