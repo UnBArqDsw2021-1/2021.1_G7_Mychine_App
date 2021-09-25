@@ -31,11 +31,11 @@ jobs:
       - name: 🧰 Install dependencies
         run: yarn install
 
-      - name: 📦 Build project
-        run: yarn build
-
       - name: 🧹 Run lint
         run: yarn lint
+
+      - name: 📦 Build project
+        run: yarn build
 
       # - name: 🐛 Run tests
       #   run: npm run test
