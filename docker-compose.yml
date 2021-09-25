@@ -15,11 +15,12 @@ services:
     build:
       dockerfile: docker/Dockerfile
       context: .
-    image: mychine_image
+    # image: mychine_image
     env_file: .env
 
     volumes:
-      - ./:/www/
+      - './:/www/'
+      - '/www/node_modules'
     ports:
       - "3000:3000"
 
