@@ -1,3 +1,5 @@
+[![Main workflow](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml/badge.svg)](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml)
+
 # RepositorioTemplate
 Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
 Demais diretrizes sobre a organização da wiki constam no Moodle Aprender 3.
