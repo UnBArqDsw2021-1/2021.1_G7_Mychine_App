@@ -21,7 +21,7 @@ const Register = (props: IRegisterProps) => {
     };
   }, [pageTransitionReadyToEnter]);
 
-  // if (!loaded) return null;
+  if (!loaded) return null;
 
   return (
     <div style={{ marginTop: "200px", display: "flex" }}>
