@@ -1,7 +1,7 @@
 
-# 2021.1_G7_Mychine_App
-
 [![Main workflow](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml/badge.svg)](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml)
+
+# 2021.1_G7_Mychine_App
 
 **Código da Disciplina**: FGA0208<br>
 **Número do Grupo**: 07<br>
