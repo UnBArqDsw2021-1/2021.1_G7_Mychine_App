@@ -39,24 +39,19 @@ Adicione o(s)s vídeo(s) da Entrega Final.
 (X) SIM
 ( ) NÃO
 
-* Execulta o container do banco de dados
+* Builda as imagens da aplicação
 ```bash
-docker-compose up -d db
+docker-compose build
 ```
 
-* Instalar dependências da aplicação
+* Executa os containers da aplicação
 ```bash
-yarn install
+docker-compose up
 ```
 
-* Execulta a migration inicial da aplicação
+* Execulta as migrations iniciais da aplicação
 ```bash
-yarn prisma migrate dev
-```
-
-* Inicia a aplicação em modo de desenvolvimento
-```bash
-yarn dev
+docker exec mychineapp yarn prisma migrate dev
 ```
 
 ## Informações Complementares 
