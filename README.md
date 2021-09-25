@@ -1,65 +1,70 @@
-[![Main workflow](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml/badge.svg)](https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App/actions/workflows/main.yml)
-
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-Demais diretrizes sobre a organização da wiki constam no Moodle Aprender 3.
-
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(NomeDoProjeto)*. !!** 
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2021.1_G1_ProjetoPandora*. !!** 
- 
- (Apague essa seção)
-
-# Nome do Projeto
+# 2021.1_G7_Mychine_App
 
 **Código da Disciplina**: FGA0208<br>
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 07<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
-## Sobre 
-Descreva o seu projeto em linhas gerais. 
+| Matrícula  | Aluno                           |
+| ---------- | ------------------------------- |
+| 18/0106970 | Matheus Gabriel Alves Rodrigues |
+| 18/0113151 | Eduardo Nunes Picolo            |
+| 17/0011267 | Giovanna Borges Bottino         |
+| 18/0122258 | Igor Queiroz Lima               |
+| 18/0042238 | João Gabriel de Matos           |
+| 18/0124498 | Kess Jhones Gomes Tavares       |
+| 18/0129287 | Pedro Henrique Vieira de Lima   |
+| 14/0065547 | Roberto Martins da Nóbrega      |
+| 18/0130722 | Samuel Nogueira Bacelar         |
 
-## Screenshots Primeira Entrega <<FOCO: DSW(Base)>>
-Adicione 2 ou mais screenshots do projeto em termos de artefatos da Primeira Entrega.
+## Sobre
 
-## Vídeo(s) Primeira Entrega <<FOCO: DSW(Base)>>
-Adicione o(s)s vídeo(s) da Primeira Entrega.
-
-## Screenshots Segunda Entrega <<FOCO: DSW(Modelagem)>>
-Adicione 2 ou mais screenshots do projeto em termos de artefatos da Segunda Entrega.
-
-## Vídeo(s) Segunda Entrega <<FOCO: DSW(Modelagem)>>
-Adicione o(s)s vídeo(s) da Segunda Entrega.
-
-## Screenshots Terceira Entrega <<FOCO: DSW(Padrões de Projeto)>>
-Adicione 2 ou mais screenshots do projeto em termos de artefatos da Terceira Entrega.
-
-## Vídeo(s) Terceira Entrega <<FOCO: DSW(Padrões de Projeto)>>
-Adicione o(s)s vídeo(s) da Terceira Entrega.
+Uma aplicação web chamada Mychine, permite alugar equipamentos como pequenos tratores, cavadeiras e outros materiais tipicamente utilizados na construção civil. Todo o processo de aluguel é feito de forma online facilitando o serviço para o locatários e o locadores.
 
 ## Screenshots Quarta Entrega (FINAL) <<FOCOS: Arquitetura & Reutilização de Software & PROJETO FINAL>>
+
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Vídeo(s) Quarta Entrega (FINAL) <<FOCOS: Arquitetura & Reutilização de Software & PROJETO FINAL>>
+
 Adicione o(s)s vídeo(s) da Entrega Final.
 
-## Descritivo dos Principais Aspectos Técnicos 
-**Principal(is) Metodologia(s) Adotada(s)**: xxxxxx<br>
-**Principais Linguagens Utilizadas e/ou Pretendidas**: xxxxxx<br>
-**Principais Tecnologias Utilizadas e/ou Pretendidas**: xxxxxx<br>
-**Principal(is) Estilo(s) Arquitetural(is) Adotado(s)**: xxxxxx<br>
+## Descritivo dos Principais Aspectos Técnicos
+
+**Principal(is) Metodologia(s) Adotada(s)**: Scrum e Kanban<br>
+**Principais Linguagens Utilizadas e/ou Pretendidas**: Typescript<br>
+**Principais Tecnologias Utilizadas e/ou Pretendidas**: NextJS<br>
+**Principal(is) Estilo(s) Arquitetural(is) Adotado(s)**: Cliente-Servidor<br>
 
 ## O Projeto está rodando?
-( ) SIM
-( ) NÃO
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados em consultar o projeto.
 
-## Informações Complementares 
+(X) SIM
+( ) NÃO
+
+- Execulta o container do banco de dados
+
+```bash
+docker-compose up -d db
+```
+
+- Instalar dependências da aplicação
+
+```bash
+yarn install
+```
+
+- Execulta a migration inicial da aplicação
+
+```bash
+yarn prisma migrate dev
+```
+
+- Inicia a aplicação em modo de desenvolvimento
+
+```bash
+yarn dev
+```
+
+## Informações Complementares
+
 Quaisquer outras informações sobre seu projeto podem ser descritas nessa seção.
