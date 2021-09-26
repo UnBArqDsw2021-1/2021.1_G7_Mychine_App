@@ -5,6 +5,7 @@ MAINTAINER matheuscoding@gmail.com
 WORKDIR /www
 
 COPY package*.json ./
+COPY prisma ./prisma/
 
 RUN yarn install
 
