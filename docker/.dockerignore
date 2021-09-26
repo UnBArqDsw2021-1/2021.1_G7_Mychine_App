@@ -1,4 +1,1 @@
-# By default, ignore everything
-*
-# Add exception for the directories you actually want to include in the context
-!../
+node_modules
