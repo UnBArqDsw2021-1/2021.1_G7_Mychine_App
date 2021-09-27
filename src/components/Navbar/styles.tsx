@@ -67,7 +67,7 @@ export const Links = styled.div`
   `}
 `;
 
-export const CustomLink = styled.a<{ highlight: boolean }>`
+export const CustomLink = styled.a<{ highlight?: boolean }>`
   ${({ theme, highlight }) => css`
     position: relative;
     display: flex;
