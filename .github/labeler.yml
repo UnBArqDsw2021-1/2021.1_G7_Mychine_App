@@ -1,0 +1,8 @@
+enhancement:
+- 'src/**/*'
+
+front-end:
+- '!src/pages/api/*'
+
+back-end:
+- 'src/pages/api/*'
