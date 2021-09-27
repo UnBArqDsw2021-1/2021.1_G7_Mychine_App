@@ -50,17 +50,16 @@ export const Button = styled.button<IButtonStyleProps>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
     padding: 12px 30px;
 
-    color: ${theme.colors.darkGray};
+    color: white;
     font-size: ${theme.font.sizes.base};
     font-weight: ${theme.font.weight.semiBold};
-    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
 
     border: none;
+    border-radius: 5px;
     outline: none;
     background-size: 200% auto;
 
