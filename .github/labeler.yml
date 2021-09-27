@@ -1,0 +1,12 @@
+enhancement:
+- 'src/**/*'
+
+front-end:
+- any: ['src/**/*']
+  all: ['!src/pages/api/*', '!src/controllers/*', '!src/models/*']
+
+back-end:
+- 'src/pages/api/*'
+- 'src/models/*'
+- 'src/controllers/*'
+
