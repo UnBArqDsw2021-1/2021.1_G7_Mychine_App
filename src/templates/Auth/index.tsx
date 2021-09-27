@@ -11,7 +11,7 @@ const AuthTemplate = ({ children }: IAuthTemplateProps) => (
   <S.AuthContainer>
     <S.Container>
       <S.HeroImage>
-        <Image src="/img/hero.jpg" layout="fill" objectFit="cover" />
+        <Image src="/img/loginHero.jpg" layout="fill" objectFit="cover" />
       </S.HeroImage>
       <S.FormContainer>
         <Link href="/" passHref>
