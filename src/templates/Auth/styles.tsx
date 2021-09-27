@@ -1,0 +1,98 @@
+import styled, { css } from "styled-components";
+
+export const AuthContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    337deg,
+    rgb(248 212 182 / 55%) 0.5%,
+    rgb(192 198 230 / 50%) 49%,
+    rgb(225 246 240 / 30%) 99.8%
+  );
+`;
+
+export const Container = styled.div`
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    grid-template-areas: "hero form";
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: ${theme.shadows.large};
+    background-color: white;
+  `}
+`;
+
+export const HeroImage = styled.div`
+  position: relative;
+  grid-area: hero;
+  min-width: 500px;
+
+  &,
+  & img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+`;
+
+export const FormContainer = styled.div`
+  ${({ theme }) => css`
+    grid-area: form;
+    padding: calc(${theme.spacings.medium} * 2) ${theme.spacings.xlarge};
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: white;
+  `}
+`;
+
+export const Logo = styled.h6`
+  ${({ theme }) => css`
+    font-weight: ${theme.font.weight.semiBold};
+    font-size: ${theme.font.sizes.medium};
+    margin: 0;
+    background: linear-gradient(
+      to right,
+      #ff8520 0%,
+      #f14745 51%,
+      #f14745 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  `}
+`;
+
+export const Header = styled.div`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.medium} 0;
+
+    h1 {
+      line-height: 1;
+      margin-bottom: ${theme.spacings.small};
+    }
+
+    p {
+      color: ${theme.colors.darkGray400};
+    }
+  `}
+`;
+
+export const Redirect = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.darkGray400};
+    margin-top: ${theme.spacings.large};
+    text-align: center;
+
+    span {
+      color: ${theme.colors.primary};
+      font-weight: ${theme.font.weight.medium};
+      margin-left: 2px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  `}
+`;

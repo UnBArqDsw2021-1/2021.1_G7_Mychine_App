@@ -1,10 +1,6 @@
 import Hero from "components/Hero";
 import type { NextPage } from "next";
 
-const Home: NextPage = () => (
-  <div>
-    <Hero />
-  </div>
-);
+const Home: NextPage = () => <Hero />;
 
 export default Home;
