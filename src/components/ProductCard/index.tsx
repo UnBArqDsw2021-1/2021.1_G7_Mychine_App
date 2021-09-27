@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import * as S from "./styles";
 
 export interface CardProps {

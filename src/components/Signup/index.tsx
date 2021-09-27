@@ -1,11 +1,10 @@
-import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
+import Button from "components/Button";
 import Form from "components/Form";
 import Input from "components/FormFields/Input";
-import Button from "@components/Button";
+import { Header, Redirect } from "templates/Auth/styles";
+import * as Yup from "yup";
 
-import { Header, Redirect } from "@templates/Auth/styles";
 import * as S from "./styles";
 
 interface FormFields {

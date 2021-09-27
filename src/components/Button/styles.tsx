@@ -1,5 +1,6 @@
 import styled, { css, DefaultTheme } from "styled-components";
-import { rippleAnimation } from "@UI/animations";
+import { rippleAnimation } from "UI/animations";
+
 import type { IButtonProps } from ".";
 
 export type IButtonStyleProps = IButtonProps;

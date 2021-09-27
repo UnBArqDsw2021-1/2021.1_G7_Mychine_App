@@ -1,5 +1,5 @@
-import AuthTemplate from "templates/Auth";
 import SignupForm from "components/Signup";
+import AuthTemplate from "templates/Auth";
 
 const Signup = () => {
   return (

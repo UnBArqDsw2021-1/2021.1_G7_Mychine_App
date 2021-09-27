@@ -1,5 +1,6 @@
-import { useForm } from "react-hook-form";
 import Button from "components/Button";
+import { useForm } from "react-hook-form";
+
 import * as S from "./styles";
 
 const SearchBar = () => {

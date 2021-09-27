@@ -1,16 +1,26 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import styled, { css } from "styled-components";
+import blurEffect from "UI/images/blur";
 
 export const AuthContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: linear-gradient(
-    337deg,
-    rgb(248 212 182 / 55%) 0.5%,
-    rgb(192 198 230 / 50%) 49%,
-    rgb(225 246 240 / 30%) 99.8%
-  );
+  ${({ theme }) => css`
+    --border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: ${theme.spacings.xlarge} 0;
+    background-image: linear-gradient(
+      337deg,
+      rgb(248 212 182 / 55%) 0.5%,
+      rgb(192 198 230 / 50%) 49%,
+      rgb(225 246 240 / 30%) 99.8%
+    );
+
+    @media (max-width: 600px) {
+      padding: ${theme.spacings.large} 0;
+    }
+  `}
 `;
 
 export const Container = styled.div`
@@ -18,31 +28,55 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 0.65fr;
     grid-template-areas: "hero form";
-    width: 70%;
-    border-radius: 20px;
+    width: 90%;
+    max-width: 1440px;
+    border-radius: var(--border-radius);
     box-shadow: ${theme.shadows.large};
     background-color: white;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 0.9fr;
+
+      ${FormContainer} {
+        padding: calc(${theme.spacings.medium}) ${theme.spacings.large};
+      }
+    }
+
+    @media (max-width: 600px) {
+      grid-template-areas: "form form";
+
+      ${FormContainer} {
+        padding: calc(${theme.spacings.medium}) ${theme.spacings.large};
+      }
+    }
   `}
 `;
 
 export const HeroImage = styled.div`
   position: relative;
   grid-area: hero;
-  min-width: 500px;
+  /* min-width: 500px; */
 
   &,
   & img {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
   }
+
+  &:after,
+  &:before {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+  }
+  ${blurEffect()};
 `;
 
 export const FormContainer = styled.div`
   ${({ theme }) => css`
     grid-area: form;
     padding: calc(${theme.spacings.medium} * 2) ${theme.spacings.xlarge};
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
     background-image: white;
   `}
 `;
@@ -60,6 +94,8 @@ export const Logo = styled.h6`
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
   `}
 `;
 

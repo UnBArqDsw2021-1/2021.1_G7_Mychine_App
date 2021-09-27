@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+
 import type { ILoaderProps } from ".";
 
 export const spin = keyframes`

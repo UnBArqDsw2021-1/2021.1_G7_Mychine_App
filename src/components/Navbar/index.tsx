@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaUserCircle } from "react-icons/fa";
+
 import Logo from "../../../public/img/logo.svg";
 import * as S from "./styles";
 

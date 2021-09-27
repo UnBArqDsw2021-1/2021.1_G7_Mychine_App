@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
 import sha3 from "crypto-js/sha3";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 type User = {
   email: string;
