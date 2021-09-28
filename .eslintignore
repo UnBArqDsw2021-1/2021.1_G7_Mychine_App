@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+#fodase o lint
+/src/controllers
+
 # production
 /build
 
