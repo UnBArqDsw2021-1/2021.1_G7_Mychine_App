@@ -1,11 +1,12 @@
-import Button from "components/Button";
-import Image from "next/image";
-import Link from "next/link";
-import { signOut, useSession } from "next-auth/client";
-import { FaUserCircle } from "react-icons/fa";
+import Image from 'next/image';
+import Link from 'next/link';
+import { signOut, useSession } from 'next-auth/client';
+import { FaUserCircle } from 'react-icons/fa';
 
-import Logo from "../../../public/img/logo.svg";
-import * as S from "./styles";
+import Button from '@components/Button';
+import Logo from '@public/img/logo.svg';
+
+import * as S from './styles';
 
 const Navbar = () => {
   const [session] = useSession();

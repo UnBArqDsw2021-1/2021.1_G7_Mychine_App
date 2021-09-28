@@ -1,7 +1,6 @@
-import { BaseController } from "./baseController";
-
-import { UserCreate, UserUpdate } from "../models/User";
-import { PrismaClient, user } from ".prisma/client";
+import { PrismaClient, user } from '@prisma/client';
+import { UserCreate, UserUpdate } from '@models/User';
+import { BaseController } from './baseController';
 
 export class UserController extends BaseController {
   async get(db: PrismaClient, id): Promise<user> {

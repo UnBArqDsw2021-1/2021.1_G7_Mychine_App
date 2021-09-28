@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import { css, keyframes } from "styled-components";
+import { css, keyframes } from 'styled-components';
 
 export interface IHoverProps {
   strokeWidth?: string;
   position?: string;
-  pseudoElement?: "before" | "after";
+  pseudoElement?: 'before' | 'after';
   blendMode?: string;
 }
 
 const hoverAnimation = ({
-  strokeWidth = "2px",
-  position = "0px",
+  strokeWidth = '2px',
+  position = '0px',
 }: IHoverProps) => css`
   position: relative;
   vertical-align: middle;
@@ -18,7 +18,7 @@ const hoverAnimation = ({
   &:before,
   &:after {
     box-sizing: inherit;
-    content: "";
+    content: '';
     position: absolute;
     border: 1px solid transparent;
     width: 0;
@@ -83,7 +83,7 @@ const hoverAnimation = ({
   }
 
   @property --angle {
-    syntax: "<angle>";
+    syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
   }

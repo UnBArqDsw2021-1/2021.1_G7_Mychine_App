@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { hoverAnimation } from "UI/animations";
+import styled, { css } from 'styled-components';
+import { hoverAnimation } from 'UI/animations';
 
 export const NavbarWrapper = styled.div`
   grid-area: nav;
@@ -91,7 +91,7 @@ export const CustomLink = styled.a<{ highlight?: boolean }>`
     `}
 
     ${hoverAnimation({
-      strokeWidth: "2px",
+      strokeWidth: '2px',
     })}
   `}
 `;

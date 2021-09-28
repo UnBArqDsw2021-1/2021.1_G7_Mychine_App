@@ -1,11 +1,13 @@
-import type { AppProps } from "next/app";
-import Head from "next/head";
-import { Provider } from "next-auth/client";
-import NextNprogress from "nextjs-progressbar";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "styles/global";
-import theme from "styles/theme";
-import BaseTemplate from "templates/Base";
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { Provider } from 'next-auth/client';
+import NextNprogress from 'nextjs-progressbar';
+import { ThemeProvider } from 'styled-components';
+
+import BaseTemplate from '@templates/Base';
+
+import GlobalStyle from '@styles/global';
+import theme from '@styles/theme';
 
 function App({ Component, pageProps, router }: AppProps) {
   return (

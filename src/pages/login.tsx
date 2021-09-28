@@ -1,12 +1,10 @@
-import LoginForm from "components/Login";
-import AuthTemplate from "templates/Auth";
+import LoginForm from '@components/Login';
+import AuthTemplate from '@templates/Auth';
 
-const Login = () => {
-  return (
-    <AuthTemplate>
-      <LoginForm />
-    </AuthTemplate>
-  );
-};
+const Login = () => (
+  <AuthTemplate>
+    <LoginForm />
+  </AuthTemplate>
+);
 
 export default Login;

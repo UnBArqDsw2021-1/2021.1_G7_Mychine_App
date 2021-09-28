@@ -1,6 +1,6 @@
-import SearchBar from "components/SearchBar";
+import SearchBar from '@components/SearchBar';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 const Hero = () => (
   <S.HeroContainer>

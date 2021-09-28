@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import * as S from "./styles";
+import * as S from './styles';
 
 export interface IAuthTemplateProps {
   children: React.ReactNode;
