@@ -3,9 +3,8 @@ import Button from "components/Button";
 import Form from "components/Form";
 import Input from "components/FormFields/Input";
 import { Magic } from "magic-sdk";
-import { useRouter } from "next/router";
 import { signIn } from "next-auth/client";
-import { Header, Redirect } from "templates/Auth/styles";
+import { Header } from "templates/Auth/styles";
 import * as Yup from "yup";
 
 import * as S from "./styles";
@@ -13,6 +12,7 @@ import * as S from "./styles";
 const magic =
   typeof window !== "undefined" &&
   new Magic(process.env.NEXT_PUBLIC_MAGIC_PK || "a", { locale: "pt" });
+
 interface FormFields {
   email: string;
 }
@@ -21,8 +21,7 @@ const schema = Yup.object({
   email: Yup.string().required("Campo obrigatório").email("Email inválido"),
 });
 
-const Signup = () => {
-  const router = useRouter();
+const Login = () => {
   const onSubmit = async ({ email }) => {
     if (!magic) throw new Error(`magic not defined`);
 
@@ -30,14 +29,14 @@ const Signup = () => {
 
     await signIn("credentials", {
       didToken,
-      callbackUrl: router.query.callbackUrl as string,
+      callbackUrl: `${window.location.origin}`,
     });
   };
 
   return (
     <S.Signup>
       <Header>
-        <h1>Inscreva-se</h1>
+        <h1>Login</h1>
         <p>Insira seu email abaixo</p>
       </Header>
       <Form<FormFields>
@@ -56,11 +55,8 @@ const Signup = () => {
           );
         }}
       </Form>
-      <Redirect>
-        Já possui uma conta? <span>Entre</span>
-      </Redirect>
     </S.Signup>
   );
 };
 
-export default Signup;
+export default Login;

@@ -113,22 +113,3 @@ export const Header = styled.div`
     }
   `}
 `;
-
-export const Redirect = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.darkGray400};
-    margin-top: ${theme.spacings.large};
-    text-align: center;
-
-    span {
-      color: ${theme.colors.primary};
-      font-weight: ${theme.font.weight.medium};
-      margin-left: 2px;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  `}
-`;
