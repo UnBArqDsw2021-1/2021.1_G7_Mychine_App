@@ -12,7 +12,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async getOne(db: PrismaClient, args = {}) {
+  async getOne(db: PrismaClient, args = {}): Promise<user> {
     try {
       return await db.user.findFirst(args);
     } catch (e) {
@@ -20,7 +20,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async list(db: PrismaClient, args = {}) {
+  async list(db: PrismaClient, args = {}): Promise<user[]> {
     try {
       return await db.user.findMany(args);
     } catch (e) {
@@ -28,7 +28,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async create(db: PrismaClient, input: UserCreate) {
+  async create(db: PrismaClient, input: UserCreate): Promise<user> {
     try {
       return await db.user.create({ data: input });
     } catch (e) {
@@ -36,7 +36,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async update(db: PrismaClient, input: UserUpdate, id) {
+  async update(db: PrismaClient, input: UserUpdate, id): Promise<user> {
     try {
       return await db.user.update({ data: input, where: { userId: id } });
     } catch (error) {
@@ -44,7 +44,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async delete(db: PrismaClient, id) {
+  async delete(db: PrismaClient, id): Promise<any> {
     try {
       return await db.user.delete({ where: { userId: id } });
     } catch (error) {
