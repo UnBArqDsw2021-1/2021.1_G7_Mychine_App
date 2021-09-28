@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { PrismaClient } from "@prisma/client";
-import { UserController } from "@controllers/userController";
+import { UserController } from "controllers/userController";
 import sha3 from "crypto-js/sha3";
 import type { NextApiRequest, NextApiResponse } from "next";
 
