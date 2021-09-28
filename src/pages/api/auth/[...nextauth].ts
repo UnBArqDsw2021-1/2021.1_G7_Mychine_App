@@ -8,15 +8,15 @@ export default NextAuth({
   session: {
     jwt: true,
   },
-  pages: {
-    signIn: "/login",
-  },
+
   providers: [
     Providers.Credentials({
-      name: "Autentificação",
+      name: "Magic Link",
+
       credentials: {
         didToken: { label: "DID Token", type: "text" },
       },
+
       async authorize({ didToken }) {
         magic.token.validate(didToken);
         const metadata = await magic.users.getMetadataByToken(didToken);
