@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+
 import * as S from "./styles";
 
 export interface ILoaderProps {
@@ -21,7 +22,11 @@ const Loader = ({
 
     for (let s = 0; s < ringSectors; s += 1) {
       sectorsArr.push(
-        <S.Sectors ringSectors={ringSectors} radius={ringRadius} size={size}>
+        <S.Sectors
+          ringSectors={ringSectors}
+          ringRadius={ringRadius}
+          size={size}
+        >
           {text[s] || ""}
         </S.Sectors>
       );

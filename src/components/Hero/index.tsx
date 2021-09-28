@@ -1,4 +1,5 @@
 import SearchBar from "components/SearchBar";
+
 import * as S from "./styles";
 
 const Hero = () => (
