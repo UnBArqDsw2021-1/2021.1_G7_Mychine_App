@@ -1,19 +1,14 @@
+import Button from "components/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { signOut, useSession } from "next-auth/client";
 import { FaUserCircle } from "react-icons/fa";
 
 import Logo from "../../../public/img/logo.svg";
 import * as S from "./styles";
 
 const Navbar = () => {
-  const router = useRouter();
-
-  if (
-    router.pathname.includes("/login") ||
-    router.pathname.includes("/cadastro")
-  )
-    return null;
+  const [session] = useSession();
 
   return (
     <S.NavbarWrapper>
@@ -43,15 +38,26 @@ const Navbar = () => {
           </S.Links>
 
           <S.Links>
-            <Link href="/cadastro" passHref>
-              <S.CustomLink>Registrar-se</S.CustomLink>
-            </Link>
-            <Link href="/" passHref>
-              <S.CustomLink highlight>
+            {!session ? (
+              <Link href="/login" passHref>
+                <S.CustomLink highlight>
+                  <FaUserCircle size={25} />
+                  Entrar
+                </S.CustomLink>
+              </Link>
+            ) : (
+              <Button
+                onClick={() =>
+                  signOut({
+                    redirect: false,
+                    callbackUrl: `${window.location.origin}`,
+                  })
+                }
+              >
                 <FaUserCircle size={25} />
-                Entrar
-              </S.CustomLink>
-            </Link>
+                Sair
+              </Button>
+            )}
           </S.Links>
         </S.NavLinks>
       </S.Navbar>

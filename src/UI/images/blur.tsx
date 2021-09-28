@@ -7,8 +7,6 @@ const blurEffect = () =>
       position: absolute;
       width: 100%;
       height: 100%;
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
       pointer-events: none;
       background: rgb(0, 0, 0);
       background: linear-gradient(

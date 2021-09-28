@@ -32,6 +32,7 @@ export const HeroContainer = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     filter: brightness(0.8);
     pointer-events: none;
     z-index: -2;
