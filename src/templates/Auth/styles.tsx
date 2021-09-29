@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import styled, { css } from "styled-components";
-import blurEffect from "UI/images/blur";
+import styled, { css } from 'styled-components';
+import blurEffect from 'UI/images/blur';
 
 export const AuthContainer = styled.div`
   ${({ theme }) => css`
@@ -27,7 +27,7 @@ export const Container = styled.div`
   ${({ theme }) => css`
     display: grid;
     grid-template-columns: 1fr 0.65fr;
-    grid-template-areas: "hero form";
+    grid-template-areas: 'hero form';
     width: 90%;
     max-width: 1440px;
     border-radius: var(--border-radius);
@@ -43,7 +43,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 600px) {
-      grid-template-areas: "form form";
+      grid-template-areas: 'form form';
 
       ${FormContainer} {
         padding: calc(${theme.spacings.medium}) ${theme.spacings.large};

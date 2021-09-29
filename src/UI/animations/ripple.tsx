@@ -1,6 +1,6 @@
-import { css, keyframes } from "styled-components";
+import { css, keyframes } from 'styled-components';
 
-export type Color = "primary" | "secondary";
+export type Color = 'primary' | 'secondary';
 
 export const ripple = keyframes`
   to {
@@ -9,7 +9,7 @@ export const ripple = keyframes`
   }
 `;
 
-const rippleAnimation = (color: Color = "primary") => css`
+const rippleAnimation = (color: Color = 'primary') => css`
   ${({ theme }) => css`
     & .ripple {
       position: absolute;

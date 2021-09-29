@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
@@ -7,9 +7,9 @@ export const Container = styled.div`
   min-height: 100vh;
 
   grid-template-areas:
-    "nav"
-    "main"
-    "footer";
+    'nav'
+    'main'
+    'footer';
 `;
 
 export const Main = styled.main`

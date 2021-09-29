@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -22,7 +22,7 @@ export const HeroContainer = styled.div`
   }
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     height: 100%;
     width: 100%;
@@ -44,7 +44,7 @@ export const HeroContainer = styled.div`
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -92,7 +92,7 @@ export const HeroTextContainer = styled.h1`
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       width: 25%;
       height: 1px;
@@ -107,7 +107,7 @@ export const HeroTextContainer = styled.h1`
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       width: 25%;
       height: 1px;

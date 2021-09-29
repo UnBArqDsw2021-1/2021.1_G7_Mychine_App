@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
@@ -52,7 +52,7 @@ export const Input = styled.input<{ icon: boolean }>`
     font-size: 1rem;
     color: ${theme.colors.darkGray};
     padding: 7px 0;
-    padding-right: ${icon ? "24px" : "0"}; // icon width;
+    padding-right: ${icon ? '24px' : '0'}; // icon width;
     background: transparent;
     transition: border-color 0.25s;
 
@@ -80,7 +80,7 @@ export const Input = styled.input<{ icon: boolean }>`
       padding-bottom: 6px;
       border-width: 2px;
 
-      &[type="password"] {
+      &[type='password'] {
         font-family: caption;
         letter-spacing: 1px;
 

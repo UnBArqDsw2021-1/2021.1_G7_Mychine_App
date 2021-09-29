@@ -1,14 +1,14 @@
-import { FormHTMLAttributes } from "react";
+import { FormHTMLAttributes } from 'react';
 import {
   FormProvider,
   SubmitHandler,
   useForm,
   UseFormProps,
   UseFormReturn,
-} from "react-hook-form";
+} from 'react-hook-form';
 
 interface FormProps<TFormValues>
-  extends Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit"> {
+  extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit'> {
   form: UseFormProps<TFormValues>;
   children: (methods: UseFormReturn<TFormValues>) => React.ReactNode;
   onSubmit: SubmitHandler<TFormValues>;

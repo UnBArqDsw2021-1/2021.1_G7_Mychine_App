@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { hoverAnimation } from "UI/animations";
+import styled, { css } from 'styled-components';
+import { hoverAnimation } from 'UI/animations';
 
 export const Card = styled.div`
   ${({ theme }) => css`
@@ -56,7 +56,7 @@ export const Content = styled.div`
       display: inline;
 
       &:after {
-        content: ": ";
+        content: ': ';
       }
     }
   }

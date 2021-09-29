@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/prisma/migrations
+/data
 /.pnp
 .pnp.js
 
