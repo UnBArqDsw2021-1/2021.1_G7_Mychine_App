@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from 'styled-components';
 
 const headingStyles = css`
   h1,
@@ -35,8 +35,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    ul[role="list"],
-    ol[role="list"] {
+    ul[role='list'],
+    ol[role='list'] {
       list-style: none;
     }
 

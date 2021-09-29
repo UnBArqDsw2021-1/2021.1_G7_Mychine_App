@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
-import type { ILoaderProps } from ".";
+import type { ILoaderProps } from '.';
 
 export const spin = keyframes`
   from {
@@ -38,7 +38,7 @@ export const Loader = styled.div`
   transform-style: preserve-3d;
 `;
 
-export const Ring = styled.div<{ size: ILoaderProps["size"] }>`
+export const Ring = styled.div<{ size: ILoaderProps['size'] }>`
   ${({ theme, size }) => css`
     transform-style: preserve-3d;
     animation: ${spin} 4s linear infinite;
@@ -53,7 +53,7 @@ export const Ring = styled.div<{ size: ILoaderProps["size"] }>`
 `;
 
 export const transformSectors = (size, ringSectors, ringRadius) => {
-  let cssString = "";
+  let cssString = '';
   for (let s = 2; s <= ringSectors; s += 1) {
     const angle = (360 / ringSectors) * (s - 1);
     cssString = cssString.concat(
@@ -79,7 +79,7 @@ export const Sectors = styled.div<ILoaderProps>`
     transform: translateZ(calc(${ringRadius} * ${sizesMap[size]}));
 
     &:empty:before {
-      content: "";
+      content: '';
       display: inline-block;
       width: 100%;
       height: 100%;

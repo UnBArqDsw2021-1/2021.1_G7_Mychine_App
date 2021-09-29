@@ -1,9 +1,9 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 const blurEffect = () =>
   css`
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;

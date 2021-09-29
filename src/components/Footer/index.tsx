@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from './styles';
 
 const Footer = () => <S.Footer>Footer</S.Footer>;
 
