@@ -56,7 +56,7 @@ model product {
   createdAt       DateTime @default(now())
   updatedAt       DateTime
 
-  cotegory category @relation(fields: [categoryId], references: categoryId)
+  category category @relation(fields: [categoryId], references: categoryId)
   rent     rent[]
 }
 
