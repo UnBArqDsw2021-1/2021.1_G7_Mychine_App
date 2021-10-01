@@ -33,8 +33,9 @@ export class AddressController extends BaseController {
   async create(db, input: AddresCreate) {
     try {
       return await db.address.create({ data: input });
-    } catch (error) {}
-    throw new Error('Não implementado');
+    } catch (e) {
+      throw new Error(`Erro ao criar address ${e}`);
+    }
   }
 
   update(db, input, id) {
