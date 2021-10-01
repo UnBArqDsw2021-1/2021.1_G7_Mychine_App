@@ -60,7 +60,6 @@ export const Button = styled.button<IButtonStyleProps>`
     text-transform: uppercase;
 
     border: none;
-    border-radius: 5px;
     outline: none;
     background-size: 200% auto;
 
