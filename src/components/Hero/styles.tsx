@@ -11,17 +11,11 @@ export const HeroContainer = styled.div`
   gap: 10rem;
   overflow: hidden;
 
-  /* Enable GPU Rendering */
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-
   @media (max-width: 800px) {
     gap: 4rem;
   }
 
-  &:before {
+  /* &:before {
     content: '';
     position: absolute;
     height: 100%;
@@ -41,9 +35,9 @@ export const HeroContainer = styled.div`
     @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
       filter: blur(8px);
     }
-  }
+  } */
 
-  &:after {
+  /* &:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -72,6 +66,58 @@ export const HeroContainer = styled.div`
       -webkit-backdrop-filter: blur(1px);
       backdrop-filter: blur(1px);
     }
+  } */
+`;
+
+export const HeroBackground = styled.div`
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+
+  /* Enable GPU Rendering */
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    backdrop-filter: blur(2px);
+    background-image: linear-gradient(
+      to top,
+      rgba(19, 21, 25, 0.5),
+      rgba(19, 21, 25, 0.5)
+    );
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    z-index: 1;
+
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      filter: blur(8px);
+    }
+  }
+
+  &:after {
+    background-image: url(/img/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 `;
 
