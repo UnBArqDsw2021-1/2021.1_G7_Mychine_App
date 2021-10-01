@@ -12,7 +12,7 @@ export class AddressController extends BaseController {
 
       return user.address;
     } catch (e) {
-      throw new Error(`Erro ao achar um address ${e}`);
+      throw new Error(`Erro ao achar um endereço ${e}`);
     }
   }
 
@@ -22,7 +22,7 @@ export class AddressController extends BaseController {
         where: { userId_cep_number: id },
       });
     } catch (e) {
-      throw new Error(`Erro ao achar um address ${e}`);
+      throw new Error(`Erro ao achar um endereço ${e}`);
     }
   }
 
@@ -34,7 +34,7 @@ export class AddressController extends BaseController {
     try {
       return await db.address.create({ data: input });
     } catch (e) {
-      throw new Error(`Erro ao criar address ${e}`);
+      throw new Error(`Erro ao criar endereço ${e}`);
     }
   }
 
@@ -45,7 +45,7 @@ export class AddressController extends BaseController {
         where: { userId_cep_number: id },
       });
     } catch (e) {
-      throw new Error(`Erro ao atualizar address ${e}`);
+      throw new Error(`Erro ao atualizar endereço ${e}`);
     }
   }
 
@@ -53,7 +53,7 @@ export class AddressController extends BaseController {
     try {
       return await db.address.delete({ where: { userId_cep_number: id } });
     } catch (e) {
-      throw new Error(`Erro ao deletar novo address${e}`);
+      throw new Error(`Erro ao deletar novo endereço ${e}`);
     }
   }
 }
