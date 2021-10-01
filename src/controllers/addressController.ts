@@ -8,12 +8,37 @@ export class AddressController extends BaseController {
       const user = await db.user.findUnique({
         where: { userId: id },
         include: { address: true },
-        // select:{user:false},
       });
 
       return user.address;
     } catch (e) {
       throw new Error(`Erro ao achar um address ${e}`);
     }
+  }
+
+  async getOne(db, args = {}) {
+    try {
+      return await db.address.findUnique({
+        where: { userId_cep_number: args },
+      });
+    } catch (e) {
+      throw new Error(`Erro ao achar um address ${e}`);
+    }
+  }
+
+  list(db, args?) {
+    throw new Error('Não implementado');
+  }
+
+  create(db, input) {
+    throw new Error('Não implementado');
+  }
+
+  update(db, input, id) {
+    throw new Error('Não implementado');
+  }
+
+  delete(db, id) {
+    throw new Error('Não implementado');
   }
 }
