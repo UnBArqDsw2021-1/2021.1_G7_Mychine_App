@@ -30,7 +30,10 @@ export class AddressController extends BaseController {
     throw new Error('Não implementado');
   }
 
-  create(db, input) {
+  async create(db, input: AddresCreate) {
+    try {
+      return await db.address.create({ data: input });
+    } catch (error) {}
     throw new Error('Não implementado');
   }
 
