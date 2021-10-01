@@ -1,6 +1,7 @@
 import { PrismaClient, address, user } from '@prisma/client';
 import { AddresCreate, AddresUpdate } from '@models/Address';
 import { BaseController } from './baseController';
+import { UserUpdate } from '@models/User';
 
 export class AddressController extends BaseController {
   async get(db: PrismaClient, id): Promise<address[]> {
@@ -38,8 +39,15 @@ export class AddressController extends BaseController {
     }
   }
 
-  update(db, input, id) {
-    throw new Error('Não implementado');
+  async update(db, input: AddresUpdate, id): Promise<address> {
+    try {
+      return await db.address.update({
+        data: input,
+        where: { userId_cep_number: id },
+      });
+    } catch (e) {
+      throw new Error(`Erro ao atualizar address ${e}`);
+    }
   }
 
   delete(db, id) {
