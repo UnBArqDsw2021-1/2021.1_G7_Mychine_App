@@ -4,12 +4,12 @@ import * as S from './styles';
 
 const Hero = () => (
   <S.HeroContainer>
-    <S.HeroTextContainer>
-      Obra Mais que Certa<span>Encontre suas máquinas de construção.</span>
-    </S.HeroTextContainer>
-    <S.HeroSearchContainer>
+    <S.Wrapper>
+      <S.HeroTextContainer>
+        Obra Mais que Certa<span>Encontre suas máquinas de construção.</span>
+      </S.HeroTextContainer>
       <SearchBar />
-    </S.HeroSearchContainer>
+    </S.Wrapper>
   </S.HeroContainer>
 );
 

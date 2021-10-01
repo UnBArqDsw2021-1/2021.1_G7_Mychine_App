@@ -1,21 +1,15 @@
 import styled, { css } from 'styled-components';
 
+import blurEffect from '@UI/images/blur';
+
 export const HeroContainer = styled.div`
   position: relative;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  /* justify-content: space-evenly; */
-  gap: 10rem;
   overflow: hidden;
-
-  /* Enable GPU Rendering */
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  z-index: 0;
 
   @media (max-width: 800px) {
     gap: 4rem;
@@ -29,7 +23,7 @@ export const HeroContainer = styled.div`
     left: 0;
     right: 0;
     background-image: url(/img/hero.jpg);
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -43,49 +37,34 @@ export const HeroContainer = styled.div`
     }
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    pointer-events: none;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.6502976190476191) 0%,
-      rgba(34, 34, 34, 0.35057773109243695) 100%
-    );
-    background-size: cover;
-    z-index: -1;
-    transition: all 40s linear;
-  }
+  ${blurEffect};
 
   &:hover {
     &:before {
       transform: scale(1.15);
       transition: all 60s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
-
-    &:after {
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
-    }
   }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
 `;
 
 export const HeroTextContainer = styled.h1`
   ${({ theme }) => css`
     position: relative;
+    width: fit-content;
     color: white;
     font-size: ${theme.font.sizes.huge};
     font-weight: ${theme.font.weight.black};
-    text-shadow: 1px 1px 3px #222222f0;
+    text-shadow: 0px 0px 1px #222222f0;
     cursor: default;
 
     @media (max-width: 800px) {
-      max-width: 90%;
       font-size: 1.8rem;
       font-weight: ${theme.font.weight.bold};
       margin-top: 100px; // ~ navbar height
@@ -128,6 +107,7 @@ export const HeroTextContainer = styled.h1`
       color: ${theme.colors.secondary};
       font-size: ${theme.font.sizes.medium};
       font-weight: ${theme.font.weight.regular};
+      text-shadow: 0;
       letter-spacing: 0.5px;
 
       @media (max-width: 800px) {
@@ -141,5 +121,5 @@ export const HeroTextContainer = styled.h1`
 export const HeroSearchContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 50%;
 `;
