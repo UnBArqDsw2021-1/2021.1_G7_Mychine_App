@@ -1,7 +1,6 @@
 import { PrismaClient, address, user } from '@prisma/client';
 import { AddresCreate, AddresUpdate } from '@models/Address';
 import { BaseController } from './baseController';
-import { UserUpdate } from '@models/User';
 
 export class AddressController extends BaseController {
   async get(db: PrismaClient, id): Promise<address[]> {
@@ -17,21 +16,21 @@ export class AddressController extends BaseController {
     }
   }
 
-  async getOne(db, args = {}) {
+  async getOne(db: PrismaClient, id) {
     try {
       return await db.address.findUnique({
-        where: { userId_cep_number: args },
+        where: { userId_cep_number: id },
       });
     } catch (e) {
       throw new Error(`Erro ao achar um address ${e}`);
     }
   }
 
-  list(db, args?) {
+  list(db: PrismaClient, args?) {
     throw new Error('Não implementado');
   }
 
-  async create(db, input: AddresCreate) {
+  async create(db: PrismaClient, input: AddresCreate): Promise<address> {
     try {
       return await db.address.create({ data: input });
     } catch (e) {
@@ -39,7 +38,7 @@ export class AddressController extends BaseController {
     }
   }
 
-  async update(db, input: AddresUpdate, id): Promise<address> {
+  async update(db: PrismaClient, input: AddresUpdate, id): Promise<address> {
     try {
       return await db.address.update({
         data: input,
@@ -50,7 +49,7 @@ export class AddressController extends BaseController {
     }
   }
 
-  async delete(db, id) {
+  async delete(db: PrismaClient, id) {
     try {
       return await db.address.delete({ where: { userId_cep_number: id } });
     } catch (e) {
