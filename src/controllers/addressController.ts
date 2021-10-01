@@ -26,8 +26,12 @@ export class AddressController extends BaseController {
     }
   }
 
-  list(db: PrismaClient, args?) {
-    throw new Error('Não implementado');
+  async list(db: PrismaClient, args?) {
+    try {
+      return await db.address.findMany();
+    } catch (e) {
+      throw new Error(`Erro ao achar um endereço ${e}`);
+    }
   }
 
   async create(db: PrismaClient, input: AddresCreate): Promise<address> {
