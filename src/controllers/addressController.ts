@@ -50,7 +50,11 @@ export class AddressController extends BaseController {
     }
   }
 
-  delete(db, id) {
-    throw new Error('Não implementado');
+  async delete(db, id) {
+    try {
+      return await db.address.delete({ where: { userId_cep_number: id } });
+    } catch (e) {
+      throw new Error(`Erro ao deletar novo address${e}`);
+    }
   }
 }
