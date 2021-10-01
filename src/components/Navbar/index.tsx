@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { signOut, useSession } from 'next-auth/client';
 import { FaUserCircle } from 'react-icons/fa';
 
@@ -10,6 +11,9 @@ import * as S from './styles';
 
 const Navbar = () => {
   const [session] = useSession();
+  const { pathname } = useRouter();
+
+  if (pathname.includes('login')) return null;
 
   return (
     <S.NavbarWrapper>

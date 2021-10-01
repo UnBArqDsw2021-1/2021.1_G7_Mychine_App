@@ -2,9 +2,10 @@ import { lighten } from 'polished';
 import styled, { css, keyframes } from 'styled-components';
 
 export const Checkbox = styled.div`
-  display: flex;
-  align-items: center;
   position: relative;
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
 `;
 
 export const ScaleIn = keyframes`
@@ -66,13 +67,14 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   ${({ theme }) => css`
+    width: fit-content;
     padding: 0.05rem 0.25rem;
     margin-left: 0.25rem;
     cursor: pointer;
     transition: 0.3s;
 
     &:hover {
-      background-color: ${lighten(0.3, theme.colors.primary)};
+      background-color: ${lighten(0.375, theme.colors.primary)};
     }
   `}
 `;

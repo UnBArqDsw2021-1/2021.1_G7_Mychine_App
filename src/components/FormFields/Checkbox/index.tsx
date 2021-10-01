@@ -18,8 +18,6 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckboxProps>((props, ref) => {
 
   const error = methods?.formState?.errors[name];
 
-  console.log(error);
-
   return (
     <S.Checkbox>
       <S.Input

@@ -3,17 +3,14 @@ import SearchBar from '@components/SearchBar';
 import * as S from './styles';
 
 const Hero = () => (
-  <>
-    <S.HeroContainer>
+  <S.HeroContainer>
+    <S.Wrapper>
       <S.HeroTextContainer>
         Obra Mais que Certa<span>Encontre suas máquinas de construção.</span>
       </S.HeroTextContainer>
-      <S.HeroSearchContainer>
-        <SearchBar />
-      </S.HeroSearchContainer>
-    </S.HeroContainer>
-    <S.HeroBackground />
-  </>
+      <SearchBar />
+    </S.Wrapper>
+  </S.HeroContainer>
 );
 
 export default Hero;
