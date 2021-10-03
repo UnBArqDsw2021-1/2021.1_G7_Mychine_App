@@ -16,7 +16,8 @@
     "baseUrl": "src",
     "paths": {
       "@*": ["*"],
-      "@public/*": ["../public/*"]
+      "@public/*": ["../public/*"],
+      "@prismadb/*": ["../prisma/*"]
     }
   },
   "exclude": ["node_modules", ".next", "out"],
