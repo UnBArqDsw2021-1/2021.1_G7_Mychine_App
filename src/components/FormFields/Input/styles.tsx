@@ -7,10 +7,6 @@ export const InputWrapper = styled.div`
     flex-direction: column;
     gap: 4px;
     margin-bottom: ${theme.spacings.medium};
-
-    &:last-of-type {
-      margin-bottom: calc(${theme.spacings.medium} * 2);
-    }
   `}
 `;
 

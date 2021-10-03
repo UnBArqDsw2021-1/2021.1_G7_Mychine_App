@@ -10,15 +10,9 @@ export const AuthContainer = styled.div`
     align-items: center;
     min-height: 100vh;
     padding: ${theme.spacings.xlarge} 0;
-    background-image: linear-gradient(
-      337deg,
-      rgb(248 212 182 / 55%) 0.5%,
-      rgb(192 198 230 / 50%) 49%,
-      rgb(225 246 240 / 30%) 99.8%
-    );
 
     @media (max-width: 600px) {
-      padding: ${theme.spacings.large} 0;
+      padding: ${theme.spacings.large} ${theme.spacings.base};
     }
   `}
 `;
@@ -26,16 +20,16 @@ export const AuthContainer = styled.div`
 export const Container = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr 0.65fr;
-    grid-template-areas: 'hero form';
-    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'form';
+    /* width: 90%; */
     max-width: 1440px;
     border-radius: var(--border-radius);
     box-shadow: ${theme.shadows.large};
     background-color: white;
 
     @media (max-width: 1024px) {
-      grid-template-columns: 1fr 0.9fr;
+      /* grid-template-columns: 1fr 0.9fr; */
 
       ${FormContainer} {
         padding: calc(${theme.spacings.medium}) ${theme.spacings.large};
@@ -68,7 +62,7 @@ export const HeroImage = styled.div`
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
   }
-  ${blurEffect()};
+  ${blurEffect};
 `;
 
 export const FormContainer = styled.div`
@@ -83,6 +77,7 @@ export const FormContainer = styled.div`
 
 export const Logo = styled.h6`
   ${({ theme }) => css`
+    display: inline-block;
     font-weight: ${theme.font.weight.semiBold};
     font-size: ${theme.font.sizes.medium};
     margin: 0;
@@ -103,13 +98,8 @@ export const Header = styled.div`
   ${({ theme }) => css`
     margin: ${theme.spacings.medium} 0;
 
-    h1 {
-      line-height: 1;
-      margin-bottom: ${theme.spacings.small};
-    }
-
     p {
-      color: ${theme.colors.darkGray400};
+      color: ${theme.colors.lightGray};
     }
   `}
 `;

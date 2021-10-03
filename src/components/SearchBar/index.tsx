@@ -10,7 +10,7 @@ const SearchBar = () => {
   return (
     <S.SearchBar>
       <input {...register('search')} placeholder="" autoComplete="off" />
-      <Button color="secondary" shadow size="large">
+      <Button color="secondary" size="large">
         Buscar
       </Button>
     </S.SearchBar>

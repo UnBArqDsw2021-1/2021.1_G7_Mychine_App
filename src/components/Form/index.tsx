@@ -7,6 +7,8 @@ import {
   UseFormReturn,
 } from 'react-hook-form';
 
+import * as S from './styles';
+
 interface FormProps<TFormValues>
   extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit'> {
   form: UseFormProps<TFormValues>;
@@ -24,9 +26,9 @@ export default function Form<TFormValues>({
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)} {...rest}>
+      <S.Form onSubmit={methods.handleSubmit(onSubmit)} {...rest}>
         {children(methods)}
-      </form>
+      </S.Form>
     </FormProvider>
   );
 }

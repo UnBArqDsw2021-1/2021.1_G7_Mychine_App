@@ -1,21 +1,31 @@
 import { css } from 'styled-components';
 
-const blurEffect = () =>
-  css`
+const blurEffect = css`
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.6502976190476191) 0%,
+      rgba(34, 34, 34, 0.35057773109243695) 100%
+    );
+    background-size: cover;
+    z-index: -1;
+    transition: all 40s linear;
+  }
+
+  &:hover {
     &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: rgb(0, 0, 0);
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(34, 34, 34, 0.25) 100%
-      );
-      background-size: cover;
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
     }
-  `;
+  }
+`;
 
 export default blurEffect;
