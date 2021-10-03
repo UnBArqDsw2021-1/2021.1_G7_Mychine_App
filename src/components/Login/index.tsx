@@ -1,6 +1,5 @@
 import { signIn } from 'next-auth/client';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Magic } from 'magic-sdk';
 import { Header } from 'templates/Auth/styles';
 import * as Yup from 'yup';
 
@@ -9,10 +8,6 @@ import Form from '@components/Form';
 import Input from '@components/FormFields/Input';
 
 import * as S from './styles';
-
-const magic =
-  typeof window !== 'undefined' &&
-  new Magic(process.env.NEXT_PUBLIC_MAGIC_PK || 'a', { locale: 'pt' });
 
 interface FormFields {
   email: string;
@@ -24,14 +19,7 @@ const schema = Yup.object({
 
 const Login = () => {
   const onSubmit = async ({ email }) => {
-    if (!magic) throw new Error('magic not defined');
-
-    const didToken = await magic.auth.loginWithMagicLink({ email });
-
-    await signIn('credentials', {
-      didToken,
-      callbackUrl: `${window.location.origin}`,
-    });
+    await signIn('credentials', { email, password: '123456' });
   };
 
   return (
