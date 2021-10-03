@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const SearchBar = styled.div`
   ${({ theme }) => css`
     display: flex;
-    width: 50%;
+    width: 100%;
     background-color: #dddddd30;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
       rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
@@ -11,7 +11,8 @@ export const SearchBar = styled.div`
     overflow: hidden;
 
     @media (max-width: 600px) {
-      width: 90%;
+      max-width: 90%;
+      font-size: ${theme.font.sizes.base};
     }
 
     & input {
@@ -29,7 +30,7 @@ export const SearchBar = styled.div`
       }
 
       @media (max-width: 600px) {
-        max-width: 200px;
+        margin-right: 0;
         font-size: ${theme.font.sizes.base};
       }
     }

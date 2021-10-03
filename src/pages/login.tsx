@@ -1,10 +1,13 @@
 import LoginForm from '@components/Login';
 import AuthTemplate from '@templates/Auth';
+import PageTemplate from '@templates/Page';
 
 const Login = () => (
-  <AuthTemplate>
-    <LoginForm />
-  </AuthTemplate>
+  <PageTemplate fullWidth>
+    <AuthTemplate>
+      <LoginForm />
+    </AuthTemplate>
+  </PageTemplate>
 );
 
 export default Login;

@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 
 import Button from '@components/Button';
 import Form from '@components/Form';
+import Checkbox from '@components/FormFields/Checkbox';
 import Input from '@components/FormFields/Input';
 
 import * as S from './styles';
@@ -16,10 +17,15 @@ const magic =
 
 interface FormFields {
   email: string;
+  terms: boolean;
 }
 
 const schema = Yup.object({
-  email: Yup.string().required('Campo obrigatório').email('Email inválido'),
+  email: Yup.string().required('').email('Email inválido'),
+  terms: Yup.boolean().oneOf(
+    [true],
+    'Deve aceitar os Termos e Condições de uso'
+  ),
 });
 
 const Login = () => {
@@ -46,8 +52,11 @@ const Login = () => {
       >
         {() => (
           <>
-            <Input label="Email" name="email" autoComplete="on" />
-            <p>Li e aceito os Termos e Condições de Uso</p>
+            <Input name="email" label="Email" autoComplete="off" />
+            <Checkbox
+              name="terms"
+              label="Li e aceito os Termos e Condições de Uso"
+            />
             <Button type="submit" size="large" fullWidth>
               Continuar
             </Button>

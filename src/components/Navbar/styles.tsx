@@ -4,11 +4,15 @@ import { hoverAnimation } from 'UI/animations';
 export const NavbarWrapper = styled.div`
   grid-area: nav;
   grid-column: 1/-1;
+  justify-self: center;
   position: fixed;
+  top: 16px;
   display: block;
   z-index: 1;
-  width: 100%;
-  background: transparent;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: rgb(17 12 46 / 15%) 0px 38px 90px 0px;
+  background: #00000033;
 `;
 
 export const Navbar = styled.div`
@@ -17,6 +21,9 @@ export const Navbar = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding: 0.5rem 4rem;
+
+  position: sticky;
+  top: 0;
 
   @media (max-width: 600px) {
     padding: 0.5rem 1rem;
