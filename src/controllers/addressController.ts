@@ -28,7 +28,7 @@ export class AddressController extends BaseController {
 
   async list(db: PrismaClient, args?) {
     try {
-      return await db.address.findMany();
+      return await db.address.findMany(args);
     } catch (e) {
       throw new Error(`Erro ao achar um endereço ${e}`);
     }
