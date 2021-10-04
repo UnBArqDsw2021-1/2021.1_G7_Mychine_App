@@ -31,7 +31,7 @@ export class ProductController extends BaseController {
     try {
       return await db.product.create({ data: input });
     } catch (e) {
-      throw new Error(`Erro ao criar novo usuário${e}`);
+      throw new Error(`Erro ao criar novo product ${e}`);
     }
   }
 

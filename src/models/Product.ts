@@ -1,5 +1,5 @@
 export interface ProductUpdate {
-  categoryId?: number;
+  category?: number;
   name?: string;
   description?: string;
   price?: number;
@@ -9,12 +9,12 @@ export interface ProductUpdate {
 }
 
 export interface ProductCreate {
-  categoryId: number;
+  category: any;
   name: string;
   description: string;
   price: number;
   image: string;
-  lastMaintenance: Date;
+  lastMaintenance?: Date;
   status: Status;
   updatedAt: Date;
 }
