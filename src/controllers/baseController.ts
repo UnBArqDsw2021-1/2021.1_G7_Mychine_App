@@ -3,11 +3,11 @@ export class BaseController {
     throw new Error('Não implementado');
   }
 
-  getOne(db, args) {
+  getOne(db, args?) {
     throw new Error('Não implementado');
   }
 
-  list(db, args) {
+  list(db, args?) {
     throw new Error('Não implementado');
   }
 
