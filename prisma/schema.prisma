@@ -49,12 +49,12 @@ model product {
   categoryId      Int
   name            String
   description     String
-  lastMaintenance DateTime
+  lastMaintenance DateTime?
   price           Float
   status          status
   image           String
   createdAt       DateTime @default(now())
-  updatedAt       DateTime
+  updatedAt       DateTime? @default(now())
 
   category category @relation(fields: [categoryId], references: categoryId)
   rent     rent[]
