@@ -30,7 +30,7 @@ export const users = [
   {
     email: 'albedo@mail.com',
     password: '12345',
-    name: 'Samuel Nojeira',
+    name: 'Samuel Nogueira',
     phone: '556127351235123',
   },
   {
@@ -48,7 +48,7 @@ export const users = [
   {
     email: 'giovanna@mail.com',
     password: '12345',
-    name: 'Giovanna Bottina',
+    name: 'Giovanna Bottino',
     phone: '556127351235123',
   },
   {
