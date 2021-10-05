@@ -46,7 +46,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "@next/eslint-plugin-next": "^11.1.2",
-    "@types/node": "^16.10.2",
+    "@types/node": "15.14.1",
     "@types/react": "17.0.20",
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
