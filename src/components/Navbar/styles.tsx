@@ -66,10 +66,16 @@ export const NavLinks = styled.div`
 export const Links = styled.div`
   ${({ theme }) => css`
     display: flex;
+    align-items: center;
     gap: ${theme.spacings.large};
+    cursor: pointer;
 
     @media (max-width: 600px) {
       gap: calc(${theme.spacings.large} / 2);
+    }
+
+    svg {
+      color: white;
     }
   `}
 `;

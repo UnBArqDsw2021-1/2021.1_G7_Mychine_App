@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { signOut, useSession } from 'next-auth/client';
 import { FaUserCircle } from 'react-icons/fa';
 
-import Button from '@components/Button';
 import Logo from '@public/img/logo.svg';
 
 import * as S from './styles';
@@ -51,17 +50,15 @@ const Navbar = () => {
                 </S.CustomLink>
               </Link>
             ) : (
-              <Button
+              <FaUserCircle
+                size={35}
                 onClick={() =>
                   signOut({
                     redirect: false,
                     callbackUrl: `${window.location.origin}`,
                   })
                 }
-              >
-                <FaUserCircle size={25} />
-                Sair
-              </Button>
+              />
             )}
           </S.Links>
         </S.NavLinks>

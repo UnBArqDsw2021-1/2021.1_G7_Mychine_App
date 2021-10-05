@@ -20,7 +20,7 @@ export const Label = styled.label`
     position: absolute;
     top: 0;
     display: block;
-    transition: 0.2s;
+    transition: top 0.2s, font-size 0.2s;
     font-size: 0.85rem;
     color: ${theme.colors.darkGray400};
   `}
@@ -96,7 +96,7 @@ export const Input = styled.input<{ icon: boolean }>`
         position: absolute;
         top: 0px;
         display: block;
-        transition: 0.2s;
+        transition: top 0.2s, font-size 0.2s;
         font-size: 0.85rem;
         color: ${theme.colors.primary};
         font-weight: ${theme.font.weight.medium};
