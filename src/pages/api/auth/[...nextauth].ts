@@ -1,26 +1,38 @@
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
-import { Magic } from '@magic-sdk/admin';
-
-const magic = new Magic(process.env.MAGIC_SK);
 
 export default NextAuth({
+  pages: {
+    signIn: '/login',
+  },
+
   session: {
     jwt: true,
   },
 
+  jwt: {
+    secret: process.env.SECRET_KEY,
+  },
+
   providers: [
     Providers.Credentials({
-      name: 'Magic Link',
-
+      name: 'Credentials',
       credentials: {
         didToken: { label: 'DID Token', type: 'text' },
       },
 
-      async authorize({ didToken }) {
-        magic.token.validate(didToken);
-        const metadata = await magic.users.getMetadataByToken(didToken);
-        return { ...metadata };
+      async authorize(credentials) {
+        const res = await fetch(`${process.env.HOST}/api/auth/login`, {
+          method: 'POST',
+          body: JSON.stringify(credentials),
+          headers: { 'Content-Type': 'application/json' },
+        });
+
+        const user = await res.json();
+        if (res.ok && user) {
+          return user;
+        }
+        return null;
       },
     }),
   ],
