@@ -52,7 +52,6 @@ export default NextAuth({
         if (res.ok && user) {
           return user;
         }
-
         throw new Error(user.error);
       },
     }),

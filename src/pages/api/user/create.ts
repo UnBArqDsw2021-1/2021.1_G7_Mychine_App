@@ -17,6 +17,7 @@ export default async function handler(
   if (req.method === 'POST') {
     const userController = new UserController();
     const addresController = new AddressController();
+    console.log(req.body);
     const user: CreateAccount = { ...req.body };
     user.User.password = sha3(user.User.password).toString();
     let createdUser;

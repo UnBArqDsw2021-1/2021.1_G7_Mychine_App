@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { RedirectLink } from '@templates/Auth/styles';
+
 export const Signup = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,5 +22,7 @@ export const Form = styled.form`
       font-weight: ${theme.font.weight.semiBold};
       margin-bottom: ${theme.spacings.small};
     }
+
+    ${RedirectLink};
   `}
 `;

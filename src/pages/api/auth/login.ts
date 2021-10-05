@@ -26,7 +26,7 @@ export default async function handler(
         }
         res.status(400).json({ error: 'Credenciais incorretas' });
       } catch (error) {
-        res.status(500);
+        res.status(500).json({ error });
       }
       break;
     }

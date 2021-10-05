@@ -1,11 +1,11 @@
-import LoginForm from '@components/Signin';
+import SignupForm from '@components/Signup';
 import AuthTemplate from '@templates/Auth';
 import PageTemplate from '@templates/Page';
 
 const Login = () => (
   <PageTemplate fullWidth>
     <AuthTemplate>
-      <LoginForm />
+      <SignupForm />
     </AuthTemplate>
   </PageTemplate>
 );
