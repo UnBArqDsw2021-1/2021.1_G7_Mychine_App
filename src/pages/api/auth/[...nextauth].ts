@@ -1,6 +1,5 @@
 import NextAuth from 'next-auth';
-// eslint-disable-next-line import/no-unresolved
-import CredentialsProvider from 'next-auth/providers/credentials';
+import Providers from 'next-auth/providers';
 
 export default NextAuth({
   session: {
@@ -17,7 +16,7 @@ export default NextAuth({
     secret: process.env.SECRET_KEY,
   },
   providers: [
-    CredentialsProvider({
+    Providers.Credentials({
       // The name to display on the sign in form (e.g. 'Sign in with...')
       name: 'Credentials',
       // The credentials is used to generate a suitable form on the sign in page.
@@ -30,9 +29,6 @@ export default NextAuth({
           placeholder: 'nome de usuário',
         },
         password: { label: 'Password', type: 'password' },
-      },
-      pages: {
-        signIn: '/login',
       },
 
       async authorize(credentials) {
@@ -50,24 +46,10 @@ export default NextAuth({
 
         const user = await res.json();
         if (res.ok && user) {
-          console.log(user);
           return user;
         }
         return null;
       },
     }),
-    // Providers.Credentials({
-    //   name: 'Magic Link',
-
-    //   credentials: {
-    //     didToken: { label: 'DID Token', type: 'text' },
-    //   },
-
-    //   async authorize({ didToken }) {
-    //     magic.token.validate(didToken);
-    //     const metadata = await magic.users.getMetadataByToken(didToken);
-    //     return metadata;
-    //   },
-    // }),
   ],
 });
