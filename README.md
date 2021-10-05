@@ -53,10 +53,24 @@ docker-compose build
 docker-compose up
 ```
 
-- Execulta as migrations iniciais da aplicação
+- Executa as migrations iniciais da aplicação e as seeds
 
 ```bash
-docker exec mychineapp yarn prisma migrate dev
+docker exec mychineapp yarn db-setup
+```
+
+- Caso deseje executar apenas as migrations iniciais depois as seeds execute os seguintes comandos:
+
+**Migrations**
+
+```bash
+docker exec mychineapp yarn prisma migrate dev --skip-seed
+```
+
+**Seeds**
+
+```bash
+docker exec mychineapp yarn prisma db seed
 ```
 
 ## Informações Complementares
