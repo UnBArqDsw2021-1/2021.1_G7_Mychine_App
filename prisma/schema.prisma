@@ -52,9 +52,9 @@ model product {
   lastMaintenance DateTime?
   price           Float
   status          status
-  image           String
+  image           String @db.Text
   createdAt       DateTime @default(now())
-  updatedAt       DateTime? @default(now())
+  updatedAt       DateTime?
 
   category category @relation(fields: [categoryId], references: categoryId)
   rent     rent[]

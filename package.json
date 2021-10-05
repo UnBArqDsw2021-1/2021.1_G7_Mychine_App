@@ -8,7 +8,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --no-cache",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "db-setup": "prisma migrate dev --skip-seed && prisma db seed"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx}": [
@@ -42,6 +46,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "@next/eslint-plugin-next": "^11.1.2",
+    "@types/node": "^16.10.2",
     "@types/react": "17.0.20",
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
@@ -65,6 +70,7 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "prisma": "^3.1.1",
+    "ts-node": "^10.2.1",
     "typescript": "4.4.2"
   }
 }
