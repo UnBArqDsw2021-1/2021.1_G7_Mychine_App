@@ -49,14 +49,14 @@ model product {
   categoryId      Int
   name            String
   description     String
-  lastMaintenance DateTime
+  lastMaintenance DateTime?
   price           Float
   status          status
-  image           String
+  image           String @db.Text
   createdAt       DateTime @default(now())
-  updatedAt       DateTime
+  updatedAt       DateTime?
 
-  cotegory category @relation(fields: [categoryId], references: categoryId)
+  category category @relation(fields: [categoryId], references: categoryId)
   rent     rent[]
 }
 

@@ -1,8 +1,9 @@
-import { useCallback } from "react";
-import * as S from "./styles";
+import { useCallback } from 'react';
+
+import * as S from './styles';
 
 export interface ILoaderProps {
-  size?: "small" | "regular" | "large";
+  size?: 'small' | 'regular' | 'large';
   rings?: number;
   ringSectors?: number;
   ringRadius?: string;
@@ -10,19 +11,23 @@ export interface ILoaderProps {
 }
 
 const Loader = ({
-  size = "regular",
+  size = 'regular',
   rings = 2,
   ringSectors = 38,
-  ringRadius = "4.5rem",
-  text = "Carregando...",
+  ringRadius = '4.5rem',
+  text = 'Carregando...',
 }: ILoaderProps) => {
   const createSectors = useCallback(() => {
     const sectorsArr = [];
 
     for (let s = 0; s < ringSectors; s += 1) {
       sectorsArr.push(
-        <S.Sectors ringSectors={ringSectors} radius={ringRadius} size={size}>
-          {text[s] || ""}
+        <S.Sectors
+          ringSectors={ringSectors}
+          ringRadius={ringRadius}
+          size={size}
+        >
+          {text[s] || ''}
         </S.Sectors>
       );
     }

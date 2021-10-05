@@ -1,12 +1,13 @@
-import Head from "next/head";
-import { PageTransition } from "next-page-transitions";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "styles/global";
-import PageTransitionStyle, { TIMEOUT } from "@UI/animations/pageTransitions";
-import theme from "styles/theme";
-import BaseTemplate from "templates/Base";
-import Loader from "components/Loader";
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { Provider } from 'next-auth/client';
+import NextNprogress from 'nextjs-progressbar';
+import { ThemeProvider } from 'styled-components';
+
+import BaseTemplate from '@templates/Base';
+
+import GlobalStyle from '@styles/global';
+import theme from '@styles/theme';
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -14,22 +15,28 @@ function App({ Component, pageProps, router }: AppProps) {
       <Head>
         <title>Mychine</title>
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <PageTransitionStyle />
-        <BaseTemplate>
-          <PageTransition
-            timeout={TIMEOUT}
-            classNames="page-transition"
-            loadingComponent={<Loader size="large" />}
-            loadingDelay={0}
-            loadingTimeout={0}
-            skipInitialTransition
-          >
+      <Provider session={pageProps.session}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <BaseTemplate>
+            <NextNprogress
+              color="linear-gradient(
+              to right,
+              #fdd017,
+              #FF8520,
+              #EB6A00,
+              #e84049
+            )"
+              startPosition={0.3}
+              stopDelayMs={200}
+              height={3}
+              showOnShallow
+              options={{ showSpinner: false }}
+            />
             <Component {...pageProps} key={router.route} />
-          </PageTransition>
-        </BaseTemplate>
-      </ThemeProvider>
+          </BaseTemplate>
+        </ThemeProvider>
+      </Provider>
     </>
   );
 }

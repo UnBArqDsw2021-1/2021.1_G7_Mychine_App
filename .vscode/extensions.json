@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "jpoissonnier.vscode-styled-components",
-    "Prisma.prisma"
+    "Prisma.prisma",
+    "IronGeek.vscode-env"
   ]
 }

@@ -1,6 +1,7 @@
-import styled, { css, DefaultTheme } from "styled-components";
-import { rippleAnimation } from "@UI/animations";
-import type { IButtonProps } from ".";
+import styled, { css, DefaultTheme } from 'styled-components';
+import { rippleAnimation } from 'UI/animations';
+
+import type { IButtonProps } from '.';
 
 export type IButtonStyleProps = IButtonProps;
 
@@ -50,18 +51,17 @@ export const Button = styled.button<IButtonStyleProps>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
     padding: 12px 30px;
 
-    color: ${theme.colors.darkGray};
+    color: white;
     font-size: ${theme.font.sizes.base};
     font-weight: ${theme.font.weight.semiBold};
-    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
 
     border: none;
     outline: none;
+    border-radius: 0;
     background-size: 200% auto;
 
     cursor: pointer;

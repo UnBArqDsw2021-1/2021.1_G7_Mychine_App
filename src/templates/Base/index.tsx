@@ -1,6 +1,7 @@
-import Navbar from "components/Navbar";
-// import Footer from "components/Footer";
-import * as S from "./styles";
+// import Footer from '@components/Footer';
+import Navbar from '@components/Navbar';
+
+import * as S from './styles';
 
 export interface IBaseTemplateProps {
   children: React.ReactNode;

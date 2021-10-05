@@ -1,16 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const InputWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  & span {
-    position: absolute;
-    top: calc(100%);
-    font-size: 0.9rem;
-    color: red;
-  }
+  ${({ theme }) => css`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: ${theme.spacings.medium};
+  `}
 `;
 
 export const InputGroup = styled.div`
@@ -19,51 +16,107 @@ export const InputGroup = styled.div`
 `;
 
 export const Label = styled.label`
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 0.85rem;
-  color: #9b9b9b;
+  ${({ theme }) => css`
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.85rem;
+    color: ${theme.colors.darkGray400};
+  `}
 `;
 
-export const Input = styled.input`
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid #9b9b9b;
-  outline: 0;
-  font-size: 1rem;
-  color: #222;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-  &::placeholder {
-    color: transparent;
-  }
-  &:placeholder-shown ~ ${Label} {
+export const Icon = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 24px;
+    right: 0;
+    width: 22px;
+    color: ${theme.colors.red};
+  `}
+`;
+
+export const Input = styled.input<{ icon: boolean }>`
+  ${({ theme, icon }) => css`
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid ${theme.colors.lightGray300};
+    outline: 0;
     font-size: 1rem;
-    cursor: text;
-    top: 20px;
-  }
-  &:focus {
-    padding-bottom: 5px;
-    font-weight: 700;
-    border-width: 3px;
-    border-image: linear-gradient(to right, #11998e, #38ef7d);
-    border-image-slice: 1;
-    ~ ${Label} {
-      position: absolute;
-      top: 0px;
-      display: block;
-      transition: 0.2s;
-      font-size: 0.85rem;
-      color: #11998e;
-      font-weight: 700;
+    color: ${theme.colors.darkGray};
+    padding: 7px 0;
+    padding-right: ${icon ? '24px' : '0'}; // icon width;
+    background: transparent;
+    transition: border-color 0.25s;
+
+    &::placeholder {
+      color: transparent;
     }
-  }
-  &:required,
-  &:invalid {
-    box-shadow: none;
-  }
+
+    &:placeholder-shown ~ ${Label} {
+      font-size: 1rem;
+      cursor: text;
+      top: 24px;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-image: linear-gradient(
+        to right,
+        ${theme.colors.primary},
+        ${theme.colors.secondary}
+      );
+      border-image-slice: 1;
+    }
+
+    &:not(:placeholder-shown) {
+      padding-bottom: 6px;
+      border-width: 2px;
+
+      &[type='password'] {
+        font-family: caption;
+        letter-spacing: 1px;
+
+        ~ ${Label} {
+          letter-spacing: 0px;
+          font-family: Roboto;
+        }
+      }
+    }
+
+    &:focus {
+      font-weight: ${theme.font.weight.semiBold};
+      padding-bottom: 5px;
+      border-width: 3px;
+
+      ~ ${Label} {
+        position: absolute;
+        top: 0px;
+        display: block;
+        transition: 0.2s;
+        font-size: 0.85rem;
+        color: ${theme.colors.primary};
+        font-weight: ${theme.font.weight.medium};
+      }
+    }
+
+    &:required,
+    &:invalid {
+      box-shadow: none;
+    }
+  `}
+`;
+
+export const Error = styled.span`
+  ${({ theme }) => css`
+    position: absolute;
+    top: calc(100% + 0.5px);
+    right: 0;
+    color: ${theme.colors.red};
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.weight.light};
+  `}
 `;
