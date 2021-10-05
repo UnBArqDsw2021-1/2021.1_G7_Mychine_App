@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { AddressController } from '@controllers/addressController';
 import { PrismaClient } from '@prisma/client';
+
+import { AddressController } from '@controllers/addressController';
 
 const prisma = new PrismaClient();
 const addressController = new AddressController();

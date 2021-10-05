@@ -1,8 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { UserController } from '@controllers/userController';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import { UserController } from '@controllers/userController';
+
+import prisma from '../../../../prisma/database';
+
 const userController = new UserController();
 export default async function handler(
   req: NextApiRequest,

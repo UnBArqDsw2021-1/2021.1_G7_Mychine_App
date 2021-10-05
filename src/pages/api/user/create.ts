@@ -1,32 +1,41 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { UserController } from '@controllers/userController';
-import { PrismaClient } from '@prisma/client';
 import sha3 from 'crypto-js/sha3';
 
-type User = {
-  email: string;
-  password: string;
-  name: string;
-  phone: string;
-  cpf: string;
-};
+import { AddressController } from '@controllers/addressController';
+import { UserController } from '@controllers/userController';
+import { CreateAccount } from '@models/User';
+
+import prisma from '../../../../prisma/database';
 
 export default async function handler(
+  /* Rota usada para criar uma conta de usuário.
+  Cria as informações relacionadas a um usuário como informações básicas e seu endereço.
+   */
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
   if (req.method === 'POST') {
-    const prisma = new PrismaClient();
     const userController = new UserController();
-    const user: User = { ...req.body };
-    user.password = sha3(user.password).toString();
+    const addresController = new AddressController();
+    const user: CreateAccount = { ...req.body };
+    user.User.password = sha3(user.User.password).toString();
+    let createdUser;
     try {
-      await userController.create(prisma, user);
+      createdUser = await userController.create(prisma, user.User);
+      delete createdUser.password;
     } catch (error) {
       res.status(400).json({ error: 'email already exists' });
       return;
     }
-    res.status(200).json(user);
+    let createdAddress;
+    try {
+      createdAddress = await addresController.create(prisma, user.Address);
+    } catch (error) {
+      res.status(400).json({ error });
+      return;
+    }
+
+    res.status(200).json({ createdUser, createdAddress });
     return;
   }
   res.status(405).json({ error: `cannot handle ${req.method} method` });

@@ -89,7 +89,7 @@ export const Logo = styled.h6`
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    user-select: none;
     cursor: pointer;
   `}
 `;

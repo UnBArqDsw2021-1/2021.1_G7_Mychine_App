@@ -11,9 +11,9 @@ export class UserController extends BaseController {
     }
   }
 
-  async getOne(db: PrismaClient, args = {}): Promise<user> {
+  async getOne(db: PrismaClient, args: any): Promise<user> {
     try {
-      return await db.user.findFirst(args);
+      return await db.user.findUnique(args);
     } catch (e) {
       throw new Error(`Erro ao achar um usuário ${e}`);
     }
