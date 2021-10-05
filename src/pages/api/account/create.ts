@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { AddressController } from '@controllers/addressController';
 import { UserController } from '@controllers/userController';
-
 import prisma from '@prismadb/database';
 
 import { CreateAccount } from '../../../models/User';

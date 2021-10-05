@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import sha3 from 'crypto-js/sha3';
+
 import { AddressController } from '@controllers/addressController';
 import { UserController } from '@controllers/userController';
 import { CreateAccount } from '@models/User';
-import sha3 from 'crypto-js/sha3';
 
-import prisma from '@prismadb/database';
+import prisma from '../../../../prisma/database';
 
 export default async function handler(
   /* Rota usada para criar uma conta de usuário.

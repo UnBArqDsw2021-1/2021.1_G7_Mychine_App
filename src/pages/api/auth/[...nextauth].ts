@@ -15,6 +15,10 @@ export default NextAuth({
   jwt: {
     secret: process.env.SECRET_KEY,
   },
+  pages: {
+    signIn: '/login',
+    error: '/login',
+  },
   providers: [
     Providers.Credentials({
       // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -48,7 +52,8 @@ export default NextAuth({
         if (res.ok && user) {
           return user;
         }
-        return null;
+
+        throw new Error(user.error);
       },
     }),
   ],
