@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { signIn } from 'next-auth/client';
 import { FormProvider, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Header } from 'templates/Auth/styles';
@@ -57,12 +58,17 @@ const Signup = () => {
     try {
       const data = await fetch('/api/user/create', {
         method: 'POST',
-        body: JSON.stringify({ ...formData }),
+        body: JSON.stringify(formData),
       }).then((res) => res.json());
       console.log(data);
       if (data?.error) {
         setError(data?.error);
       } else {
+        await signIn('credentials', {
+          email: formData.email,
+          password: formData.password,
+          redirect: false,
+        });
         router.push('/');
       }
     } catch (e) {
