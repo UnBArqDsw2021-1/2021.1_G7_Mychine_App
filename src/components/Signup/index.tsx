@@ -40,7 +40,7 @@ const schema = Yup.object({
 
 const Signup = () => {
   const router = useRouter();
-  const [error, setError] = useState<string>();
+  const [error, setApiError] = useState<string>();
   const methods = useForm<FormFields>({
     resolver: yupResolver(schema),
     reValidateMode: 'onChange',
@@ -48,12 +48,13 @@ const Signup = () => {
 
   const {
     handleSubmit,
+    setError: setFormError,
     formState: { isSubmitting },
   } = methods;
 
   const onSubmit = async (formData) => {
     if (error) {
-      setError(null);
+      setApiError(null);
     }
     try {
       const data = await fetch('/api/user/create', {
@@ -62,7 +63,8 @@ const Signup = () => {
       }).then((res) => res.json());
       console.log(data);
       if (data?.error) {
-        setError(data?.error);
+        setApiError(data?.error);
+        setFormError('email', { message: 'Email já cadastrado' });
       } else {
         await signIn('credentials', {
           email: formData.email,
