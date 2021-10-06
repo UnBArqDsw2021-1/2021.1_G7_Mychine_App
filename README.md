@@ -41,16 +41,10 @@ Adicione o(s)s vídeo(s) da Entrega Final.
 (X) SIM
 ( ) NÃO
 
-- Builda as imagens da aplicação
-
-```bash
-docker-compose build
-```
-
 - Executa os containers da aplicação
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 
 - Executa as migrations iniciais da aplicação e as seeds
