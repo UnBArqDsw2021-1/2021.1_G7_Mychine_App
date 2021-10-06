@@ -1,5 +1,7 @@
 # 2021.1_G7_Mychine_App
 
+![Vercel](https://vercelbadge.vercel.app/api/UnBArqDsw2021-1/2021.1_G7_Mychine_App?style=for-the-badge)
+
 **Código da Disciplina**: FGA0208<br>
 **Número do Grupo**: 07<br>
 

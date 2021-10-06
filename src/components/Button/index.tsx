@@ -58,7 +58,7 @@ const Button = ({ children, ...props }: IButtonProps) => {
       {...props}
       onClick={handleClick}
     >
-      {children}
+      <span>{children}</span>
     </S.Button>
   );
 };

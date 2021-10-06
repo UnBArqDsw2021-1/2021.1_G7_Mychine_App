@@ -27,7 +27,7 @@ export class UserController extends BaseController {
     }
   }
 
-  async create(db: PrismaClient, input: UserCreate): Promise<user> {
+  async create(db: PrismaClient, input): Promise<user> {
     try {
       return await db.user.create({ data: input });
     } catch (e) {

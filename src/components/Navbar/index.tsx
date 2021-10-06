@@ -12,7 +12,7 @@ const Navbar = () => {
   const [session] = useSession();
   const { pathname } = useRouter();
 
-  if (pathname.includes('login')) return null;
+  if (pathname.includes('login') || pathname.includes('registro')) return null;
 
   return (
     <S.NavbarWrapper>
@@ -43,12 +43,17 @@ const Navbar = () => {
 
           <S.Links>
             {!session ? (
-              <Link href="/login" passHref>
-                <S.CustomLink highlight>
-                  <FaUserCircle size={25} />
-                  Entrar
-                </S.CustomLink>
-              </Link>
+              <>
+                <Link href="/registro" passHref>
+                  <S.CustomLink highlight>Registrar-se</S.CustomLink>
+                </Link>
+                <Link href="/login" passHref>
+                  <S.CustomLink>
+                    <FaUserCircle size={25} />
+                    Entrar
+                  </S.CustomLink>
+                </Link>
+              </>
             ) : (
               <FaUserCircle
                 size={35}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/client';
 import { FormProvider, useForm } from 'react-hook-form';
@@ -7,7 +8,6 @@ import { Header } from 'templates/Auth/styles';
 import * as Yup from 'yup';
 
 import Button from '@components/Button';
-import Checkbox from '@components/FormFields/Checkbox';
 import Input from '@components/FormFields/Input';
 
 import * as S from './styles';
@@ -50,13 +50,14 @@ const Login = () => {
         password,
         redirect: false,
       });
+      console.log(res);
       if (res?.error) {
         setError(res?.error);
       } else {
         router.push('/');
       }
     } catch (e) {
-      // console.log(e);
+      console.log('POHA!: ', e);
     }
   };
 
@@ -71,13 +72,13 @@ const Login = () => {
           {error ? <span>{error}</span> : null}
           <Input name="email" label="Email" autoComplete="off" />
           <Input name="password" label="Senha" type="password" />
-          <Checkbox
-            name="terms"
-            label="Li e aceito os Termos e Condições de Uso"
-          />
           <Button type="submit" size="large" fullWidth>
             {!isSubmitting ? 'Continuar' : 'Aguarde...'}
           </Button>
+          <p>
+            Não possui uma conta?
+            <Link href="/registro">Registre-se</Link>
+          </p>
         </S.Form>
       </FormProvider>
     </S.Signup>

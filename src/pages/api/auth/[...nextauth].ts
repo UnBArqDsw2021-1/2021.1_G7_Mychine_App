@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
 
+import api from '@services/api';
+
 export default NextAuth({
   session: {
     jwt: true,
@@ -42,18 +44,15 @@ export default NextAuth({
         // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
         // You can also use the `req` object to obtain additional parameters
         // (i.e., the request IP address)
-        const res = await fetch(`${process.env.HOST}/api/auth/login`, {
-          method: 'POST',
-          body: JSON.stringify(credentials),
-          headers: { 'Content-Type': 'application/json' },
-        });
-
-        const user = await res.json();
-        if (res.ok && user) {
-          return user;
+        try {
+          const res = await api.post(`/api/auth/login`, { ...credentials });
+          if (res.statusText === 'OK' && res.data) {
+            return res.data;
+          }
+          return null;
+        } catch (error) {
+          throw new Error(error);
         }
-
-        throw new Error(user.error);
       },
     }),
   ],

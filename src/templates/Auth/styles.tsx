@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import styled, { css } from 'styled-components';
-import blurEffect from 'UI/images/blur';
+
+import darkenEffect from '@UI/images/darken';
 
 export const AuthContainer = styled.div`
   ${({ theme }) => css`
@@ -20,16 +21,16 @@ export const AuthContainer = styled.div`
 export const Container = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'form';
-    /* width: 90%; */
+    grid-template-columns: 1fr 0.65fr;
+    grid-template-areas: 'hero form';
+    width: 90%;
     max-width: 1440px;
     border-radius: var(--border-radius);
     box-shadow: ${theme.shadows.large};
     background-color: white;
 
     @media (max-width: 1024px) {
-      /* grid-template-columns: 1fr 0.9fr; */
+      grid-template-columns: 1fr 0.9fr;
 
       ${FormContainer} {
         padding: calc(${theme.spacings.medium}) ${theme.spacings.large};
@@ -62,7 +63,7 @@ export const HeroImage = styled.div`
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
   }
-  ${blurEffect};
+  ${darkenEffect};
 `;
 
 export const FormContainer = styled.div`
@@ -72,6 +73,29 @@ export const FormContainer = styled.div`
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     background-image: white;
+  `}
+`;
+
+export const RedirectLink = css`
+  ${({ theme }) => css`
+    & > p {
+      margin-top: ${theme.spacings.medium};
+      color: ${theme.colors.lightGray};
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        margin-left: ${theme.spacings.xsmall};
+        font-weight: ${theme.font.weight.medium};
+        text-align: center;
+        color: ${theme.colors.primary};
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   `}
 `;
 
