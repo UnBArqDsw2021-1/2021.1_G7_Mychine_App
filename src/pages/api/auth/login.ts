@@ -21,12 +21,13 @@ export default async function handler(
         });
         const hashedPassword = sha3(loggingUser?.password).toString();
         if (hashedPassword === existingUser?.password) {
+          // delete existingUser.password;
           res.status(200).json(existingUser);
           return;
         }
         res.status(400).json({ error: 'Credenciais incorretas' });
       } catch (error) {
-        res.status(500).json({ error });
+        res.status(409).json({ error: 'se fodeu' }); // NÃO RELA!
       }
       break;
     }

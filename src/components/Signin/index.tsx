@@ -50,13 +50,14 @@ const Login = () => {
         password,
         redirect: false,
       });
+      console.log(res);
       if (res?.error) {
         setError(res?.error);
       } else {
         router.push('/');
       }
     } catch (e) {
-      // console.log(e);
+      console.log('POHA!: ', e);
     }
   };
 

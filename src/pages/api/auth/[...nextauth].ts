@@ -44,17 +44,15 @@ export default NextAuth({
         // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
         // You can also use the `req` object to obtain additional parameters
         // (i.e., the request IP address)
-        const user = await api(`/auth/login`, {
-          method: 'POST',
-          body: JSON.stringify(credentials),
-          headers: { 'Content-Type': 'application/json' },
-        });
-
-        // const user = await res.json();
-        if (user) {
-          return user;
+        try {
+          const res = await api.post(`/api/auth/login`, { ...credentials });
+          if (res.statusText === 'OK' && res.data) {
+            return res.data;
+          }
+          return null;
+        } catch (error) {
+          throw new Error(error);
         }
-        throw new Error(user);
       },
     }),
   ],

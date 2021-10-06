@@ -61,7 +61,6 @@ const Signup = () => {
         method: 'POST',
         body: JSON.stringify(formData),
       }).then((res) => res.json());
-      console.log(data);
       if (data?.error) {
         setApiError(data?.error);
         setFormError('email', { message: 'Email já cadastrado' });
