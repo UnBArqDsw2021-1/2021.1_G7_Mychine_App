@@ -92,7 +92,7 @@ export const products = [
     name: 'Placa solar',
     description: 'Placa solar que funciona com o sol',
     price: 500.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
   },
@@ -101,16 +101,17 @@ export const products = [
     name: 'Placa solar - Rosa',
     description: 'Placa solar que funciona com o sol dá cor rosa choque',
     price: 600.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
   },
   {
     categoryId: 1,
     name: 'Gerador de energia movido a energia',
-    description: 'Gere energia consumindo sua propria energia de maneira perpetua',
+    description:
+      'Gere energia consumindo sua propria energia de maneira perpetua',
     price: 50.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
   },
@@ -119,16 +120,17 @@ export const products = [
     name: 'Catavento',
     description: 'Cate seu vento com nosso catavento',
     price: 450.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
   },
   {
     categoryId: 1,
     name: 'Gerador hidraulico',
-    description: 'Gerador hidraulico muito bom para gerar energia com base em água',
+    description:
+      'Gerador hidraulico muito bom para gerar energia com base em água',
     price: 300.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
   },
@@ -136,8 +138,8 @@ export const products = [
     categoryId: 1,
     name: 'Gerador a disel',
     description: 'Gera energia com base em disel',
-    price: 1000.00,
-    status: status.Avaliable,
+    price: 1000.0,
+    status: status.Available,
     image:
       'https://www.taqi.com.br/ccstore/v1/images/?source=/file/v5349520148770145571/products/089446.00-gerador-de-luz-motomil-gasolina-3kva-motor-4-tempos-65hp-monofasico-mg3000cl.jpg&height=1000&width=1000&quality=0.9',
   },
@@ -146,7 +148,7 @@ export const products = [
     name: 'Gerador a Gasolina',
     description: 'Gera energia com base em disel',
     price: 1000.99,
-    status: status.Unavaliable,
+    status: status.Unavailable,
     image:
       'https://www.taqi.com.br/ccstore/v1/images/?source=/file/v5349520148770145571/products/089446.00-gerador-de-luz-motomil-gasolina-3kva-motor-4-tempos-65hp-monofasico-mg3000cl.jpg&height=1000&width=1000&quality=0.9',
   },
@@ -164,7 +166,7 @@ export const products = [
     name: 'Andaime',
     description: 'Andaime para uso geral',
     price: 1000.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://www.locacoesmartins.com.br/wp-content/uploads/2020/07/andaime-torre.jpg',
   },
@@ -173,7 +175,7 @@ export const products = [
     name: 'Andaime eletrico',
     description: 'Andaimer para uso geral, movido a energia',
     price: 800.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://ae01.alicdn.com/kf/Ha993c13e604e49369c001a6ade3d346f8/Andaime-hidr-ulico-da-tesoura-do-andaime-com-ce.jpg_Q90.jpg_.webp',
   },
@@ -182,7 +184,7 @@ export const products = [
     name: 'Andaime com rodinhas',
     description: 'Andaime para uso geral',
     price: 500.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://www.locacoesmartins.com.br/wp-content/uploads/2020/07/andaime-torre.jpg',
   },
@@ -191,7 +193,7 @@ export const products = [
     name: 'Andaime eletrico',
     description: 'Andaimer para uso geral, movido a energia',
     price: 200.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://ae01.alicdn.com/kf/Ha993c13e604e49369c001a6ade3d346f8/Andaime-hidr-ulico-da-tesoura-do-andaime-com-ce.jpg_Q90.jpg_.webp',
   },
@@ -200,7 +202,7 @@ export const products = [
     name: 'Betoneira',
     description: 'Betoneira para mexer o concreto',
     price: 1000.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/21/07/2107045_betoneira-profissional-trifasica-400-litros-com-painel-2cv-220-volts-71000729-csm_m2_637486474279502387.jpg',
   },
@@ -209,7 +211,7 @@ export const products = [
     name: 'Caminhao de mexer concreto',
     description: 'Caminhao todo rosinha para mexer seu concretinho',
     price: 500.99,
-    status: status.Avaliable,
+    status: status.Available,
     image: 'https://abcp.org.br/wp-content/uploads/2019/10/01ciplan.jpg',
   },
   {
@@ -217,7 +219,7 @@ export const products = [
     name: 'Betoneira com rodinhas',
     description: 'Betoneira para mexer o concreto',
     price: 600.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/21/07/2107045_betoneira-profissional-trifasica-400-litros-com-painel-2cv-220-volts-71000729-csm_m2_637486474279502387.jpg',
   },
@@ -226,7 +228,7 @@ export const products = [
     name: 'Caminhao velho',
     description: 'Caminhao todo rosinha para mexer seu concretinho',
     price: 200.99,
-    status: status.Unavaliable,
+    status: status.Unavailable,
     image: 'https://abcp.org.br/wp-content/uploads/2019/10/01ciplan.jpg',
   },
   {
@@ -234,7 +236,7 @@ export const products = [
     name: 'Caminhao compactador - Rosa',
     description: 'Caminhao todo rosinha para compactar seu lixo',
     price: 1000.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://img.r7.com/images/2016/10/12/nkxtqrdl3_6qr77l5nqf_file?dimensions=460x305',
   },
@@ -243,7 +245,7 @@ export const products = [
     name: 'Compactador de concreto',
     description: 'O melhor compactador do mercado',
     price: 400.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://a-static.mlcdn.com.br/1500x1500/compactador-de-solo-tipo-sapo-a-gasolina-6-5-hp-motor-loncin-motor-de-4-tempos-ncslon-nagano/agrotama2/mgl-101014894/226cc03e0b382610bfce2186e7bf91b1.jpg',
   },
@@ -252,7 +254,7 @@ export const products = [
     name: 'Caminhao compactador velho',
     description: 'Caminhao todo rosinha para compactar seu lixo',
     price: 1000.99,
-    status: status.Unavaliable,
+    status: status.Unavailable,
     image:
       'https://img.r7.com/images/2016/10/12/nkxtqrdl3_6qr77l5nqf_file?dimensions=460x305',
   },
@@ -261,7 +263,7 @@ export const products = [
     name: 'Compactador de concreto',
     description: 'O melhor compactador do mercado',
     price: 500.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://a-static.mlcdn.com.br/1500x1500/compactador-de-solo-tipo-sapo-a-gasolina-6-5-hp-motor-loncin-motor-de-4-tempos-ncslon-nagano/agrotama2/mgl-101014894/226cc03e0b382610bfce2186e7bf91b1.jpg',
   },
@@ -270,7 +272,7 @@ export const products = [
     name: 'Trator pesado - rosa',
     description: 'Demolir sua obra nunca foi tao estiloso',
     price: 1000.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://magazineagrofest.com.br/wp-content/uploads/2019/10/MG_0530.jpg',
   },
@@ -279,7 +281,7 @@ export const products = [
     name: 'Bola de demolir',
     description: 'Demolir sua obra esta mais facil que nunca',
     price: 800.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://http2.mlstatic.com/D_NQ_NP_885425-MLB25424673311_032017-O.jpg',
   },
@@ -288,7 +290,7 @@ export const products = [
     name: 'Trator leve - rosa',
     description: 'Demolir sua obra nunca foi tao estiloso e leve',
     price: 400.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://magazineagrofest.com.br/wp-content/uploads/2019/10/MG_0530.jpg',
   },
@@ -297,7 +299,7 @@ export const products = [
     name: 'Bola de demolir com caveira',
     description: 'Demolir sua obra esta mais facil e radical que nunca',
     price: 300.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://http2.mlstatic.com/D_NQ_NP_885425-MLB25424673311_032017-O.jpg',
   },
@@ -306,7 +308,7 @@ export const products = [
     name: 'Container - Rosa',
     description: 'Armazene com estilo',
     price: 1000.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://www.logweb.com.br/wp-content/uploads/2018/10/CONTAINER-ROSA.jpg',
   },
@@ -315,7 +317,7 @@ export const products = [
     name: 'Caixote de madeira',
     description: 'Guarde seus produtos com simplicidade',
     price: 500.99,
-    status: status.Avaliable,
+    status: status.Available,
     image:
       'https://www.logweb.com.br/wp-content/uploads/2018/10/CONTAINER-ROSA.jpg',
   },
