@@ -20,7 +20,7 @@ export interface ProductCreate {
 }
 
 enum Status {
-  Avaliable = 'Avaliable',
-  Unavaliable = 'Unavaliable',
+  Available = 'Available',
+  Unavailable = 'Unavailable',
   Maintenance = 'Maintenance',
 }

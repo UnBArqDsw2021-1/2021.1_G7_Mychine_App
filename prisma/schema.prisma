@@ -61,8 +61,8 @@ model product {
 }
 
 enum status {
-  Avaliable
-  Unavaliable
+  Available
+  Unavailable
   Maintenance
 }
 
