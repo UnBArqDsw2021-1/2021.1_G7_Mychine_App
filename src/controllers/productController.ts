@@ -37,7 +37,10 @@ export class ProductController extends BaseController {
 
   async update(db: PrismaClient, input: ProductUpdate, id): Promise<product> {
     try {
-      return await db.product.update({ data: input, where: { productId: id } });
+      return await db.product.update({
+        data: input,
+        where: { productId: id },
+      });
     } catch (error) {
       throw new Error(`Erro ao atualizar novo usuário${error}`);
     }
