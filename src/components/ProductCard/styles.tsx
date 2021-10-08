@@ -26,7 +26,7 @@ export const Card = styled.div`
 export const Image = styled.div`
   ${({ theme }) => css`
     margin: -${theme.spacings.base};
-    margin-bottom: ${theme.spacings.base};
+    margin-bottom: ${theme.spacings.xsmall};
     cursor: pointer;
   `}
 `;

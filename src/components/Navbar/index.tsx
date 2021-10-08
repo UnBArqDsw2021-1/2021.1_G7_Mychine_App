@@ -1,8 +1,10 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { signOut, useSession } from 'next-auth/client';
 import { FaUserCircle } from 'react-icons/fa';
+import { GoSignOut } from 'react-icons/go';
 
 import Logo from '@public/img/logo.svg';
 
@@ -11,11 +13,17 @@ import * as S from './styles';
 const Navbar = () => {
   const [session] = useSession();
   const { pathname } = useRouter();
+  const [position, setPosition] = useState<'fixed' | 'sticky'>('fixed');
+
+  useEffect(() => {
+    if (pathname === '/') setPosition('fixed');
+    else setPosition('sticky');
+  }, [pathname]);
 
   if (pathname.includes('login') || pathname.includes('registro')) return null;
 
   return (
-    <S.NavbarWrapper position={pathname === '/' ? 'fixed' : 'sticky'}>
+    <S.NavbarWrapper position={position}>
       <S.Navbar>
         <Link href="/" passHref>
           <S.Logo>
@@ -55,15 +63,17 @@ const Navbar = () => {
                 </Link>
               </>
             ) : (
-              <FaUserCircle
-                size={35}
-                onClick={() =>
-                  signOut({
-                    redirect: false,
-                    callbackUrl: `${window.location.origin}`,
-                  })
-                }
-              />
+              <S.CustomLink>
+                <GoSignOut
+                  size={35}
+                  onClick={() =>
+                    signOut({
+                      redirect: false,
+                      callbackUrl: `${window.location.origin}`,
+                    })
+                  }
+                />
+              </S.CustomLink>
             )}
           </S.Links>
         </S.NavLinks>

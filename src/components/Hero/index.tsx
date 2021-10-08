@@ -8,7 +8,7 @@ const Hero = () => (
       <S.HeroTextContainer>
         Obra Mais que Certa<span>Encontre suas máquinas de construção.</span>
       </S.HeroTextContainer>
-      <SearchBar />
+      <SearchBar color="white" />
     </S.Wrapper>
   </S.HeroContainer>
 );
