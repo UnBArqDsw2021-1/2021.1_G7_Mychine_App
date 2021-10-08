@@ -3,24 +3,17 @@ import { hoverAnimation } from 'UI/animations';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    cursor: pointer;
-    border-bottom: 3px solid #ededed;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+    gap: ${theme.spacings.small};
+    padding: ${theme.spacings.base};
 
     color: ${theme.colors.darkGray};
-    font-size: 1.9rem;
     font-weight: ${theme.font.weight.medium};
-
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-items: center;
-
-    & span {
-      display: block;
-      color: #b6b6b6;
-      font-size: ${theme.font.sizes.base};
-      font-weight: ${theme.font.weight.medium};
-    }
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
+      rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    background-color: white;
+    overflow: hidden;
 
     ${hoverAnimation({})}
 
@@ -30,51 +23,62 @@ export const Card = styled.div`
   `}
 `;
 
-export const Hero = styled.div`
-  width: 200px;
+export const Image = styled.div`
+  ${({ theme }) => css`
+    margin: -${theme.spacings.base};
+    margin-bottom: ${theme.spacings.base};
+    cursor: pointer;
+  `}
 `;
 
 export const Content = styled.div`
-  flex-grow: 3;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: ${theme.spacings.xsmall};
+    padding: ${theme.spacings.small};
+  `}
+`;
 
-  & div {
-    margin-right: 25px;
-  }
-
-  & span {
-    display: block;
-  }
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-
-    & span {
-      display: inline;
-
-      &:after {
-        content: ': ';
-      }
-    }
-  }
+export const Description = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.darkGray200};
+    font-size: 0.85rem;
+    font-weight: ${theme.font.weight.regular};
+  `}
 `;
 
 export const Year = styled.div`
   margin-left: 25px;
 `;
 
-export const Model = styled.div`
+export const Model = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.primary};
-
-    & span {
-      font-weight: ${theme.font.weight.bold};
-      color: ${theme.colors.primary};
-    }
+    color: ${theme.colors.darkGray100};
+    cursor: pointer;
   `};
 `;
 
-export const Price = styled.div``;
+export const Price = styled.div`
+  ${({ theme }) => css`
+    display: inline-block;
+    color: ${theme.colors.primaryDark};
+
+    & p {
+      color: ${theme.colors.darkGray400};
+      font-size: ${theme.font.sizes.small};
+      font-weight: ${theme.font.weight.light};
+    }
+
+    & span:nth-child(odd) {
+      position: relative;
+      top: -7px;
+      font-size: ${theme.font.sizes.small};
+    }
+
+    & span:nth-child(2) {
+      font-size: ${theme.font.sizes.large};
+      font-weight: ${theme.font.weight.medium};
+    }
+  `}
+`;

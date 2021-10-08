@@ -1,52 +1,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { product } from '@prisma/client';
 
 import * as S from './styles';
 
-export interface CardProps {
-  imgSrc: string;
-  year: string;
-  brand: string;
-  model: string;
-  dayPrice: string;
-  weekPrice: string;
-}
+export interface IProductCardProps extends product {}
 
-const ProductCard = (props: CardProps) => {
-  const { year, brand, model, dayPrice, weekPrice, imgSrc } = props;
-
+const ProductCard = ({ name, price, description }: IProductCardProps) => {
   return (
-    <Link href="/" passHref>
-      <S.Card>
-        <S.Hero>
+    <S.Card>
+      <Link href="/" passHref>
+        <S.Image>
           <Image
-            src={imgSrc}
+            src="/img/hero.jpg"
             width="100%"
-            height="80%"
+            height="100%"
             layout="responsive"
             objectFit="cover"
           />
-        </S.Hero>
-        <S.Content>
-          <S.Year>
-            <span>Ano</span>
-            {year}
-          </S.Year>
-          <S.Model>
-            <span>{brand}</span>
-            {model}
-          </S.Model>
-          <S.Price>
-            <span>Aluguel</span>
-            {dayPrice}
-          </S.Price>
-          <S.Price>
-            <span>A partir de 10 dias</span>
-            {weekPrice}
-          </S.Price>
-        </S.Content>
-      </S.Card>
-    </Link>
+        </S.Image>
+      </Link>
+      <S.Model>{name}</S.Model>
+      <S.Description>{description}</S.Description>
+      <S.Price>
+        <span>R$</span>
+        <span>{parseInt(price as unknown as string, 10)}</span>
+        <span>{((price % 100) * 100).toFixed(0)}</span>
+      </S.Price>
+    </S.Card>
   );
 };
 
