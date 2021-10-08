@@ -1,15 +1,64 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import { Checkbox } from '@components/FormFields/Checkbox/styles';
+export const FilterbarWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: ${theme.spacings.large};
+    padding-top: 0;
+  `}
+`;
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 25px;
+export const FilterBar = styled.div`
+  ${({ theme }) => css`
+    position: sticky;
+    top: calc(91px + 4rem);
+    display: flex;
+    flex-direction: column;
+    padding: ${theme.spacings.medium};
+    background-color: ${theme.colors.lightGray};
+    background-color: white;
+    background-image: radial-gradient(
+      circle farthest-corner at 18.7% 37.8%,
+      rgba(250, 250, 250, 1) 0%,
+      rgba(225, 234, 238, 1) 90%
+    );
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+      rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 
-  ${Checkbox} {
-    margin-top: 5px;
-  }
+    button {
+      margin-bottom: ${theme.spacings.small};
+    }
+  `}
+`;
+
+export const FilterOption = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    transition: all ${theme.transition.fast};
+
+    position: sticky;
+
+    &:not(:last-child) {
+      margin-bottom: ${theme.spacings.medium};
+    }
+
+    &:not(:first-child) {
+      padding-top: ${theme.spacings.medium};
+      border-top: 1px solid ${theme.colors.lightGray300};
+    }
+
+    & > label:first-child {
+      display: inline-block;
+      color: ${theme.colors.darkGray100};
+      font-size: 0.9rem;
+      margin-bottom: ${theme.spacings.small};
+    }
+
+    & > div:not(:last-child) {
+      margin-bottom: calc(${theme.spacings.small});
+    }
+  `}
 `;

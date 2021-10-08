@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
 import { hoverAnimation } from 'UI/animations';
 
-export const NavbarWrapper = styled.div`
+export const NavbarWrapper = styled.div<{ position: 'fixed' | 'sticky' }>`
   grid-area: nav;
   grid-column: 1/-1;
   justify-self: center;
-  position: fixed;
-  top: 16px;
+  position: ${({ position }) => position};
+  top: 8px;
   display: block;
+  margin-bottom: ${({ theme }) => theme.spacings.xlarge};
   z-index: 1;
   width: 90%;
   border-radius: 5px;

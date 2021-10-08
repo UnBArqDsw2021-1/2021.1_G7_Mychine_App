@@ -26,7 +26,8 @@ const hoverAnimation = ({
 
     border-image-slice: 1;
     --angle: 0deg;
-    z-index: 2;
+    z-index: 1;
+    pointer-events: none;
   }
 
   &:before {
