@@ -19,11 +19,6 @@ export const FilterBar = styled.div`
     padding: ${theme.spacings.medium};
     background-color: ${theme.colors.lightGray};
     background-color: white;
-    background-image: radial-gradient(
-      circle farthest-corner at 18.7% 37.8%,
-      rgba(250, 250, 250, 1) 0%,
-      rgba(225, 234, 238, 1) 90%
-    );
     box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
       rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 

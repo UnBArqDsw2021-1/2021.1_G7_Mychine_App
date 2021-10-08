@@ -20,6 +20,7 @@ export default {
     lightGray400: '#eee',
     background: '#F1F1F1',
     background100: '#FAFAFA',
+    white: '#ffffff',
   },
   font: {
     weight: {

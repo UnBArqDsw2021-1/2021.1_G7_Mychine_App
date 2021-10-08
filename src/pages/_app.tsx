@@ -27,10 +27,9 @@ function App({ Component, pageProps, router }: AppProps) {
               #EB6A00,
               #e84049
             )"
-              startPosition={0.3}
-              stopDelayMs={200}
+              startPosition={0.35}
+              stopDelayMs={150}
               height={3}
-              showOnShallow
               options={{ showSpinner: false }}
             />
             <Component {...pageProps} key={router.route} />
