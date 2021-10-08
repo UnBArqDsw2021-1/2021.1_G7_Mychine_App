@@ -7,6 +7,10 @@ export const FilterbarWrapper = styled.div`
     height: 100%;
     padding: ${theme.spacings.large};
     padding-top: 0;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
   `}
 `;
 
@@ -16,6 +20,7 @@ export const FilterBar = styled.div`
     top: calc(91px + 4rem);
     display: flex;
     flex-direction: column;
+    min-width: 250px;
     padding: ${theme.spacings.medium};
     background-color: ${theme.colors.lightGray};
     background-color: white;

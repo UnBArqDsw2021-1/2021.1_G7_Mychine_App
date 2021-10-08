@@ -15,11 +15,7 @@ export const Card = styled.div`
     background-color: white;
     overflow: hidden;
 
-    ${hoverAnimation({})}
-
-    @media (max-width: 850px) {
-      flex-direction: column;
-    }
+    ${hoverAnimation({})};
   `}
 `;
 
