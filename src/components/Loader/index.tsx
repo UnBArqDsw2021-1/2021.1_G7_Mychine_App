@@ -26,6 +26,7 @@ const Loader = ({
           ringSectors={ringSectors}
           ringRadius={ringRadius}
           size={size}
+          key={s}
         >
           {text[s] || ''}
         </S.Sectors>
@@ -38,7 +39,11 @@ const Loader = ({
     const ringsArr = [];
 
     for (let r = 0; r < rings; r += 1) {
-      ringsArr.push(<S.Ring size={size}>{createSectors()}</S.Ring>);
+      ringsArr.push(
+        <S.Ring size={size} key={r}>
+          {createSectors()}
+        </S.Ring>
+      );
     }
 
     return ringsArr;

@@ -72,7 +72,7 @@
               ["^react$", "^next", "^react", "^@?\\w"],
               // Internal packages.
               [
-                "^(@components|@pages|@templates|@public|@controllers|@models|@services|@company|@ui|@UI|components|utils|config|vendored-lib|@prismadb)(/.*|$|..)"
+                "^(@components|@pages|@hooks|@templates|@public|@controllers|@models|@services|@company|@ui|@UI|components|utils|config|vendored-lib|@prismadb)(/.*|$|..)"
               ],
               // Side effect imports.
               ["^\\u0000"],

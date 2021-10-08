@@ -15,7 +15,7 @@ const Navbar = () => {
   if (pathname.includes('login') || pathname.includes('registro')) return null;
 
   return (
-    <S.NavbarWrapper>
+    <S.NavbarWrapper position={pathname === '/' ? 'fixed' : 'sticky'}>
       <S.Navbar>
         <Link href="/" passHref>
           <S.Logo>

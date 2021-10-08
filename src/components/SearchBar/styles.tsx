@@ -1,13 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const SearchBar = styled.div`
-  ${({ theme }) => css`
+export const SearchBar = styled.div<{ color: string }>`
+  ${({ theme, color }) => css`
     display: flex;
     width: 100%;
     background-color: #dddddd30;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    box-shadow: ${theme.shadows.soft};
     overflow: hidden;
 
     @media (max-width: 600px) {
@@ -17,7 +15,7 @@ export const SearchBar = styled.div`
 
     & input {
       flex: 1;
-      color: white;
+      color: ${theme.colors[color]};
       font-size: ${theme.font.sizes.medium};
       padding: 0 1rem;
       margin-right: 5px;

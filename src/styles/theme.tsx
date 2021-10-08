@@ -20,6 +20,7 @@ export default {
     lightGray400: '#eee',
     background: '#F1F1F1',
     background100: '#FAFAFA',
+    white: '#ffffff',
   },
   font: {
     weight: {
@@ -49,7 +50,7 @@ export default {
     xlarge: '4rem',
   },
   shadows: {
-    soft: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px',
+    soft: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
     medium: ' 0px 16px 32px rgb(0 0 0 / 25%)',
     hard: 'rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px',
     large: 'rgba(17,12,46,0.15) 0px 48px 100px 0px',
