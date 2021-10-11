@@ -23,7 +23,7 @@ const ProductList = () => {
           ))}
         </S.ListContainer>
       ) : (
-        <Loader size="large" rings={3} />
+        <Loader size="large" rings={2} />
       )}
     </S.Content>
   );
