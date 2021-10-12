@@ -22,7 +22,7 @@ export const HeroContainer = styled.div`
     width: 100%;
     left: 0;
     right: 0;
-    background-image: url(/img/hero.jpg);
+    background-image: url(/img/hero.webp);
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;

@@ -26,11 +26,13 @@ const ProductCard = (item: IProductCardProps) => {
       <Link href="/" passHref>
         <S.Image>
           <Image
-            src="/img/hero.jpg"
+            src="/img/hero.webp"
             width="100%"
             height="100%"
             layout="responsive"
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8="
           />
         </S.Image>
       </Link>

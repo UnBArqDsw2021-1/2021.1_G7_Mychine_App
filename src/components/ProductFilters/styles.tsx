@@ -1,17 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const FilterbarWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: ${theme.spacings.large};
-    padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 0;
 
-    @media (max-width: 800px) {
-      display: none;
-    }
-  `}
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const FilterBar = styled.div`
@@ -21,16 +18,10 @@ export const FilterBar = styled.div`
     display: flex;
     flex-direction: column;
     min-width: 250px;
-    padding: ${theme.spacings.medium};
-    background-color: ${theme.colors.lightGray};
+    padding: ${theme.spacings.large};
+    border-radius: 5px;
     background-color: white;
-    background-image: radial-gradient(
-      circle 621px at 25.3% 13.8%,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(234, 236, 255, 1) 90%
-    );
-    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
-      rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+    box-shadow: ${theme.shadows.large};
 
     button {
       margin-bottom: ${theme.spacings.small};

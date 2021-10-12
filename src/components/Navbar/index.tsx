@@ -7,7 +7,6 @@ import { FaUserCircle } from 'react-icons/fa';
 import { GoSignOut } from 'react-icons/go';
 
 import CartIcon from '@components/Cart/CartIcon';
-import Logo from '@public/img/logo.svg';
 
 import * as S from './styles';
 
@@ -29,11 +28,13 @@ const Navbar = () => {
         <Link href="/" passHref>
           <S.Logo>
             <Image
-              src={Logo}
+              src="/img/logo.svg"
               width={75}
               height={75}
               objectFit="contain"
               alt="logo"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8="
             />
             <h1>MYCHINE</h1>
           </S.Logo>

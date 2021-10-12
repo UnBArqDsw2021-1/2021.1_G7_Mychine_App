@@ -11,8 +11,8 @@ export const Card = styled.div`
 
     color: ${theme.colors.darkGray};
     font-weight: ${theme.font.weight.medium};
-    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
-      rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+      rgb(27 31 35 / 15%) 0px 0px 0px 1px;
     background-color: white;
     overflow: hidden;
 

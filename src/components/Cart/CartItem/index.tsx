@@ -15,7 +15,7 @@ const CartItems = ({ item }: ICartItemProps) => {
   return (
     <S.CartItem>
       <Image
-        src="/img/hero.jpg"
+        src="/img/hero.webp"
         width={50}
         height={50}
         alt="product image"
