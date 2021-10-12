@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
 
 export const SearchBar = styled.div<{
-  color: string;
+  variant: string;
   automaticSearch?: boolean;
 }>`
-  ${({ theme, color, automaticSearch }) => css`
+  ${({ theme, variant, automaticSearch }) => css`
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: ${automaticSearch ? '45px' : '55px'};
-    background-color: #dddddd30;
+    background-color: ${variant === 'white' ? '#dddddd30' : 'white'};
     box-shadow: ${theme.shadows.soft};
     overflow: hidden;
 
@@ -22,7 +22,7 @@ export const SearchBar = styled.div<{
     & input {
       flex: 1;
       height: 100%;
-      color: ${theme.colors[color]};
+      color: ${theme.colors[variant]};
       font-size: ${theme.font.sizes.medium};
       padding: 0 1rem;
       margin-right: ${automaticSearch ? '0' : '5px'};

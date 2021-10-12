@@ -51,6 +51,8 @@ const Navbar = () => {
           </S.Links>
 
           <S.Links>
+            <CartIcon />
+
             {!session ? (
               <>
                 <Link href="/registro" passHref>
@@ -64,20 +66,17 @@ const Navbar = () => {
                 </Link>
               </>
             ) : (
-              <>
-                <CartIcon />
-                <S.CustomLink>
-                  <GoSignOut
-                    size={35}
-                    onClick={() =>
-                      signOut({
-                        redirect: false,
-                        callbackUrl: `${window.location.origin}`,
-                      })
-                    }
-                  />
-                </S.CustomLink>
-              </>
+              <S.CustomLink>
+                <GoSignOut
+                  size={35}
+                  onClick={() =>
+                    signOut({
+                      redirect: false,
+                      callbackUrl: `${window.location.origin}`,
+                    })
+                  }
+                />
+              </S.CustomLink>
             )}
           </S.Links>
         </S.NavLinks>

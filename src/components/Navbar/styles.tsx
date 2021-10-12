@@ -12,8 +12,10 @@ export const NavbarWrapper = styled.div<{ position: 'fixed' | 'sticky' }>`
   z-index: 1;
   width: 90%;
   border-radius: 5px;
-  box-shadow: rgb(17 12 46 / 15%) 0px 38px 90px 0px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   background: #00000050;
+  z-index: 10;
 `;
 
 export const Navbar = styled.div`

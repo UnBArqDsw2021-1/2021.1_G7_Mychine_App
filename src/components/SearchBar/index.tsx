@@ -10,10 +10,10 @@ import * as S from './styles';
 
 export interface ISearchbarProps {
   automaticSearch?: boolean;
-  color?: string;
+  variant?: string;
 }
 
-const SearchBar = ({ color, automaticSearch }: ISearchbarProps) => {
+const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
   const router = useRouter();
   const { query } = router;
   const [value, setValue] = useState('');
@@ -56,7 +56,7 @@ const SearchBar = ({ color, automaticSearch }: ISearchbarProps) => {
   const searchText = register('searchText');
 
   return (
-    <S.SearchBar color={color} automaticSearch={automaticSearch}>
+    <S.SearchBar variant={variant} automaticSearch={automaticSearch}>
       <input
         {...register('searchText')}
         onChange={(e) => {
