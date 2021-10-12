@@ -5,8 +5,11 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    border-radius: 5px;
     padding: ${theme.spacings.large};
-    padding-top: 0;
+    margin-bottom: ${theme.spacings.xlarge};
+    background: white;
+    box-shadow: ${theme.shadows.large};
   `}
 `;
 

@@ -1,6 +1,6 @@
 import { css, keyframes } from 'styled-components';
 
-export type Color = 'primary' | 'secondary';
+export type Color = 'primary' | 'secondary' | 'black';
 
 export const ripple = keyframes`
   to {

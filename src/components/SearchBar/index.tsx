@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { BiSearchAlt2 } from 'react-icons/bi';
+import { useFilter } from '@contexts/Filter';
 
 import Button from '@components/Button';
 import useDebounce from '@hooks/useDebounce';
@@ -15,58 +16,43 @@ export interface ISearchbarProps {
 
 const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
   const router = useRouter();
-  const { query } = router;
-  const [value, setValue] = useState('');
-  const { register, getValues } = useForm<{ searchText: string }>({
+  const { filters, setFilters, removeFilter } = useFilter();
+
+  const { register, getValues, setValue, watch } = useForm<{
+    searchText: string;
+  }>({
     defaultValues: {
-      searchText: query?.searchText as string,
+      searchText: filters?.searchText || '',
     },
   });
+  const searchText = register('searchText');
 
-  const debouncedValue = useDebounce<string>(value, 500);
+  useEffect(() => {
+    if (!filters?.searchText) {
+      setValue('searchText', '');
+    }
+  }, [filters, setValue]);
 
-  const pushUrl = useCallback(
-    (params) => {
-      router.push(
-        {
-          pathname: '/produtos',
-          query: { ...params },
-        },
-        undefined,
-        { shallow: true }
-      );
-    },
-    [router]
-  );
-
-  const setParams = useCallback(
-    (param, paramValue: string | number) => {
-      pushUrl({ ...query, [param]: paramValue });
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [pushUrl]
-  );
+  // const debouncedValue = useDebounce<string>(value, 500);
+  const debouncedValue = useDebounce<string>(watch('searchText'), 500);
 
   useEffect(
-    () => debouncedValue && setParams('searchText', debouncedValue),
+    () =>
+      debouncedValue && setFilters({ ...filters, searchText: debouncedValue }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [debouncedValue]
   );
-
-  const searchText = register('searchText');
 
   return (
     <S.SearchBar variant={variant} automaticSearch={automaticSearch}>
       <input
         {...register('searchText')}
         onChange={(e) => {
-          searchText.onChange(e);
           if (automaticSearch) {
-            setValue(e.target.value);
             if (!e.target.value) {
-              delete query.searchText;
-              pushUrl(query);
+              removeFilter('searchText');
             }
+            searchText.onChange(e);
           }
         }}
         placeholder="Buscar"
@@ -74,7 +60,11 @@ const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
       />
       {!automaticSearch ? (
         <Button
-          onClick={() => setParams('searchText', getValues('searchText'))}
+          onClick={() => {
+            const value = getValues('searchText');
+            setFilters({ searchText: value });
+            router.push('/produtos');
+          }}
           color="secondary"
           size="large"
         >
