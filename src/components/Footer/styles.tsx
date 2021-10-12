@@ -4,6 +4,12 @@ import styled, { css } from 'styled-components';
 export const Footer = styled.footer`
   grid-area: footer;
   grid-column: 1/-1;
+  justify-self: center;
+  top: 8px;
+  display: block;
+  z-index: 1;
+  background: #00000050;
+
   align-items: center;
 `;
 
@@ -37,14 +43,28 @@ export const Links = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
+    text-align: center;
+
     gap: ${theme.spacings.large};
 
     @media (max-width: 600px) {
       gap: calc(${theme.spacings.large} / 2);
     }
+  `}
+`;
 
-    svg {
-      color: white;
-    }
+export const CustomLink = styled.a`
+  ${({ theme }) => css`
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: ${theme.spacings.small};
+    padding: 1rem;
+    color: black;
+    font-weight: ${theme.font.weight.light};
+    font-size: ${theme.font.sizes.medium};
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #333;
+    cursor: pointer;
   `}
 `;
