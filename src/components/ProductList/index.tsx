@@ -15,7 +15,7 @@ const ProductList = () => {
 
   return (
     <S.Content>
-      <SearchBar automaticSearch color="darkGray" />
+      <SearchBar automaticSearch variant="darkGray" />
       {!isLoading ? (
         <S.ListContainer>
           {data?.map((item) => (

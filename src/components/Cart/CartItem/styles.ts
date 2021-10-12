@@ -52,7 +52,7 @@ export const ItemQuantity = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: ${theme.spacings.small};
     user-select: none;
     font-weight: ${theme.font.weight.medium};
 

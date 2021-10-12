@@ -1,10 +1,11 @@
+import { MdShoppingCart } from 'react-icons/md';
 import styled, { css } from 'styled-components';
 import { hoverAnimation } from 'UI/animations';
 
 export const Card = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: auto auto auto 1fr;
     gap: ${theme.spacings.small};
     padding: ${theme.spacings.base};
 
@@ -55,6 +56,26 @@ export const Model = styled.p`
   `};
 `;
 
+export const PriceContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      opacity: 0.9;
+    }
+  }
+`;
+
 export const Price = styled.div`
   ${({ theme }) => css`
     display: inline-block;
@@ -78,3 +99,5 @@ export const Price = styled.div`
     }
   `}
 `;
+
+export const CartIcon = styled(MdShoppingCart)``;
