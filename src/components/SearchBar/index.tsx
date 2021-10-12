@@ -18,11 +18,21 @@ const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
   const router = useRouter();
   const { filters, setFilters, removeFilter } = useFilter();
   const [value, setValue] = useState('');
-  const { register, getValues } = useForm<{ searchText: string }>({
+  const {
+    register,
+    getValues,
+    setValue: setValue2,
+  } = useForm<{ searchText: string }>({
     defaultValues: {
       searchText: filters?.searchText,
     },
   });
+
+  useEffect(() => {
+    if (!filters?.searchText) {
+      setValue2('searchText', '');
+    }
+  }, [filters, setValue2]);
 
   const debouncedValue = useDebounce<string>(value, 500);
 

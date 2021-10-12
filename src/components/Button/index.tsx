@@ -6,7 +6,7 @@ type ButtonTypes = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export interface IButtonProps extends ButtonTypes {
   size?: 'small' | 'regular' | 'large';
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'black';
   shadow?: boolean;
   fullWidth?: boolean;
   minimal?: boolean;

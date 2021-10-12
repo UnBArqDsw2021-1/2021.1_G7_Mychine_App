@@ -9,7 +9,7 @@ export interface ITrackProps {
 
 export const RangeContainer = styled.div`
   display: block;
-  padding: 3.5rem 0 1rem;
+  padding: 2.2rem 0 1rem;
 `;
 
 export const Track = styled.div.attrs(

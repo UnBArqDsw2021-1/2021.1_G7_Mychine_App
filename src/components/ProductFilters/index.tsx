@@ -27,6 +27,8 @@ const ProductFilters = () => {
           <S.FilterOption>
             <Button
               size="small"
+              color="black"
+              shadow={false}
               onClick={() => {
                 clearFilters();
                 reset();
@@ -82,9 +84,9 @@ const ProductFilters = () => {
           <label>Preço</label>
           <RangeInput
             min={0}
-            max={500}
-            step={5}
-            initialValue={[0, 500]}
+            max={10000}
+            step={100}
+            initialValue={[0, 10000]}
             formatValue={(val) => `$${val}`}
             {...priceRange}
             onFinalChange={(prices) => {

@@ -36,6 +36,14 @@ const buttonStylesModifiers = (theme: DefaultTheme) => ({
         #f7971e 100%
       );
     `,
+    black: css`
+      background-image: linear-gradient(
+        to right,
+        #000000 0%,
+        #434343 51%,
+        #000000 100%
+      );
+    `,
   },
   shadow: css`
     box-shadow: ${theme.shadows.medium};
