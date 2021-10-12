@@ -23,9 +23,9 @@ const buttonStylesModifiers = (theme: DefaultTheme) => ({
     primary: css`
       background-image: linear-gradient(
         to right,
-        #ff8520 0%,
-        #ff7300 51%,
-        #f14745 100%
+        #ff7100 0%,
+        #ff8e32 51%,
+        #ff7100 100%
       );
     `,
     secondary: css`

@@ -6,6 +6,7 @@ import { signOut, useSession } from 'next-auth/client';
 import { FaUserCircle } from 'react-icons/fa';
 import { GoSignOut } from 'react-icons/go';
 
+import CartIcon from '@components/Cart/CartIcon';
 import Logo from '@public/img/logo.svg';
 
 import * as S from './styles';
@@ -50,6 +51,8 @@ const Navbar = () => {
           </S.Links>
 
           <S.Links>
+            <CartIcon />
+
             {!session ? (
               <>
                 <Link href="/registro" passHref>
