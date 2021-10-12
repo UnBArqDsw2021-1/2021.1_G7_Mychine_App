@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useFilter } from '@contexts/Filter';
 import { product } from '@prisma/client';
 
 import Loader from '@components/Loader';
@@ -10,8 +10,8 @@ import { getProducts } from '@services/productsServices';
 import * as S from './styles';
 
 const ProductList = () => {
-  const router = useRouter();
-  const { data, isLoading } = useRequest<product[]>(getProducts(router.query));
+  const { filters } = useFilter();
+  const { data, isLoading } = useRequest<product[]>(getProducts(filters));
 
   return (
     <S.Content>

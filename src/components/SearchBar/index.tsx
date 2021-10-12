@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { BiSearchAlt2 } from 'react-icons/bi';
+import { useFilter } from '@contexts/Filter';
 
 import Button from '@components/Button';
 import useDebounce from '@hooks/useDebounce';
@@ -15,40 +16,19 @@ export interface ISearchbarProps {
 
 const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
   const router = useRouter();
-  const { query } = router;
+  const { filters, setFilters } = useFilter();
   const [value, setValue] = useState('');
   const { register, getValues } = useForm<{ searchText: string }>({
     defaultValues: {
-      searchText: query?.searchText as string,
+      searchText: filters?.searchText,
     },
   });
 
   const debouncedValue = useDebounce<string>(value, 500);
 
-  const pushUrl = useCallback(
-    (params) => {
-      router.push(
-        {
-          pathname: '/produtos',
-          query: { ...params },
-        },
-        undefined,
-        { shallow: true }
-      );
-    },
-    [router]
-  );
-
-  const setParams = useCallback(
-    (param, paramValue: string | number) => {
-      pushUrl({ ...query, [param]: paramValue });
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [pushUrl]
-  );
-
   useEffect(
-    () => debouncedValue && setParams('searchText', debouncedValue),
+    () =>
+      debouncedValue && setFilters({ ...filters, searchText: debouncedValue }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [debouncedValue]
   );
@@ -64,8 +44,8 @@ const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
           if (automaticSearch) {
             setValue(e.target.value);
             if (!e.target.value) {
-              delete query.searchText;
-              pushUrl(query);
+              delete filters.searchText;
+              setFilters({ ...filters });
             }
           }
         }}
@@ -74,7 +54,10 @@ const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
       />
       {!automaticSearch ? (
         <Button
-          onClick={() => setParams('searchText', getValues('searchText'))}
+          onClick={() => {
+            setFilters({ ...filters, searchText: getValues('searchText') });
+            router.push('/produtos');
+          }}
           color="secondary"
           size="large"
         >

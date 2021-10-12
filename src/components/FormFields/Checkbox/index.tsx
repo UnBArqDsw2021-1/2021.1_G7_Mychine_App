@@ -22,12 +22,12 @@ const Checkbox = forwardRef<HTMLInputElement, ICheckboxProps>((props, ref) => {
     <S.Checkbox>
       <S.Input
         type="checkbox"
-        id={name}
+        id={name + props?.value}
         ref={ref}
         {...methods?.register(name)}
         {...props}
       />
-      <S.Label htmlFor={name}>{label}</S.Label>
+      <S.Label htmlFor={name + props?.value}>{label}</S.Label>
       {error && <Error>{error?.message}</Error>}
     </S.Checkbox>
   );
