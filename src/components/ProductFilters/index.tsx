@@ -14,7 +14,7 @@ interface FormFields {
 }
 
 const ProductFilters = () => {
-  const { filters, setFilters } = useFilter();
+  const { filters, setFilters, removeFilter, clearFilters } = useFilter();
   const { register, watch, reset, setValue, getValues } = useForm<FormFields>();
 
   const priceRange = register('priceRange');
@@ -28,7 +28,7 @@ const ProductFilters = () => {
             <Button
               size="small"
               onClick={() => {
-                setFilters({});
+                clearFilters();
                 reset();
               }}
             >
@@ -53,8 +53,7 @@ const ProductFilters = () => {
             onClick={() => {
               if (getValues('orderByPrice') === 'ASC') {
                 setValue('orderByPrice', null);
-                delete filters.orderByPrice;
-                setFilters({ ...filters });
+                removeFilter('orderByPrice');
               }
             }}
             checked={watch('orderByPrice') === 'ASC'} // NÃO TIRA!
@@ -74,8 +73,7 @@ const ProductFilters = () => {
             onClick={() => {
               if (getValues('orderByPrice') === 'DESC') {
                 setValue('orderByPrice', null);
-                delete filters.orderByPrice;
-                setFilters({ ...filters });
+                removeFilter('orderByPrice');
               }
             }}
           />

@@ -4,13 +4,15 @@ import React, { createContext, Dispatch, useContext, useState } from 'react';
 export type FilterContextType = {
   filters: Record<string, any>;
   setFilters: Dispatch<any>;
-  removeFilters(): void;
+  removeFilter(filter: string): void;
+  clearFilters(): void;
 };
 
 export const filterContextDefaultValues: FilterContextType = {
   filters: {},
   setFilters: () => {},
-  removeFilters: () => {},
+  removeFilter: () => {},
+  clearFilters: () => {},
 };
 
 export const FiltersContext = createContext<FilterContextType>(
@@ -20,13 +22,16 @@ export const FiltersContext = createContext<FilterContextType>(
 export type Filters = Record<string, any>;
 
 export const FilterProvider: React.FC = ({ children }) => {
-  // const router = useRouter();
-  // const { query } = router;
-
   const [filters, setFilters] = useState<Filters>({});
 
-  // const setFilters = () => {};
-  const removeFilters = () => {};
+  const removeFilter = (filterToRemove: string) => {
+    delete filters[filterToRemove];
+    setFilters({ ...filters });
+  };
+
+  const clearFilters = () => {
+    setFilters({});
+  };
 
   return (
     <>
@@ -34,7 +39,8 @@ export const FilterProvider: React.FC = ({ children }) => {
         value={{
           filters,
           setFilters,
-          removeFilters,
+          removeFilter,
+          clearFilters,
         }}
       >
         {children}

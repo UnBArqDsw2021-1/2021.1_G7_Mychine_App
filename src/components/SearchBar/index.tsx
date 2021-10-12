@@ -16,7 +16,7 @@ export interface ISearchbarProps {
 
 const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
   const router = useRouter();
-  const { filters, setFilters } = useFilter();
+  const { filters, setFilters, removeFilter } = useFilter();
   const [value, setValue] = useState('');
   const { register, getValues } = useForm<{ searchText: string }>({
     defaultValues: {
@@ -44,8 +44,7 @@ const SearchBar = ({ variant, automaticSearch }: ISearchbarProps) => {
           if (automaticSearch) {
             setValue(e.target.value);
             if (!e.target.value) {
-              delete filters.searchText;
-              setFilters({ ...filters });
+              removeFilter('searchText');
             }
           }
         }}
