@@ -15,6 +15,7 @@ type ProductParams = {
   maxPrice?: string;
   minPrice?: string;
   categoryId?: string;
+  orderByPrice?: 'ASC' | 'DESC';
 };
 
 async function searchFromText(
@@ -117,6 +118,22 @@ export default async function handler(
     // filtrar de acordo com o intervalo inferior de preço
     if (searchParams.minPrice) {
       results = filterByMinPrice(results, searchParams.minPrice);
+    }
+
+    if (searchParams.orderByPrice) {
+      results.sort((p1: product, p2: product) => {
+        if (Number(p1.price) >= Number(p2.price)) {
+          return 1;
+        }
+        if (Number(p1.price) <= Number(p2.price)) {
+          return -1;
+        }
+        return 0;
+      });
+
+      if (searchParams.orderByPrice === 'DESC') {
+        results.reverse();
+      }
     }
   } else {
     res.status(405).json({ error: `cannot handle ${req.method} method` });
