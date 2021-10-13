@@ -3,7 +3,7 @@ import TermosDeUso from '@components/TermosDeUso';
 import PageTemplate from '@templates/Page';
 
 const Termos = () => (
-  <PageTemplate fullWidth>
+  <PageTemplate center>
     <TermosDeUso />
   </PageTemplate>
 );
