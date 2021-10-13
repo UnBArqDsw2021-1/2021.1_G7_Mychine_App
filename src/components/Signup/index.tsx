@@ -96,10 +96,13 @@ const Signup = () => {
             label="Confirmar senha"
             type="password"
           />
+
           <Checkbox
             name="terms"
             label="Li e aceito os Termos e Condições de Uso"
           />
+          <Link href="/termos">Termos de uso</Link>
+
           <Button type="submit" size="large" fullWidth>
             {!isSubmitting ? 'Continuar' : 'Aguarde...'}
           </Button>
