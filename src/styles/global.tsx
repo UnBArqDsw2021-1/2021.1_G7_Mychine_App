@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     dl,
     dd {
       margin: 0;
+      margin: 0;
     }
 
     /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

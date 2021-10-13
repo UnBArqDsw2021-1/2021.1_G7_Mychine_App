@@ -1,22 +1,19 @@
 import styled, { css } from 'styled-components';
-// import { hoverAnimation } from 'UI/animations';
 
 export const Footer = styled.footer`
   grid-area: footer;
   grid-column: 1/-1;
-  justify-self: center;
   top: 8px;
-  display: block;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
   background: #00000050;
-
   align-items: center;
 `;
 
 export const Logo = styled.div`
   ${({ theme }) => css`
     position: relative;
-    display: flex;
+    display: inline-flexbox;
     gap: 1rem;
     align-items: center;
     margin-right: ${theme.spacings.xlarge};
