@@ -19,7 +19,7 @@ const Footer = () => {
             objectFit="contain"
             alt="logo"
           />
-          <h3>MYCHINE</h3>
+          <h2>MYCHINE</h2>
         </S.Logo>
       </Link>
       <S.Links>
