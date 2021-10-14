@@ -10,18 +10,21 @@ import * as S from './styles';
 const Footer = () => {
   return (
     <S.Footer>
-      <Link href="/" passHref>
-        <S.Logo>
-          <Image
-            src={Logo}
-            width={50}
-            height={50}
-            objectFit="contain"
-            alt="logo"
-          />
-          <h2>MYCHINE</h2>
-        </S.Logo>
-      </Link>
+      <S.container>
+        <Link href="/" passHref>
+          <S.Logo>
+            <Image
+              src={Logo}
+              width={50}
+              height={50}
+              objectFit="contain"
+              alt="logo"
+            />
+            <h2>MYCHINE</h2>
+          </S.Logo>
+        </Link>
+      </S.container>
+
       <S.Links>
         <Link href="/" passHref>
           <S.CustomLink> Termos de uso </S.CustomLink>
@@ -42,6 +45,7 @@ const Footer = () => {
           <S.CustomLink> Sobre </S.CustomLink>
         </Link>
       </S.Links>
+
       <S.Links>
         <Link
           href="https://github.com/UnBArqDsw2021-1/2021.1_G7_Mychine_App"

@@ -1,13 +1,33 @@
 import styled, { css } from 'styled-components';
+import { hoverAnimation } from 'UI/animations';
 
 export const Footer = styled.footer`
-  grid-area: footer;
-  grid-column: 1/-1;
-  top: 8px;
+  ${({ theme }) => css`
+    grid-area: footer;
+    grid-column: 1/-1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: ${theme.colors.lightGray300};
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 600px) {
+      gap: calc(${theme.spacings.large} / 2);
+      div:nth-child(2) {
+        flex-direction: column;
+      }
+    }
+  `}
+`;
+export const container = styled.div`
   display: flex;
   flex-direction: column;
-  background: #00000050;
+  justify-content: center;
+  /* border: 1px solid red; */
   align-items: center;
+  text-align: center;
+  margin: 0 auto;
 `;
 
 export const Logo = styled.div`
@@ -16,7 +36,7 @@ export const Logo = styled.div`
     display: inline-flexbox;
     gap: 1rem;
     align-items: center;
-    margin-right: ${theme.spacings.xlarge};
+    /* margin-right: ${theme.spacings.xlarge}; */
     cursor: pointer;
     color: ${theme.colors.primary};
     text-shadow: 
@@ -39,14 +59,11 @@ export const Logo = styled.div`
 export const Links = styled.div`
   ${({ theme }) => css`
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
     text-align: center;
-
+    /* border: 1px solid blue; */
     gap: ${theme.spacings.large};
-
-    @media (max-width: 600px) {
-      gap: calc(${theme.spacings.large} / 2);
-    }
   `}
 `;
 
@@ -63,5 +80,8 @@ export const CustomLink = styled.a`
     text-decoration: none;
     text-shadow: 1px 1px 1px #333;
     cursor: pointer;
+    ${hoverAnimation({
+      strokeWidth: '2px',
+    })}
   `}
 `;
