@@ -8,7 +8,7 @@ export const Footer = styled.footer`
     padding: 20px;
     display: flex;
     flex-direction: column;
-    background: ${theme.colors.lightGray300};
+    background: ${theme.colors.white};
     align-items: center;
     justify-content: center;
 
