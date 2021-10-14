@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillGithub } from 'react-icons/ai';
+import { HiOutlineMail } from 'react-icons/hi';
 import { IoGlobeOutline } from 'react-icons/io5';
 
 import Logo from '@public/img/logo.svg';
@@ -63,6 +64,11 @@ const Footer = () => {
           <S.CustomLink>
             {' '}
             <IoGlobeOutline color="black" size={30} />{' '}
+          </S.CustomLink>
+        </Link>
+        <Link href="/" passHref>
+          <S.CustomLink>
+            <HiOutlineMail color="black" size={30} />
           </S.CustomLink>
         </Link>
       </S.Links>
