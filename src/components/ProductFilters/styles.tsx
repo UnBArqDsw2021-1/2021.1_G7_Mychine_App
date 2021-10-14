@@ -22,6 +22,7 @@ export const FilterBar = styled.div`
     border-radius: 5px;
     background-color: white;
     box-shadow: ${theme.shadows.large};
+    margin-bottom: ${theme.spacings.medium};
 
     button {
       margin-bottom: ${theme.spacings.small};
