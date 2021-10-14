@@ -1,5 +1,6 @@
 import { FilterProvider } from '@contexts/Filter';
 
+import Footer from '@components/Footer';
 import ProductFilters from '@components/ProductFilters';
 import ProductList from '@components/ProductList';
 import PageTemplate from '@templates/Page';
@@ -15,6 +16,7 @@ const Products = () => {
           <ProductList />
         </Grid>
       </PageTemplate>
+      <Footer />
     </FilterProvider>
   );
 };
