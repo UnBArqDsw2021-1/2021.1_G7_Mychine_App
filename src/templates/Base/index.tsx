@@ -1,3 +1,4 @@
+import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 
 import * as S from './styles';
@@ -10,6 +11,7 @@ const BaseTemplate = ({ children }: IBaseTemplateProps) => (
   <S.Container>
     <Navbar />
     <S.Main>{children}</S.Main>
+    <Footer />
   </S.Container>
 );
 
