@@ -7,10 +7,10 @@ export const Footer = styled.footer`
     grid-column: 1/-1;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     background: ${theme.colors.white};
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     @media (max-width: 600px) {
       gap: calc(${theme.spacings.large} / 2);
@@ -24,10 +24,7 @@ export const container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid red; */
   align-items: center;
-  text-align: center;
-  margin: 0 auto;
 `;
 
 export const Logo = styled.div`
@@ -36,7 +33,6 @@ export const Logo = styled.div`
     display: inline-flexbox;
     gap: 1rem;
     align-items: center;
-    /* margin-right: ${theme.spacings.xlarge}; */
     cursor: pointer;
     color: ${theme.colors.primary};
     text-shadow: 
@@ -57,14 +53,8 @@ export const Logo = styled.div`
 `;
 
 export const Links = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    text-align: center;
-    /* border: 1px solid blue; */
-    gap: ${theme.spacings.large};
-  `}
+  display: flex;
+  align-items: center;
 `;
 
 export const CustomLink = styled.a`
@@ -72,13 +62,11 @@ export const CustomLink = styled.a`
     position: relative;
     display: flex;
     align-items: center;
-    gap: ${theme.spacings.small};
     padding: 1rem;
     color: black;
-    font-weight: ${theme.font.weight.light};
+    font-weight: ${theme.font.weight.medium};
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
-    text-shadow: 1px 1px 1px #333;
     cursor: pointer;
     ${hoverAnimation({
       strokeWidth: '2px',
