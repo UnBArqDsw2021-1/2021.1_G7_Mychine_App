@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -101,7 +102,9 @@ const Signup = () => {
             name="terms"
             label="Li e aceito os Termos e Condições de Uso"
           />
-          <Link href="/termos">Termos de uso</Link>
+          <Link href="/termos">
+            <a target="_blank">Termos de uso</a>
+          </Link>
 
           <Button type="submit" size="large" fullWidth>
             {!isSubmitting ? 'Continuar' : 'Aguarde...'}
