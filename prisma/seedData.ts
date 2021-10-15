@@ -94,7 +94,7 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/233/103/png-clipart-solar-energy-solar-power-solar-panels-renewable-energy-solar-inverter-energy-solar-cell-panel-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/11/11/17/08/solar-system-2939560_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -103,7 +103,7 @@ export const products = [
     price: 600.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/241/235/png-clipart-submersible-pump-solar-energy-solar-power-solar-panel-green-energy-solar-renewable-energy-green-vector-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/09/12/13/21/photovoltaic-system-2742302_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -113,7 +113,7 @@ export const products = [
     price: 50.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/970/553/png-clipart-solar-panels-solar-power-solar-energy-voltaic-system-voltaics-energy-renewable-energy-solar-cell-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -122,7 +122,7 @@ export const products = [
     price: 450.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/998/906/png-clipart-white-wind-turbine-wind-farm-wind-turbine-energy-machine-wind-energy-angle-farm-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2018/10/23/13/36/wind-power-3767886_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -132,7 +132,7 @@ export const products = [
     price: 300.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/772/7/png-clipart-electronics-accessory-heat-pump-berogailu-hidros-srl-oleotec-oleos-tecnicos-lda-electronics-electronic-device-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2014/01/10/02/16/mcnary-oregon-241459_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -141,7 +141,7 @@ export const products = [
     price: 1000.0,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/137/259/png-clipart-hidro-melhoras-lda-water-system-quality-water-service-quality-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2016/10/04/20/52/machine-1715424_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -150,7 +150,7 @@ export const products = [
     price: 1000.99,
     status: status.Unavailable,
     image:
-      'https://e7.pngegg.com/pngimages/202/773/png-clipart-electric-motor-induction-motor-ac-motor-three-phase-electric-power-electricity-engine-business-transport-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2020/08/10/00/02/generator-5476642_960_720.jpg',
   },
   {
     categoryId: 1,
@@ -159,7 +159,7 @@ export const products = [
     price: 1000.99,
     status: status.Maintenance,
     image:
-      'https://e7.pngegg.com/pngimages/316/916/png-clipart-skull-human-skeleton-skull-face-head-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/06/17/11/39/power-plant-2411932_960_720.jpg',
   },
   {
     categoryId: 2,
@@ -168,7 +168,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/853/836/png-clipart-steel-facade-ladder-angle-shelf-andaime-glass-angle-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2012/02/17/14/55/scaffold-14253_960_720.jpg',
   },
   {
     categoryId: 2,
@@ -177,7 +177,7 @@ export const products = [
     price: 800.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/736/84/png-clipart-black-and-yellow-fork-lift-forklift-alarm-device-heavy-equipment-vehicle-machine-forklift-products-in-kind-to-avoid-the-material-car-warehouse-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2020/04/04/06/19/elevator-5001019_960_720.jpg',
   },
   {
     categoryId: 2,
@@ -186,7 +186,7 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/411/886/png-clipart-wheel-scaffolding-engine-machine-crane-andaime-angle-auto-part-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/08/24/09/39/scaffold-2676008_960_720.png',
   },
   {
     categoryId: 2,
@@ -195,7 +195,7 @@ export const products = [
     price: 200.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/849/908/png-clipart-toyota-material-handling-u-s-a-inc-pallet-jack-forklift-truck-heavy-equipment-truck-forklift-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2020/02/11/11/32/transportation-4839274_960_720.jpg',
   },
   {
     categoryId: 3,
@@ -204,7 +204,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/831/464/png-clipart-concrete-mixer-cement-illustration-concrete-car-car-accident-building-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2019/10/15/09/00/concrete-mixer-4551108_960_720.jpg',
   },
   {
     categoryId: 3,
@@ -212,33 +212,16 @@ export const products = [
     description: 'Caminhao todo rosinha para mexer seu concretinho',
     price: 500.99,
     status: status.Available,
-    image: 'https://e7.pngegg.com/pngimages/38/626/png-clipart-concrete-mixer-ready-mix-concrete-truck-heavy-equipment-realistic-mix-of-sand-machine-freight-transport-realistic-thumbnail.png',
-  },
-  {
-    categoryId: 3,
-    name: 'Betoneira com rodinhas',
-    description: 'Betoneira para mexer o concreto',
-    price: 600.99,
-    status: status.Unavailable,
-    image:
-      'https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/21/07/2107045_betoneira-profissional-trifasica-400-litros-com-painel-2cv-220-volts-71000729-csm_m2_637486474279502387.jpg',
-  },
-  {
-    categoryId: 3,
-    name: 'Caminhao velho',
-    description: 'Caminhao todo rosinha para mexer seu concretinho',
-    price: 200.99,
-    status: status.Unavailable,
-    image: 'https://abcp.org.br/wp-content/uploads/2019/10/01ciplan.jpg',
+    image: 'https://cdn.pixabay.com/photo/2020/06/16/20/36/oversize-load-5307208_960_720.jpg',
   },
   {
     categoryId: 4,
-    name: 'Caminhao compactador',
-    description: 'Caminhao  para compactar seu lixo',
+    name: 'Caminhao de carga',
+    description: 'Caminhao  para carregar produtos pesados',
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/822/642/png-clipart-bulldozer-heavy-machinery-volvo-construction-equipment-construction-equipment-mode-of-transport-vehicle-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2018/01/13/14/20/dump-truck-3080177_960_720.jpg',
   },
   {
     categoryId: 4,
@@ -247,7 +230,7 @@ export const products = [
     price: 400.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/553/380/png-clipart-tire-car-road-roller-heavy-machinery-architectural-engineering-maquinaria-truck-car-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2021/08/22/07/17/road-roller-6564386_960_720.jpg',
   },
   {
     categoryId: 4,
@@ -256,7 +239,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/380/385/png-clipart-john-deere-caterpillar-inc-bulldozer-industrial-alternator-starter-backhoe-jd-vehicle-backhoe-loader-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2020/02/06/18/41/tracked-dumper-4825167_960_720.jpg',
   },
   {
     categoryId: 4,
@@ -265,7 +248,7 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/553/380/png-clipart-tire-car-road-roller-heavy-machinery-architectural-engineering-maquinaria-truck-car-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2016/09/27/13/52/roll-1698364_960_720.jpg',
   },
   {
     categoryId: 5,
@@ -274,7 +257,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/393/78/png-clipart-john-deere-skid-steer-loader-heavy-machinery-front-end-loader-backhoe-vehicle-agricultural-machinery-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2014/09/10/11/08/mining-440743_960_720.jpg',
   },
   {
     categoryId: 5,
@@ -283,7 +266,7 @@ export const products = [
     price: 800.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/742/235/png-clipart-heavy-machinery-kobelco-training-services-excavator-kobe-steel-demolition-excavator-building-technic-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2015/12/08/12/10/crash-1082857_960_720.jpg',
   },
   {
     categoryId: 5,
@@ -292,7 +275,7 @@ export const products = [
     price: 400.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/118/995/png-clipart-caterpillar-inc-caterpillar-d9-bulldozer-komatsu-limited-caterpillar-d6-bulldozer-vehicle-transport-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/04/02/09/08/bulldozer-2195329__340.jpg',
   },
   {
     categoryId: 5,
@@ -301,7 +284,7 @@ export const products = [
     price: 300.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/245/729/png-clipart-crane-architectural-engineering-building-business-project-crane-building-technic-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2018/08/10/21/52/wrecking-ball-3597678_960_720.jpg',
   },
   {
     categoryId: 6,
@@ -310,7 +293,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/666/373/png-clipart-cassone-truck-equipment-sales-standby-generator-business-electric-generator-heavy-machinery-solar-inverter-building-service-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg',
   },
   {
     categoryId: 6,
@@ -319,7 +302,7 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/264/107/png-clipart-three-brown-wooden-boxes-wooden-box-wooden-box-combination-angle-furniture-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2017/08/05/18/12/box-2584940_960_720.png',
   },
   {
     categoryId: 6,
@@ -328,7 +311,7 @@ export const products = [
     price: 1.99,
     status: status.Available,
     image:
-      'https://e7.pngegg.com/pngimages/342/975/png-clipart-pallet-cargo-cardboard-box-graphy-boxes-miscellaneous-freight-transport-thumbnail.png',
+      'https://cdn.pixabay.com/photo/2016/09/12/19/08/pallet-1665471_960_720.jpg',
   },
 ];
 
