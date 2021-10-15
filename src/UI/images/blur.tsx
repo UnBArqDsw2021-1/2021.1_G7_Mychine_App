@@ -12,11 +12,11 @@ const blurEffect = css`
     background: rgb(0, 0, 0);
     background: linear-gradient(
       45deg,
-      rgba(0, 0, 0, 0.6502976190476191) 0%,
-      rgba(34, 34, 34, 0.35057773109243695) 100%
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(34, 34, 34, 0.3) 100%
     );
     background-size: cover;
-    z-index: -1;
+    /* z-index: -1; */
     transition: all 40s linear;
   }
 

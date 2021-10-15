@@ -14,7 +14,7 @@ export type IProductCardProps = product;
 const ProductCard = (item: IProductCardProps) => {
   const { addItem, findItem } = useCart();
 
-  const { name, price, description } = item;
+  const { name, price, description, image } = item;
 
   const inCartItem = useMemo(
     () => findItem(item as ICartItem),
@@ -26,7 +26,7 @@ const ProductCard = (item: IProductCardProps) => {
       <Link href="/" passHref>
         <S.Image>
           <Image
-            src="/img/hero.webp"
+            src={image}
             width="100%"
             height="100%"
             layout="responsive"

@@ -14,36 +14,27 @@ export const HeroContainer = styled.div`
   @media (max-width: 800px) {
     gap: 4rem;
   }
+`;
 
-  &:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    background-image: url(/img/hero.webp);
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: brightness(0.8);
-    pointer-events: none;
-    z-index: -2;
-    transition: all 45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+export const Image = styled.div`
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.8);
+  pointer-events: none;
+  z-index: -1;
+  transition: all 45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-      filter: blur(8px);
-    }
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    filter: blur(8px);
   }
 
   ${blurEffect};
 
   &:hover {
-    &:before {
-      transform: scale(1.15);
-      transition: all 60s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
+    transform: scale(1.15);
+    transition: all 60s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
 `;
 
