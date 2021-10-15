@@ -89,40 +89,40 @@ export const category = [
 export const products = [
   {
     categoryId: 1,
-    name: 'Placa solar',
-    description: 'Placa solar que funciona com o sol',
+    name: 'Placa solar - Média',
+    description: 'Placa solar de tamanho médio capaz de gerar energia para quartos, salas, etc',
     price: 500.99,
     status: status.Available,
     image:
-      'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
+      'https://e7.pngegg.com/pngimages/233/103/png-clipart-solar-energy-solar-power-solar-panels-renewable-energy-solar-inverter-energy-solar-cell-panel-thumbnail.png',
   },
   {
     categoryId: 1,
-    name: 'Placa solar - Rosa',
-    description: 'Placa solar que funciona com o sol dá cor rosa choque',
+    name: 'Placa solar - Pequena',
+    description: 'Placa solar Pequena capaz de suprir energia para pequenos aparelhos como celulares, etc.',
     price: 600.99,
     status: status.Available,
     image:
-      'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
+      'https://e7.pngegg.com/pngimages/241/235/png-clipart-submersible-pump-solar-energy-solar-power-solar-panel-green-energy-solar-renewable-energy-green-vector-thumbnail.png',
   },
   {
     categoryId: 1,
-    name: 'Gerador de energia movido a energia',
+    name: 'Placa solar - Grande',
     description:
-      'Gere energia consumindo sua propria energia de maneira perpetua',
+      'Capaz de gerar energia em quantidade suficiente para casas inteiras.',
     price: 50.99,
     status: status.Available,
     image:
-      'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
+      'https://e7.pngegg.com/pngimages/970/553/png-clipart-solar-panels-solar-power-solar-energy-voltaic-system-voltaics-energy-renewable-energy-solar-cell-thumbnail.png',
   },
   {
     categoryId: 1,
-    name: 'Catavento',
-    description: 'Cate seu vento com nosso catavento',
+    name: 'Catavento - Gerador eólico',
+    description: 'Gerador de grande porte para localidades com grandes fluxos de ventos',
     price: 450.99,
     status: status.Available,
     image:
-      'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
+      'https://e7.pngegg.com/pngimages/998/906/png-clipart-white-wind-turbine-wind-farm-wind-turbine-energy-machine-wind-energy-angle-farm-thumbnail.png',
   },
   {
     categoryId: 1,
@@ -132,7 +132,7 @@ export const products = [
     price: 300.99,
     status: status.Available,
     image:
-      'https://cdn.awsli.com.br/1000x1000/816/816887/produto/53511512/4d93112285.jpg',
+      'https://e7.pngegg.com/pngimages/772/7/png-clipart-electronics-accessory-heat-pump-berogailu-hidros-srl-oleotec-oleos-tecnicos-lda-electronics-electronic-device-thumbnail.png',
   },
   {
     categoryId: 1,
@@ -141,7 +141,7 @@ export const products = [
     price: 1000.0,
     status: status.Available,
     image:
-      'https://www.taqi.com.br/ccstore/v1/images/?source=/file/v5349520148770145571/products/089446.00-gerador-de-luz-motomil-gasolina-3kva-motor-4-tempos-65hp-monofasico-mg3000cl.jpg&height=1000&width=1000&quality=0.9',
+      'https://e7.pngegg.com/pngimages/137/259/png-clipart-hidro-melhoras-lda-water-system-quality-water-service-quality-thumbnail.png',
   },
   {
     categoryId: 1,
@@ -150,7 +150,7 @@ export const products = [
     price: 1000.99,
     status: status.Unavailable,
     image:
-      'https://www.taqi.com.br/ccstore/v1/images/?source=/file/v5349520148770145571/products/089446.00-gerador-de-luz-motomil-gasolina-3kva-motor-4-tempos-65hp-monofasico-mg3000cl.jpg&height=1000&width=1000&quality=0.9',
+      'https://e7.pngegg.com/pngimages/202/773/png-clipart-electric-motor-induction-motor-ac-motor-three-phase-electric-power-electricity-engine-business-transport-thumbnail.png',
   },
   {
     categoryId: 1,
@@ -159,7 +159,7 @@ export const products = [
     price: 1000.99,
     status: status.Maintenance,
     image:
-      'https://img.olhardigital.com.br/wp-content/uploads/2021/05/shutterstock_1387140884.jpg',
+      'https://e7.pngegg.com/pngimages/316/916/png-clipart-skull-human-skeleton-skull-face-head-thumbnail.png',
   },
   {
     categoryId: 2,
@@ -168,16 +168,16 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://www.locacoesmartins.com.br/wp-content/uploads/2020/07/andaime-torre.jpg',
+      'https://e7.pngegg.com/pngimages/853/836/png-clipart-steel-facade-ladder-angle-shelf-andaime-glass-angle-thumbnail.png',
   },
   {
     categoryId: 2,
-    name: 'Andaime eletrico',
-    description: 'Andaimer para uso geral, movido a energia',
+    name: 'Andaime eletrico - medio',
+    description: 'Andaimer medio para uso geral, movido a energia',
     price: 800.99,
     status: status.Available,
     image:
-      'https://ae01.alicdn.com/kf/Ha993c13e604e49369c001a6ade3d346f8/Andaime-hidr-ulico-da-tesoura-do-andaime-com-ce.jpg_Q90.jpg_.webp',
+      'https://e7.pngegg.com/pngimages/736/84/png-clipart-black-and-yellow-fork-lift-forklift-alarm-device-heavy-equipment-vehicle-machine-forklift-products-in-kind-to-avoid-the-material-car-warehouse-thumbnail.png',
   },
   {
     categoryId: 2,
@@ -186,16 +186,16 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://www.locacoesmartins.com.br/wp-content/uploads/2020/07/andaime-torre.jpg',
+      'https://e7.pngegg.com/pngimages/411/886/png-clipart-wheel-scaffolding-engine-machine-crane-andaime-angle-auto-part-thumbnail.png',
   },
   {
     categoryId: 2,
     name: 'Andaime eletrico',
-    description: 'Andaimer para uso geral, movido a energia',
+    description: 'Andaimer tamnho normal  para uso geral, movido a energia',
     price: 200.99,
     status: status.Available,
     image:
-      'https://ae01.alicdn.com/kf/Ha993c13e604e49369c001a6ade3d346f8/Andaime-hidr-ulico-da-tesoura-do-andaime-com-ce.jpg_Q90.jpg_.webp',
+      'https://e7.pngegg.com/pngimages/849/908/png-clipart-toyota-material-handling-u-s-a-inc-pallet-jack-forklift-truck-heavy-equipment-truck-forklift-thumbnail.png',
   },
   {
     categoryId: 3,
@@ -204,7 +204,7 @@ export const products = [
     price: 1000.99,
     status: status.Available,
     image:
-      'https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/21/07/2107045_betoneira-profissional-trifasica-400-litros-com-painel-2cv-220-volts-71000729-csm_m2_637486474279502387.jpg',
+      'https://e7.pngegg.com/pngimages/831/464/png-clipart-concrete-mixer-cement-illustration-concrete-car-car-accident-building-thumbnail.png',
   },
   {
     categoryId: 3,
@@ -212,14 +212,14 @@ export const products = [
     description: 'Caminhao todo rosinha para mexer seu concretinho',
     price: 500.99,
     status: status.Available,
-    image: 'https://abcp.org.br/wp-content/uploads/2019/10/01ciplan.jpg',
+    image: 'https://e7.pngegg.com/pngimages/38/626/png-clipart-concrete-mixer-ready-mix-concrete-truck-heavy-equipment-realistic-mix-of-sand-machine-freight-transport-realistic-thumbnail.png',
   },
   {
     categoryId: 3,
     name: 'Betoneira com rodinhas',
     description: 'Betoneira para mexer o concreto',
     price: 600.99,
-    status: status.Available,
+    status: status.Unavailable,
     image:
       'https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/21/07/2107045_betoneira-profissional-trifasica-400-litros-com-painel-2cv-220-volts-71000729-csm_m2_637486474279502387.jpg',
   },
@@ -233,84 +233,84 @@ export const products = [
   },
   {
     categoryId: 4,
-    name: 'Caminhao compactador - Rosa',
-    description: 'Caminhao todo rosinha para compactar seu lixo',
+    name: 'Caminhao compactador',
+    description: 'Caminhao  para compactar seu lixo',
     price: 1000.99,
     status: status.Available,
     image:
-      'https://img.r7.com/images/2016/10/12/nkxtqrdl3_6qr77l5nqf_file?dimensions=460x305',
+      'https://e7.pngegg.com/pngimages/822/642/png-clipart-bulldozer-heavy-machinery-volvo-construction-equipment-construction-equipment-mode-of-transport-vehicle-thumbnail.png',
   },
   {
     categoryId: 4,
     name: 'Compactador de concreto',
-    description: 'O melhor compactador do mercado',
+    description: 'O melhor compactador de concreto do mercado',
     price: 400.99,
     status: status.Available,
     image:
-      'https://a-static.mlcdn.com.br/1500x1500/compactador-de-solo-tipo-sapo-a-gasolina-6-5-hp-motor-loncin-motor-de-4-tempos-ncslon-nagano/agrotama2/mgl-101014894/226cc03e0b382610bfce2186e7bf91b1.jpg',
+      'https://e7.pngegg.com/pngimages/553/380/png-clipart-tire-car-road-roller-heavy-machinery-architectural-engineering-maquinaria-truck-car-thumbnail.png',
   },
   {
     categoryId: 4,
-    name: 'Caminhao compactador velho',
-    description: 'Caminhao todo rosinha para compactar seu lixo',
+    name: 'Trator compactador ',
+    description: 'Trator para compactação',
     price: 1000.99,
-    status: status.Unavailable,
+    status: status.Available,
     image:
-      'https://img.r7.com/images/2016/10/12/nkxtqrdl3_6qr77l5nqf_file?dimensions=460x305',
+      'https://e7.pngegg.com/pngimages/380/385/png-clipart-john-deere-caterpillar-inc-bulldozer-industrial-alternator-starter-backhoe-jd-vehicle-backhoe-loader-thumbnail.png',
   },
   {
     categoryId: 4,
-    name: 'Compactador de concreto',
-    description: 'O melhor compactador do mercado',
+    name: 'Compactador de concreto de grande porte',
+    description: 'O compactador ideal para grande obras',
     price: 500.99,
     status: status.Available,
     image:
-      'https://a-static.mlcdn.com.br/1500x1500/compactador-de-solo-tipo-sapo-a-gasolina-6-5-hp-motor-loncin-motor-de-4-tempos-ncslon-nagano/agrotama2/mgl-101014894/226cc03e0b382610bfce2186e7bf91b1.jpg',
+      'https://e7.pngegg.com/pngimages/553/380/png-clipart-tire-car-road-roller-heavy-machinery-architectural-engineering-maquinaria-truck-car-thumbnail.png',
   },
   {
     categoryId: 5,
-    name: 'Trator pesado - rosa',
-    description: 'Demolir sua obra nunca foi tao estiloso',
+    name: 'Trator pesado - laranja',
+    description: 'Trator para realização de serviços de demolição e escavação - coloração laranja',
     price: 1000.99,
     status: status.Available,
     image:
-      'https://magazineagrofest.com.br/wp-content/uploads/2019/10/MG_0530.jpg',
+      'https://e7.pngegg.com/pngimages/393/78/png-clipart-john-deere-skid-steer-loader-heavy-machinery-front-end-loader-backhoe-vehicle-agricultural-machinery-thumbnail.png',
+  },
+  {
+    categoryId: 5,
+    name: 'Maquina com pinça',
+    description: 'Ideal se você precisar demolir com movimentos de pinça',
+    price: 800.99,
+    status: status.Available,
+    image:
+      'https://e7.pngegg.com/pngimages/742/235/png-clipart-heavy-machinery-kobelco-training-services-excavator-kobe-steel-demolition-excavator-building-technic-thumbnail.png',
+  },
+  {
+    categoryId: 5,
+    name: 'Trator leve',
+    description: 'Trator para serviços leves que não exijem demais do equipamento',
+    price: 400.99,
+    status: status.Available,
+    image:
+      'https://e7.pngegg.com/pngimages/118/995/png-clipart-caterpillar-inc-caterpillar-d9-bulldozer-komatsu-limited-caterpillar-d6-bulldozer-vehicle-transport-thumbnail.png',
   },
   {
     categoryId: 5,
     name: 'Bola de demolir',
-    description: 'Demolir sua obra esta mais facil que nunca',
-    price: 800.99,
-    status: status.Available,
-    image:
-      'https://http2.mlstatic.com/D_NQ_NP_885425-MLB25424673311_032017-O.jpg',
-  },
-  {
-    categoryId: 5,
-    name: 'Trator leve - rosa',
-    description: 'Demolir sua obra nunca foi tao estiloso e leve',
-    price: 400.99,
-    status: status.Available,
-    image:
-      'https://magazineagrofest.com.br/wp-content/uploads/2019/10/MG_0530.jpg',
-  },
-  {
-    categoryId: 5,
-    name: 'Bola de demolir com caveira',
-    description: 'Demolir sua obra esta mais facil e radical que nunca',
+    description: 'Demolir sua obra esta mais facil e barato que nunca',
     price: 300.99,
     status: status.Available,
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_885425-MLB25424673311_032017-O.jpg',
+      'https://e7.pngegg.com/pngimages/245/729/png-clipart-crane-architectural-engineering-building-business-project-crane-building-technic-thumbnail.png',
   },
   {
     categoryId: 6,
-    name: 'Container - Rosa',
-    description: 'Armazene com estilo',
+    name: 'Container',
+    description: 'Armazene tudo o que você precisar nesses belos containers ',
     price: 1000.99,
     status: status.Available,
     image:
-      'https://www.logweb.com.br/wp-content/uploads/2018/10/CONTAINER-ROSA.jpg',
+      'https://e7.pngegg.com/pngimages/666/373/png-clipart-cassone-truck-equipment-sales-standby-generator-business-electric-generator-heavy-machinery-solar-inverter-building-service-thumbnail.png',
   },
   {
     categoryId: 6,
@@ -319,7 +319,16 @@ export const products = [
     price: 500.99,
     status: status.Available,
     image:
-      'https://www.logweb.com.br/wp-content/uploads/2018/10/CONTAINER-ROSA.jpg',
+      'https://e7.pngegg.com/pngimages/264/107/png-clipart-three-brown-wooden-boxes-wooden-box-wooden-box-combination-angle-furniture-thumbnail.png',
+  },
+  {
+    categoryId: 6,
+    name: 'Caixote de papelão',
+    description: 'Guarde seus produtos em nossas caixas!',
+    price: 1.99,
+    status: status.Available,
+    image:
+      'https://e7.pngegg.com/pngimages/342/975/png-clipart-pallet-cargo-cardboard-box-graphy-boxes-miscellaneous-freight-transport-thumbnail.png',
   },
 ];
 
