@@ -6,8 +6,8 @@ const blurEffect = css`
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     pointer-events: none;
     background: rgb(0, 0, 0);
     background: linear-gradient(
@@ -16,14 +16,9 @@ const blurEffect = css`
       rgba(34, 34, 34, 0.3) 100%
     );
     background-size: cover;
-    /* z-index: -1; */
-    transition: all 40s linear;
-  }
 
-  &:hover {
-    &:after {
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      filter: blur(8px);
     }
   }
 `;

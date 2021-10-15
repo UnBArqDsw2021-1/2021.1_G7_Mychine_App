@@ -6,16 +6,14 @@ import * as S from './styles';
 
 const Hero = () => (
   <S.HeroContainer>
-    <S.Image>
-      <Image
-        src="/img/hero.webp"
-        priority
-        layout="fill"
-        objectFit="cover"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8="
-      />
-    </S.Image>
+    <Image
+      src="/img/hero.webp"
+      priority
+      layout="fill"
+      objectFit="cover"
+      placeholder="blur"
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkCgEAAF4AWD0K18MAAAAASUVORK5CYII="
+    />
     <S.Wrapper>
       <S.HeroTextContainer>
         Obra Mais que Certa<span>Encontre suas máquinas de construção.</span>
