@@ -25,11 +25,16 @@ Uma aplicação web chamada Mychine, permite alugar equipamentos como pequenos t
 
 ## Screenshots Quarta Entrega (FINAL) <<FOCOS: Arquitetura & Reutilização de Software & PROJETO FINAL>>
 
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+| | | |
+| - | - | - |
+|![screenshot1](/public/img/entrega4/screenshot1.png)|![screenshot2](/public/img/entrega4/screenshot2.png)| ![screenshot3](/public/img/entrega4/screenshot3.png) |
+
 
 ## Vídeo(s) Quarta Entrega (FINAL) <<FOCOS: Arquitetura & Reutilização de Software & PROJETO FINAL>>
 
-Adicione o(s)s vídeo(s) da Entrega Final.
+| | |
+| - | - |
+|[![Vídeo 1 - Módulo Estilos e Padrões Arquiteturais](/public/img/entrega4/screenshot_video1.png)](https://www.youtube.com/watch?v=0De87u8pZLg) | [![Vídeo 2 - Módulo Reutilização de Software](/public/img/entrega4/screenshot_video2.png)](https://www.youtube.com/watch?v=M7XcdJPwNk8)|
 
 ## Descritivo dos Principais Aspectos Técnicos
 
