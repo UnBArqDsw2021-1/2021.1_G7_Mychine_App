@@ -29,4 +29,7 @@ module.exports = {
       },
     ];
   },
+  images: {
+    domains: ['e7.pngegg.com', 'cdn.pixabay.com'],
+  },
 };

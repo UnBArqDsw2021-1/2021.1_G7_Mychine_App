@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -13,12 +12,8 @@ import * as S from './styles';
 const Navbar = () => {
   const [session] = useSession();
   const { pathname } = useRouter();
-  const [position, setPosition] = useState<'fixed' | 'sticky'>('fixed');
 
-  useEffect(() => {
-    if (pathname === '/') setPosition('fixed');
-    else setPosition('sticky');
-  }, [pathname]);
+  const position = pathname === '/' ? 'fixed' : 'sticky';
 
   if (pathname.includes('login') || pathname.includes('registro')) return null;
 
@@ -34,7 +29,7 @@ const Navbar = () => {
               objectFit="contain"
               alt="logo"
               placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8="
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkCgEAAF4AWD0K18MAAAAASUVORK5CYII="
             />
             <h1>MYCHINE</h1>
           </S.Logo>
